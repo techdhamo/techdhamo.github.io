@@ -1,25 +1,19 @@
-# Wonderful Landing Page Template
+# techdhamo.github.io
 
-### <a href="https://wonderfullandingpage.github.io/mylandingpage/">LIVE DEMO</a> 
+Personal portfolio of **Dhamodaran Narayana Perumal** — Mobility Product Lead & Technology Consultant.
 
-![](https://github.com/wonderfullandingpage/mylandingpage/blob/master/imgs/01.jpg?raw=true)
-![](https://github.com/wonderfullandingpage/mylandingpage/blob/master/imgs/02.jpg?raw=true)
+- Live: https://techdhamo.github.io
+- Primary portfolio: https://dhamo.in
 
-## Description
-This is a ReactJS based landing page template, fit for a startup company/service with a one page view.All 'visual' data can be easily modified by changing the data.json file. The project fork is from https://github.com/issaafalkattan/React-Landing-Page-Template. Thanks to the author for a great project.
+Static single-page site. No build step — `index.html` is served directly by GitHub Pages.
 
-## Make it Yours!
-### 1. Preps
-You will need to have <a href="https://nodejs.org/">Node JS</a> installed on your pc. 
+## Stack
+- HTML5 + Tailwind CSS (CDN)
+- Lucide Icons
+- Vanilla JS
 
-### 2. Clone Files
-After cloning the files, you will have to run ```yarn``` followed by ```yarn start``` in the CLI
-### 3. Add your own data 
-Change the data in the ```data.json``` file as well as add any images to ```public/img/```
-You can also change styles by modifying the ```public/css``` files.
-
-
-## Credits
-##### Free CSS 
-<a href="https://www.free-css.com/assets/files/free-css-templates/preview/page234/interact/">Free-CSS.com </a>
-
+## Local preview
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
+```
