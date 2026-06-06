@@ -6,7 +6,7 @@
   <title>Dhamodaran Narayana Perumal — Principal Mobile Engineering Lead</title>
   <meta name="description" content="Principal Mobile Engineering Lead with 4+ years of experience specializing in Native, Cross-Platform, and Hybrid app development, security hardening, and AI integration." />
   <meta name="author" content="Dhamodaran Narayana Perumal" />
-  <meta name="theme-color" content="#1a110a" />
+  <meta name="theme-color" content="#0b1020" />
   <meta property="og:title" content="Dhamodaran N. — Principal Mobile Engineering Lead" />
   <meta property="og:description" content="4+ years defining architecture across Native (SwiftUI/Compose), Cross-Platform (React Native/KMP), AppSec, and AI integrations." />
   <meta property="og:type" content="website" />
@@ -23,66 +23,57 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  
   <style>
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, sans-serif; background: #0c0a09; } /* Deep warm dark background */
+    body { font-family: 'Inter', system-ui, sans-serif; background: #0b1020; }
     .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
-    
-    /* Indian Flag / Warm Festive Gradient Background */
     .grid-bg {
       background-image:
-        radial-gradient(600px 300px at 10% -10%, rgba(249, 115, 22, 0.15), transparent 60%), /* Saffron Glow */
-        radial-gradient(500px 300px at 90% 10%, rgba(34, 197, 94, 0.12), transparent 60%), /* Emerald Green Glow */
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+        radial-gradient(600px 300px at 10% -10%, rgba(59,130,246,.18), transparent 60%),
+        radial-gradient(500px 300px at 90% 10%, rgba(168,85,247,.15), transparent 60%),
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
       background-size: auto, auto, 44px 44px, 44px 44px;
     }
-    
     .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
-    .card:hover { border-color: rgba(251, 146, 60, 0.35); } /* Orange hover */
-    .chip { background: rgba(249, 115, 22, 0.08); border: 1px solid rgba(249, 115, 22, 0.25); color: #fed7aa; }
-    .glow { box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.2), 0 20px 60px -20px rgba(249, 115, 22, 0.35); }
-    
-    /* Sunset / Gold / Saffron Text Gradient */
-    .gradient-text { background: linear-gradient(90deg, #fb923c, #fbbf24, #f87171); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    
+    .card:hover { border-color: rgba(99,179,237,0.35); }
+    .chip { background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.25); color: #cbd5e1; }
+    .glow { box-shadow: 0 0 0 1px rgba(59,130,246,.2), 0 20px 60px -20px rgba(59,130,246,.35); }
+    .gradient-text { background: linear-gradient(90deg,#60a5fa,#a78bfa,#f472b6); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .divider { height:1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent); }
-    a.nav-link:hover { color: #fdba74; } /* Warm orange hover */
-    
-    /* Ashoka / Chakra Blue pulse for availability */
-    .pulse-dot { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); animation: pulse 2s infinite; }
-    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);} 70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);} 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);} }
+    a.nav-link:hover { color: #93c5fd; }
+    .pulse-dot { box-shadow: 0 0 0 0 rgba(34,197,94,.7); animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(34,197,94,.7);} 70% { box-shadow: 0 0 0 10px rgba(34,197,94,0);} 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0);} }
   </style>
 </head>
 <body class="text-slate-200 antialiased">
 
   <!-- NAV -->
-  <header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-[#0c0a09]/80 border-b border-white/5">
+  <header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-[#0b1020]/70 border-b border-white/5">
     <nav class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
       <a href="#top" class="flex items-center gap-2 font-semibold tracking-tight text-lg">
         <span class="gradient-text font-extrabold">Dhamo</span><span class="text-slate-500 font-normal hidden sm:inline">.in</span>
       </a>
       <div class="hidden md:flex gap-7 text-sm text-slate-400">
-        <a class="nav-link transition-colors" href="#about">About</a>
-        <a class="nav-link transition-colors" href="#skills">Skills</a>
-        <a class="nav-link transition-colors" href="#experience">Experience</a>
-        <a class="nav-link transition-colors" href="#projects">Projects</a>
-        <a class="nav-link transition-colors" href="#contact">Contact</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
       </div>
-      <a href="/resume_principal_mobility_lead.pdf" target="_blank" rel="noopener" class="text-sm px-3 py-1.5 rounded-md border border-white/10 hover:border-orange-400/50 hover:text-orange-200 transition"> Download Resume ↗</a>
+      <a href="/resume.pdf" target="_blank" rel="noopener" class="text-sm px-3 py-1.5 rounded-md border border-white/10 hover:border-blue-400/50 hover:text-blue-200 transition"> Download Resume ↗</a>
     </nav>
   </header>
 
   <!-- HERO -->
   <section id="top" class="grid-bg pt-32 pb-24">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="inline-flex items-center gap-2 text-xs mono text-blue-300/90 px-3 py-1.5 rounded-full border border-blue-400/20 bg-blue-400/5 mb-6 animate-pulse">
-        <span class="w-2 h-2 bg-blue-500 rounded-full pulse-dot"></span>
+      <div class="inline-flex items-center gap-2 text-xs mono text-amber-300/90 px-3 py-1.5 rounded-full border border-amber-400/20 bg-amber-400/5 mb-6 animate-pulse">
+        <span class="w-2 h-2 bg-amber-400 rounded-full pulse-dot"></span>
         AVAILABLE: SERVING NOTICE PERIOD (LWD: JULY 16, 2026)
       </div>
       <h1 class="text-4xl sm:text-6xl font-bold tracking-tight leading-[1.05]">
-        Vanakkam 🙏 I'm <span class="gradient-text">Dhamodaran</span>.<br/>
+        Hi, I'm <span class="gradient-text">Dhamodaran</span>.<br/>
         I architect <span class="text-white">omni-channel mobile</span><br/>
         ecosystems & <span class="text-white">GenAI integrations</span>.
       </h1>
@@ -90,13 +81,13 @@
         Principal Mobile Engineering Lead with <b class="text-slate-200">4+ years</b> defining architecture across <b class="text-slate-200">Native-First (SwiftUI/Compose), Cross-Platform (React Native/KMP), and Hybrid (Capacitor)</b> developments. Expert at AppSec mitigation (RASP/JNI), automated delivery via <b class="text-slate-200">Fastlane</b>, and deploying intelligent features via <b class="text-slate-200">Amazon Bedrock & Vertex AI</b>.
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
-        <a href="#projects" class="px-5 py-2.5 rounded-md bg-orange-600 hover:bg-orange-500 text-white font-medium inline-flex items-center gap-2 glow transition-colors">
+        <a href="#projects" class="px-5 py-2.5 rounded-md bg-blue-500 hover:bg-blue-400 text-white font-medium inline-flex items-center gap-2 glow">
           <i data-lucide="rocket" class="w-4 h-4"></i> View Projects
         </a>
-        <a href="#contact" class="px-5 py-2.5 rounded-md border border-white/15 hover:border-orange-400/50 hover:text-orange-100 inline-flex items-center gap-2 transition-colors">
+        <a href="#contact" class="px-5 py-2.5 rounded-md border border-white/15 hover:border-white/40 inline-flex items-center gap-2">
           <i data-lucide="mail" class="w-4 h-4"></i> Get in touch
         </a>
-        <a href="https://github.com/techdhamo" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-md border border-white/15 hover:border-orange-400/50 hover:text-orange-100 inline-flex items-center gap-2 transition-colors">
+        <a href="https://github.com/techdhamo" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-md border border-white/15 hover:border-white/40 inline-flex items-center gap-2">
           <i data-lucide="github" class="w-4 h-4"></i> GitHub
         </a>
       </div>
@@ -129,13 +120,13 @@
   <section id="about" class="py-24">
     <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
       <div>
-        <div class="text-xs mono text-orange-400 uppercase tracking-widest">About</div>
+        <div class="text-xs mono text-blue-300 uppercase tracking-widest">About</div>
         <h2 class="mt-3 text-3xl font-bold text-white">Omni-Channel Architecture & AI Platform Leadership.</h2>
       </div>
       <div class="md:col-span-2 space-y-5 text-slate-300 leading-relaxed">
         <p>I am a Principal Mobile Engineering Lead with <b class="text-white">4+ years</b> of extensive experience defining architecture and scaling enterprise mobile applications across the entire development spectrum. I lead cross-functional engineering squads executing <b class="text-white">Native-First (SwiftUI, Jetpack Compose)</b>, <b class="text-white">Cross-Platform (React Native, Flutter, Kotlin Multiplatform)</b>, and <b class="text-white">Hybrid (Capacitor, Cordova)</b> developments.</p>
         <p>My work bridges complex mobile front-ends with advanced AI: deploying context-aware LLMs via <b class="text-white">Amazon Bedrock & Google Cloud Vertex AI</b> (RAG, Model Context Protocol), securing apps using <b class="text-white">DexGuard, Talsec, RASP development, JNI C/C++ native checks</b>, and orchestrating zero-touch CI/CD pipelines via <b class="text-white">Fastlane</b> and Bitrise.</p>
-        <p>Based in Chennai, Tamil Nadu 🇮🇳 · Currently serving notice period (Last Working Day: <b>July 16, 2026</b>).</p>
+        <p>Based in Chennai, India · Currently serving notice period (Last Working Day: <b>July 16, 2026</b>).</p>
       </div>
     </div>
   </section>
@@ -145,36 +136,36 @@
   <!-- SKILLS -->
   <section id="skills" class="py-24">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="text-xs mono text-orange-400 uppercase tracking-widest">Core competencies</div>
+      <div class="text-xs mono text-blue-300 uppercase tracking-widest">Core competencies</div>
       <h2 class="mt-3 text-3xl font-bold text-white mb-12">What I do</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div class="card rounded-2xl p-6 transition-colors">
-          <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 inline-flex items-center justify-center mb-4"><i data-lucide="smartphone" class="w-5 h-5"></i></div>
+        <div class="card rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-300 inline-flex items-center justify-center mb-4"><i data-lucide="smartphone" class="w-5 h-5"></i></div>
           <h3 class="font-semibold text-white">Native-First Development</h3>
           <p class="text-sm text-slate-400 mt-2">Swift, SwiftUI, Kotlin, Jetpack Compose, Objective-C, Android NDK & JNI (C/C++), native bridging modules.</p>
         </div>
-        <div class="card rounded-2xl p-6 transition-colors">
-          <div class="w-10 h-10 rounded-lg bg-emerald-500/15 text-emerald-400 inline-flex items-center justify-center mb-4"><i data-lucide="layers" class="w-5 h-5"></i></div>
+        <div class="card rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-300 inline-flex items-center justify-center mb-4"><i data-lucide="layers" class="w-5 h-5"></i></div>
           <h3 class="font-semibold text-white">Cross-Platform & Hybrid</h3>
           <p class="text-sm text-slate-400 mt-2">React Native, Flutter, Kotlin Multiplatform (KMP), Cordova, Capacitor, Ionic, custom plugin architecture.</p>
         </div>
-        <div class="card rounded-2xl p-6 transition-colors">
-          <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-400 inline-flex items-center justify-center mb-4"><i data-lucide="cpu" class="w-5 h-5"></i></div>
+        <div class="card rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-300 inline-flex items-center justify-center mb-4"><i data-lucide="cpu" class="w-5 h-5"></i></div>
           <h3 class="font-semibold text-white">Generative AI & LLMs</h3>
           <p class="text-sm text-slate-400 mt-2">Purple Fabric, Claude AI, Amazon Bedrock, Google Cloud Vertex AI, RAG, MCP Client Integration, Prompt Caching.</p>
         </div>
-        <div class="card rounded-2xl p-6 transition-colors">
-          <div class="w-10 h-10 rounded-lg bg-red-500/15 text-red-400 inline-flex items-center justify-center mb-4"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
+        <div class="card rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-300 inline-flex items-center justify-center mb-4"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
           <h3 class="font-semibold text-white">Security & App Hardening</h3>
           <p class="text-sm text-slate-400 mt-2">DexGuard, AppProtectt, Talsec, RASP development, JS obfuscation, Google Play Integrity, signature checks, VAPT.</p>
         </div>
-        <div class="card rounded-2xl p-6 transition-colors">
-          <div class="w-10 h-10 rounded-lg bg-purple-500/15 text-purple-400 inline-flex items-center justify-center mb-4"><i data-lucide="terminal" class="w-5 h-5"></i></div>
+        <div class="card rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-300 inline-flex items-center justify-center mb-4"><i data-lucide="terminal" class="w-5 h-5"></i></div>
           <h3 class="font-semibold text-white">DevOps & Distribution</h3>
           <p class="text-sm text-slate-400 mt-2">Fastlane, Bitrise, GitHub Actions, Jenkins, App Store Connect (TestFlight), Google Play Console, Managed Publishing.</p>
         </div>
-        <div class="card rounded-2xl p-6 transition-colors">
-          <div class="w-10 h-10 rounded-lg bg-amber-500/15 text-amber-400 inline-flex items-center justify-center mb-4"><i data-lucide="git-branch" class="w-5 h-5"></i></div>
+        <div class="card rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-300 inline-flex items-center justify-center mb-4"><i data-lucide="git-branch" class="w-5 h-5"></i></div>
           <h3 class="font-semibold text-white">Architecture & State</h3>
           <p class="text-sm text-slate-400 mt-2">MVVM, Clean Architecture, Micro-frontends, Redux (React), BLoC/Riverpod (Flutter), Firebase Ecosystem.</p>
         </div>
@@ -203,12 +194,12 @@
   <!-- EXPERIENCE -->
   <section id="experience" class="py-24">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="text-xs mono text-orange-400 uppercase tracking-widest">Experience</div>
+      <div class="text-xs mono text-blue-300 uppercase tracking-widest">Experience</div>
       <h2 class="mt-3 text-3xl font-bold text-white mb-12">Career timeline</h2>
       <ol class="relative border-l border-white/10 ml-3 space-y-10">
         <li class="pl-6">
-          <span class="absolute -left-2 mt-1.5 w-4 h-4 rounded-full bg-orange-500 ring-4 ring-[#0c0a09]"></span>
-          <div class="text-xs mono text-slate-400">Feb 2024 — Present · Chennai, India 🇮🇳</div>
+          <span class="absolute -left-2 mt-1.5 w-4 h-4 rounded-full bg-blue-500 ring-4 ring-[#0b1020]"></span>
+          <div class="text-xs mono text-slate-400">Feb 2024 — Present · Chennai, India</div>
           <h3 class="text-xl font-semibold text-white mt-1">Consultant (Principal Mobile Tech Lead)</h3>
           <div class="text-slate-400 text-sm">Intellect Design Arena Ltd</div>
           <ul class="mt-3 text-slate-300 list-disc pl-5 space-y-2 text-sm">
@@ -220,8 +211,8 @@
           </ul>
         </li>
         <li class="pl-6">
-          <span class="absolute -left-2 mt-1.5 w-4 h-4 rounded-full bg-orange-500/70 ring-4 ring-[#0c0a09]"></span>
-          <div class="text-xs mono text-slate-400">Jun 2022 — Jul 2023 · Chennai, India 🇮🇳</div>
+          <span class="absolute -left-2 mt-1.5 w-4 h-4 rounded-full bg-blue-500/70 ring-4 ring-[#0b1020]"></span>
+          <div class="text-xs mono text-slate-400">Jun 2022 — Jul 2023 · Chennai, India</div>
           <h3 class="text-xl font-semibold text-white mt-1">Associate Consultant (Product Engineer - Mobility)</h3>
           <div class="text-slate-400 text-sm">Intellect Design Arena Ltd · Hybrid Banking Apps</div>
           <ul class="mt-3 text-slate-300 list-disc pl-5 space-y-2 text-sm">
@@ -231,8 +222,8 @@
           </ul>
         </li>
         <li class="pl-6">
-          <span class="absolute -left-2 mt-1.5 w-4 h-4 rounded-full bg-orange-500/50 ring-4 ring-[#0c0a09]"></span>
-          <div class="text-xs mono text-slate-400">Aug 2021 — Mar 2022 · Chennai, India 🇮🇳</div>
+          <span class="absolute -left-2 mt-1.5 w-4 h-4 rounded-full bg-blue-500/60 ring-4 ring-[#0b1020]"></span>
+          <div class="text-xs mono text-slate-400">Aug 2021 — Mar 2022 · Chennai, India</div>
           <h3 class="text-xl font-semibold text-white mt-1">Full Stack Developer</h3>
           <div class="text-slate-400 text-sm">Otomate Technologies · Automation Platforms</div>
           <ul class="mt-3 text-slate-300 list-disc pl-5 space-y-2 text-sm">
@@ -242,8 +233,8 @@
           </ul>
         </li>
         <li class="pl-6">
-          <span class="absolute -left-2 mt-1.5 w-4 h-4 rounded-full bg-orange-500/30 ring-4 ring-[#0c0a09]"></span>
-          <div class="text-xs mono text-slate-400">Dec 2018 — May 2019 · Nagercoil, India 🇮🇳</div>
+          <span class="absolute -left-2 mt-1.5 w-4 h-4 rounded-full bg-blue-500/40 ring-4 ring-[#0b1020]"></span>
+          <div class="text-xs mono text-slate-400">Dec 2018 — May 2019 · Chennai, India</div>
           <h3 class="text-xl font-semibold text-white mt-1">Web Development Intern</h3>
           <div class="text-slate-400 text-sm">CKS Solutions</div>
           <ul class="mt-3 text-slate-300 list-disc pl-5 space-y-1 text-sm">
@@ -259,13 +250,13 @@
   <!-- PROJECTS -->
   <section id="projects" class="py-24">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="text-xs mono text-orange-400 uppercase tracking-widest">Selected work</div>
+      <div class="text-xs mono text-blue-300 uppercase tracking-widest">Selected work</div>
       <h2 class="mt-3 text-3xl font-bold text-white mb-12">Projects & impact</h2>
 
       <div class="grid md:grid-cols-2 gap-5">
         <div class="card rounded-2xl p-6">
           <div class="flex items-center justify-between">
-            <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 inline-flex items-center justify-center"><i data-lucide="package" class="w-5 h-5"></i></div>
+            <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-300 inline-flex items-center justify-center"><i data-lucide="package" class="w-5 h-5"></i></div>
             <span class="text-xs mono text-slate-500">Corporate Banking cms</span>
           </div>
           <h3 class="mt-4 text-lg font-semibold text-white">Corporate Banking Mobile Platform (CMS)</h3>
@@ -280,7 +271,7 @@
 
         <a href="https://github.com/techdhamo/aran" target="_blank" rel="noopener" class="card rounded-2xl p-6 block">
           <div class="flex items-center justify-between">
-            <div class="w-10 h-10 rounded-lg bg-emerald-500/15 text-emerald-400 inline-flex items-center justify-center"><i data-lucide="shield" class="w-5 h-5"></i></div>
+            <div class="w-10 h-10 rounded-lg bg-fuchsia-500/15 text-fuchsia-300 inline-flex items-center justify-center"><i data-lucide="shield" class="w-5 h-5"></i></div>
             <span class="text-xs mono text-slate-500">github.com/techdhamo/aran</span>
           </div>
           <h3 class="mt-4 text-lg font-semibold text-white">Aran RASP — Mobile Security SDK</h3>
@@ -295,7 +286,7 @@
 
         <a href="https://github.com/techdhamo/DS3" target="_blank" rel="noopener" class="card rounded-2xl p-6 block">
           <div class="flex items-center justify-between">
-            <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-400 inline-flex items-center justify-center"><i data-lucide="shopping-cart" class="w-5 h-5"></i></div>
+            <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-300 inline-flex items-center justify-center"><i data-lucide="package" class="w-5 h-5"></i></div>
             <span class="text-xs mono text-slate-500">github.com/techdhamo/DS3</span>
           </div>
           <h3 class="mt-4 text-lg font-semibold text-white">DS3 — Commerce & Experience Platform</h3>
@@ -310,16 +301,42 @@
 
         <a href="https://dhamo.in" target="_blank" rel="noopener" class="card rounded-2xl p-6 block">
           <div class="flex items-center justify-between">
-            <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 inline-flex items-center justify-center"><i data-lucide="globe" class="w-5 h-5"></i></div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/15 text-emerald-300 inline-flex items-center justify-center"><i data-lucide="globe" class="w-5 h-5"></i></div>
             <span class="text-xs mono text-slate-500">dhamo.in</span>
           </div>
           <h3 class="mt-4 text-lg font-semibold text-white">dhamo.in — GenAI-powered Portfolio</h3>
-          <p class="text-sm text-slate-400 mt-2">Portfolio showcasing expertise in Mobile Architecture, AppSec, and SaaS, powered by GenAI. Cloudflare-hosted, performance-first.</p>
+          <p class="text-sm text-slate-400 mt-2">Portfolio showcasing expertise in Java, RASP, and SaaS, powered by GenAI. Cloudflare-hosted, performance-first.</p>
           <div class="mt-4 flex flex-wrap gap-2">
             <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">GenAI</span>
             <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">Cloudflare</span>
           </div>
         </a>
+
+        <a href="https://mazhai.org" target="_blank" rel="noopener" class="card rounded-2xl p-6 block">
+          <div class="flex items-center justify-between">
+            <div class="w-10 h-10 rounded-lg bg-amber-500/15 text-amber-300 inline-flex items-center justify-center"><i data-lucide="wrench" class="w-5 h-5"></i></div>
+            <span class="text-xs mono text-slate-500">mazhai.org</span>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold text-white">mazhai.org — Developer SaaS Suite</h3>
+          <p class="text-sm text-slate-400 mt-2">Comprehensive SaaS delivering expert developer tools and utilities for students and engineers. Umbrella brand behind the Aran security ecosystem.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">SaaS</span>
+            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">DevTools</span>
+          </div>
+        </a>
+
+        <div class="card rounded-2xl p-6">
+          <div class="flex items-center justify-between">
+            <div class="w-10 h-10 rounded-lg bg-sky-500/15 text-sky-300 inline-flex items-center justify-center"><i data-lucide="cpu" class="w-5 h-5"></i></div>
+            <span class="text-xs mono text-slate-500">tinylang.org · prototype</span>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold text-white">tinylang — Language for IoT</h3>
+          <p class="text-sm text-slate-400 mt-2">Lightweight, efficient language initiative tailored for high-performance IoT devices. Currently under prototype development.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">Compilers</span>
+            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">IoT</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -329,39 +346,39 @@
   <!-- AWARDS -->
   <section id="awards" class="py-24">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="text-xs mono text-orange-400 uppercase tracking-widest">Recognition</div>
+      <div class="text-xs mono text-blue-300 uppercase tracking-widest">Recognition</div>
       <h2 class="mt-3 text-3xl font-bold text-white mb-8">Awards, Certifications & Education</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         <div class="card rounded-2xl p-6">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-amber-500/15 text-amber-400 inline-flex items-center justify-center"><i data-lucide="award" class="w-5 h-5"></i></div>
+            <div class="w-10 h-10 rounded-lg bg-amber-500/15 text-amber-300 inline-flex items-center justify-center"><i data-lucide="award" class="w-5 h-5"></i></div>
             <h3 class="font-semibold text-white">Awards</h3>
           </div>
           <ul class="text-sm text-slate-300 space-y-2">
             <li>• <b>SPOTLIGHT (GEM) Award</b> (Apr 2025) — Cleared critical iOS/Android build failures for production launch.</li>
             <li>• <b>SPOT Award</b> (Nov 2024) — Client appreciation for exceptional debugging, AppSec mitigation, and UI resolution.</li>
-            <li>• Kalam Award (2019)</li>
+            <li>• Kalam Award</li>
           </ul>
         </div>
         <div class="card rounded-2xl p-6">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-emerald-500/15 text-emerald-400 inline-flex items-center justify-center"><i data-lucide="graduation-cap" class="w-5 h-5"></i></div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/15 text-emerald-300 inline-flex items-center justify-center"><i data-lucide="graduation-cap" class="w-5 h-5"></i></div>
             <h3 class="font-semibold text-white">Certifications & Training</h3>
           </div>
           <ul class="text-sm text-slate-300 space-y-2">
-            <li>• Claude with Amazon Bedrock (Anthropic)</li>
-            <li>• Claude with Google Cloud Vertex AI (Anthropic)</li>
+            <li>• Claude with Amazon Bedrock (Anthropic Academy)</li>
+            <li>• Claude with Google Cloud Vertex AI (Anthropic Academy)</li>
             <li>• Mobile AppSec, Hybrid Mobile & AI Integrations</li>
           </ul>
         </div>
         <div class="card rounded-2xl p-6 md:col-span-2 lg:col-span-1">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-400 inline-flex items-center justify-center"><i data-lucide="book-open" class="w-5 h-5"></i></div>
+            <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-300 inline-flex items-center justify-center"><i data-lucide="book-open" class="w-5 h-5"></i></div>
             <h3 class="font-semibold text-white">Education</h3>
           </div>
           <ul class="text-sm text-slate-300 space-y-2">
-            <li>• <b>B.E. (Computer Science)</b><br/><span class="text-slate-400 text-xs">Stella Mary's College of Engg. (2018-2021) — First Class</span></li>
-            <li>• <b>Diploma (Computer Science)</b><br/><span class="text-slate-400 text-xs">Surya Polytechnic College (2011-2014) — First Class</span></li>
+            <li>• <b>B.E. (Computer Science)</b><br/><span class="text-slate-400 text-xs">Stella Mary's College of Engineering (2018-2021) — First Class</span></li>
+            <li>• <b>Diploma (Computer Science)</b><br/><span class="text-slate-400 text-xs">Surya Polytechnic College, Kanyakumari (2011-2014) — First Class</span></li>
           </ul>
         </div>
       </div>
@@ -373,20 +390,20 @@
   <!-- CONTACT -->
   <section id="contact" class="py-24">
     <div class="max-w-6xl mx-auto px-6 text-center">
-      <div class="text-xs mono text-orange-400 uppercase tracking-widest">Contact</div>
+      <div class="text-xs mono text-blue-300 uppercase tracking-widest">Contact</div>
       <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-white">Let's build something resilient.</h2>
-      <p class="mt-4 text-slate-400 max-w-xl mx-auto">Available for Principal / Staff Engineering, Tech Lead, and Consulting engagements — specializing in Omni-Channel Mobile Architecture, AppSec Hardening, and Generative AI Integrations.</p>
+      <p class="mt-4 text-slate-400 max-w-xl mx-auto">Available for Senior / Staff Engineering, Tech Lead, and Consulting engagements — specializing in Omni-Channel Mobile Architecture, AppSec Hardening, and Generative AI Integrations.</p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
-        <a href="mailto:dhamodaran@outlook.in" class="px-5 py-2.5 rounded-md bg-orange-600 hover:bg-orange-500 text-white font-medium inline-flex items-center gap-2 glow transition-colors">
+        <a href="mailto:dhamodaran@outlook.in" class="px-5 py-2.5 rounded-md bg-blue-500 hover:bg-blue-400 text-white font-medium inline-flex items-center gap-2 glow">
           <i data-lucide="mail" class="w-4 h-4"></i> dhamodaran@outlook.in
         </a>
-        <a href="https://www.linkedin.com/in/techdhamo" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-md border border-white/15 hover:border-orange-400/50 hover:text-orange-100 inline-flex items-center gap-2 transition-colors">
+        <a href="https://www.linkedin.com/in/techdhamo" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-md border border-white/15 hover:border-white/40 inline-flex items-center gap-2">
           <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
         </a>
-        <a href="https://github.com/techdhamo" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-md border border-white/15 hover:border-orange-400/50 hover:text-orange-100 inline-flex items-center gap-2 transition-colors">
+        <a href="https://github.com/techdhamo" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-md border border-white/15 hover:border-white/40 inline-flex items-center gap-2">
           <i data-lucide="github" class="w-4 h-4"></i> GitHub
         </a>
-        <a href="tel:+919655606681" class="px-5 py-2.5 rounded-md border border-white/15 hover:border-orange-400/50 hover:text-orange-100 inline-flex items-center gap-2 transition-colors">
+        <a href="tel:+919655606681" class="px-5 py-2.5 rounded-md border border-white/15 hover:border-white/40 inline-flex items-center gap-2">
           <i data-lucide="phone" class="w-4 h-4"></i> +91 96556 06681
         </a>
       </div>
@@ -394,10 +411,8 @@
   </section>
 
   <footer class="border-t border-white/5 py-10 text-center text-sm text-slate-500">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-center items-center gap-2">
-      <span>© <span id="yr"></span> Dhamodaran Narayana Perumal</span>
-      <span class="hidden sm:inline">·</span>
-      <span class="inline-flex items-center gap-1">Chennai, India <img src="https://flagcdn.com/w20/in.png" alt="India Flag" class="w-4 h-auto rounded-sm"></span>
+    <div class="max-w-6xl mx-auto px-6">
+      © <span id="yr"></span> Dhamodaran Narayana Perumal · Chennai, India
     </div>
   </footer>
 
