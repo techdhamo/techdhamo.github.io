@@ -6,7 +6,7 @@
   <title>Dhamodaran Narayana Perumal — Principal Mobile Engineering Lead</title>
   <meta name="description" content="Principal Mobile Engineering Lead with 4+ years of experience specializing in Native, Cross-Platform, and Hybrid app development, security hardening, and AI integration." />
   <meta name="author" content="Dhamodaran Narayana Perumal" />
-  <meta name="theme-color" content="#1a110a" />
+  <meta name="theme-color" content="#f8f9fa" />
   <meta property="og:title" content="Dhamodaran N. — Principal Mobile Engineering Lead" />
   <meta property="og:description" content="4+ years defining architecture across Native (SwiftUI/Compose), Cross-Platform (React Native/KMP), AppSec, and AI integrations." />
   <meta property="og:type" content="website" />
@@ -22,196 +22,231 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Switching to Roboto for authentic Google Material feel -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
   <style>
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, sans-serif; background: #0c0a09; } /* Deep warm dark background */
+    body { 
+        font-family: 'Roboto', system-ui, sans-serif; 
+        background: #f8f9fa; /* Material Light Surface */
+        color: #202124; /* Material Text Primary */
+    } 
     .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
     
-    /* Indian Flag / Warm Festive Gradient Background */
-    .grid-bg {
-      background-image:
-        radial-gradient(600px 300px at 10% -10%, rgba(249, 115, 22, 0.15), transparent 60%), /* Saffron Glow */
-        radial-gradient(500px 300px at 90% 10%, rgba(34, 197, 94, 0.12), transparent 60%), /* Emerald Green Glow */
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-      background-size: auto, auto, 44px 44px, 44px 44px;
+    /* Material 3 Card Elevation */
+    .md-card { 
+        background: #ffffff; 
+        border: 1px solid #e8eaed;
+        border-radius: 24px; 
+        box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+        transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out; 
+    }
+    .md-card:hover { 
+        box-shadow: 0 4px 6px -1px rgba(60,64,67,0.2), 0 2px 4px -1px rgba(60,64,67,0.1); 
+        transform: translateY(-2px);
     }
     
-    .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
-    .card:hover { border-color: rgba(251, 146, 60, 0.35); } /* Orange hover */
-    .chip { background: rgba(249, 115, 22, 0.08); border: 1px solid rgba(249, 115, 22, 0.25); color: #fed7aa; }
-    .glow { box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.2), 0 20px 60px -20px rgba(249, 115, 22, 0.35); }
+    /* Material 3 Chips (Tonal) */
+    .md-chip { 
+        background: #e8f0fe; /* Google Blue 50 */
+        color: #1967d2; /* Google Blue 700 */
+        font-weight: 500;
+        border-radius: 9999px; /* Pill shape */
+    }
+
+    /* Material 3 Buttons */
+    .md-btn-filled {
+        background: #1a73e8; /* Google Blue 600 */
+        color: #ffffff;
+        border-radius: 9999px;
+        box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+        transition: background 0.2s, box-shadow 0.2s;
+        font-weight: 500;
+    }
+    .md-btn-filled:hover {
+        background: #185abc; /* Google Blue 700 */
+        box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
+    }
+    .md-btn-outlined {
+        background: transparent;
+        color: #1a73e8;
+        border: 1px solid #dadce0;
+        border-radius: 9999px;
+        font-weight: 500;
+        transition: background 0.2s, border-color 0.2s;
+    }
+    .md-btn-outlined:hover {
+        background: #f8fbff;
+        border-color: #1a73e8;
+    }
     
-    /* Sunset / Gold / Saffron Text Gradient */
-    .gradient-text { background: linear-gradient(90deg, #fb923c, #fbbf24, #f87171); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .divider { height: 1px; background: #e8eaed; }
+    a.nav-link { color: #5f6368; font-weight: 500; }
+    a.nav-link:hover { color: #1a73e8; } 
     
-    .divider { height:1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent); }
-    a.nav-link:hover { color: #fdba74; } /* Warm orange hover */
-    
-    /* Ashoka / Chakra Blue pulse for availability */
-    .pulse-dot { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); animation: pulse 2s infinite; }
-    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);} 70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);} 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);} }
+    .pulse-dot { box-shadow: 0 0 0 0 rgba(26, 115, 232, 0.4); animation: md-pulse 2s infinite; }
+    @keyframes md-pulse { 0% { box-shadow: 0 0 0 0 rgba(26, 115, 232, 0.4);} 70% { box-shadow: 0 0 0 10px rgba(26, 115, 232, 0);} 100% { box-shadow: 0 0 0 0 rgba(26, 115, 232, 0);} }
   </style>
 </head>
-<body class="text-slate-200 antialiased">
+<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
 
-  <!-- NAV -->
-  <header class="fixed inset-x-0 top-0 z-50 backdrop-blur bg-[#0c0a09]/80 border-b border-white/5">
-    <nav class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-      <a href="#top" class="flex items-center gap-2 font-semibold tracking-tight text-lg">
-        <span class="gradient-text font-extrabold">Dhamo</span><span class="text-slate-500 font-normal hidden sm:inline">.in</span>
+  <header class="fixed inset-x-0 top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2 font-bold tracking-tight text-xl text-gray-800">
+        <span class="text-[#1a73e8]">Dhamo</span><span class="text-gray-500 font-normal hidden sm:inline">.in</span>
       </a>
-      <div class="hidden md:flex gap-7 text-sm text-slate-400">
+      <div class="hidden md:flex gap-8 text-sm">
         <a class="nav-link transition-colors" href="#about">About</a>
         <a class="nav-link transition-colors" href="#skills">Skills</a>
         <a class="nav-link transition-colors" href="#experience">Experience</a>
         <a class="nav-link transition-colors" href="#projects">Projects</a>
         <a class="nav-link transition-colors" href="#contact">Contact</a>
       </div>
-      <a href="/resume_principal_mobility_lead.pdf" target="_blank" rel="noopener" class="text-sm px-3 py-1.5 rounded-md border border-white/10 hover:border-orange-400/50 hover:text-orange-200 transition"> Download Resume ↗</a>
+      <a href="/Dhamo_Resume.pdf" target="_blank" rel="noopener" class="text-sm px-5 py-2 md-btn-outlined flex items-center gap-2"> 
+        <i data-lucide="download" class="w-4 h-4"></i> Resume 
+      </a>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section id="top" class="grid-bg pt-32 pb-24">
+  <section id="top" class="pt-36 pb-24 bg-white border-b border-gray-200">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="inline-flex items-center gap-2 text-xs mono text-blue-300/90 px-3 py-1.5 rounded-full border border-blue-400/20 bg-blue-400/5 mb-6 animate-pulse">
-        <span class="w-2 h-2 bg-blue-500 rounded-full pulse-dot"></span>
+      <div class="inline-flex items-center gap-2 text-xs font-medium text-[#1a73e8] px-4 py-2 rounded-full bg-[#e8f0fe] border border-[#d2e3fc] mb-8 animate-pulse">
+        <span class="w-2.5 h-2.5 bg-[#1a73e8] rounded-full pulse-dot"></span>
         AVAILABLE: SERVING NOTICE PERIOD (LWD: JULY 16, 2026)
       </div>
-      <h1 class="text-4xl sm:text-6xl font-bold tracking-tight leading-[1.05]">
-        Vanakkam 🙏 I'm <span class="gradient-text">Dhamodaran</span>.<br/>
-        I architect <span class="text-white">omni-channel mobile</span><br/>
-        ecosystems & <span class="text-white">GenAI integrations</span>.
+      <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-gray-900 leading-[1.15]">
+        Hi, I'm <span class="text-[#1a73e8]">Dhamodaran</span>.<br/>
+        I architect <span class="text-gray-800">omni-channel mobile</span><br/>
+        ecosystems & <span class="text-gray-800">GenAI integrations</span>.
       </h1>
-      <p class="mt-6 max-w-2xl text-slate-400 text-lg leading-relaxed">
-        Principal Mobile Engineering Lead with <b class="text-slate-200">6+ years</b> defining architecture across <b class="text-slate-200">Native-First (SwiftUI/Compose), Cross-Platform (React Native/KMP), and Hybrid (Capacitor)</b> developments. Expert at AppSec mitigation (RASP/JNI), automated delivery via <b class="text-slate-200">Fastlane</b>, and deploying intelligent features via <b class="text-slate-200">Amazon Bedrock & Vertex AI</b>.
+      <p class="mt-6 max-w-2xl text-gray-600 text-lg leading-relaxed">
+        Principal Mobile Engineering Lead with <b class="text-gray-900">4+ years</b> defining architecture across <b class="text-gray-900">Native-First (SwiftUI/Compose), Cross-Platform (React Native/KMP), and Hybrid (Capacitor)</b> developments. Expert at AppSec mitigation (RASP/JNI), automated delivery via <b class="text-gray-900">Fastlane</b>, and deploying intelligent features via <b class="text-gray-900">Amazon Bedrock & Vertex AI</b>.
       </p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="#projects" class="px-5 py-2.5 rounded-md bg-orange-600 hover:bg-orange-500 text-white font-medium inline-flex items-center gap-2 glow transition-colors">
-          <i data-lucide="rocket" class="w-4 h-4"></i> View Projects
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="#projects" class="px-8 py-3 md-btn-filled inline-flex items-center gap-2">
+          <i data-lucide="rocket" class="w-5 h-5"></i> View Projects
         </a>
-        <a href="#contact" class="px-5 py-2.5 rounded-md border border-white/15 hover:border-orange-400/50 hover:text-orange-100 inline-flex items-center gap-2 transition-colors">
-          <i data-lucide="mail" class="w-4 h-4"></i> Get in touch
+        <a href="#contact" class="px-8 py-3 md-btn-outlined inline-flex items-center gap-2">
+          <i data-lucide="mail" class="w-5 h-5"></i> Get in touch
         </a>
-        <a href="https://github.com/techdhamo" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-md border border-white/15 hover:border-orange-400/50 hover:text-orange-100 inline-flex items-center gap-2 transition-colors">
-          <i data-lucide="github" class="w-4 h-4"></i> GitHub
+        <a href="https://github.com/techdhamo" target="_blank" rel="noopener" class="px-8 py-3 md-btn-outlined inline-flex items-center gap-2 text-gray-700 border-gray-300 hover:bg-gray-50 hover:text-gray-900 hover:border-gray-400">
+          <i data-lucide="github" class="w-5 h-5"></i> GitHub
         </a>
       </div>
 
-      <!-- Impact stats -->
-      <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="card rounded-xl p-5">
-          <div class="text-3xl font-bold text-white">6+</div>
-          <div class="text-sm text-slate-400 mt-1">Enterprise Client Implementations Managed</div>
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+          <div class="text-3xl font-bold text-[#1a73e8]">6+</div>
+          <div class="text-sm text-gray-600 mt-1 font-medium">Enterprise Client Implementations</div>
         </div>
-        <div class="card rounded-xl p-5">
-          <div class="text-3xl font-bold text-white">100%</div>
-          <div class="text-sm text-slate-400 mt-1">Mobile RASP & Security Hardening Coverage</div>
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+          <div class="text-3xl font-bold text-[#1a73e8]">100%</div>
+          <div class="text-sm text-gray-600 mt-1 font-medium">Mobile RASP & Hardening Coverage</div>
         </div>
-        <div class="card rounded-xl p-5">
-          <div class="text-3xl font-bold text-white">6+</div>
-          <div class="text-sm text-slate-400 mt-1">Years of Mobile Architecture & Leadership</div>
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+          <div class="text-3xl font-bold text-[#1a73e8]">4+</div>
+          <div class="text-sm text-gray-600 mt-1 font-medium">Years of Mobile Leadership</div>
         </div>
-        <div class="card rounded-xl p-5">
-          <div class="text-3xl font-bold text-white">0</div>
-          <div class="text-sm text-slate-400 mt-1">Production Security Breaches</div>
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+          <div class="text-3xl font-bold text-[#1a73e8]">0</div>
+          <div class="text-sm text-gray-600 mt-1 font-medium">Production Security Breaches</div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
-  <!-- ABOUT -->
   <section id="about" class="py-24">
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12">
       <div>
-        <div class="text-xs mono text-orange-400 uppercase tracking-widest">About</div>
-        <h2 class="mt-3 text-3xl font-bold text-white">Omni-Channel Architecture & AI Platform Leadership.</h2>
+        <div class="text-sm font-bold text-[#1a73e8] uppercase tracking-wider">About</div>
+        <h2 class="mt-3 text-3xl font-bold text-gray-900">Omni-Channel Architecture & AI Platform Leadership.</h2>
       </div>
-      <div class="md:col-span-2 space-y-5 text-slate-300 leading-relaxed">
-        <p>I am a Principal Mobile Engineering Lead with <b class="text-white">6+ years</b> of extensive experience defining architecture and scaling enterprise mobile applications across the entire development spectrum. I lead cross-functional engineering squads executing <b class="text-white">Native-First (SwiftUI, Jetpack Compose)</b>, <b class="text-white">Cross-Platform (React Native, Flutter, Kotlin Multiplatform)</b>, and <b class="text-white">Hybrid (Capacitor, Cordova)</b> developments.</p>
-        <p>My work bridges complex mobile front-ends with advanced AI: deploying context-aware LLMs via <b class="text-white">Amazon Bedrock & Google Cloud Vertex AI</b> (RAG, Model Context Protocol), securing apps using <b class="text-white">DexGuard, Talsec, RASP development, JNI C/C++ native checks</b>, and orchestrating zero-touch CI/CD pipelines via <b class="text-white">Fastlane</b> and Bitrise.</p>
-        <p>Based in Chennai, Tamil Nadu 🇮🇳 · Currently serving notice period (Last Working Day: <b>July 16, 2026</b>).</p>
+      <div class="md:col-span-2 space-y-6 text-gray-600 leading-relaxed text-lg">
+        <p>I am a Principal Mobile Engineering Lead with <b class="text-gray-900">4+ years</b> of extensive experience defining architecture and scaling enterprise mobile applications across the entire development spectrum. I lead cross-functional engineering squads executing <b class="text-gray-900">Native-First (SwiftUI, Jetpack Compose)</b>, <b class="text-gray-900">Cross-Platform (React Native, Flutter, Kotlin Multiplatform)</b>, and <b class="text-gray-900">Hybrid (Capacitor, Cordova)</b> developments.</p>
+        <p>My work bridges complex mobile front-ends with advanced AI: deploying context-aware LLMs via <b class="text-gray-900">Amazon Bedrock & Google Cloud Vertex AI</b> (RAG, Model Context Protocol), securing apps using <b class="text-gray-900">DexGuard, Talsec, RASP development, JNI C/C++ native checks</b>, and orchestrating zero-touch CI/CD pipelines via <b class="text-gray-900">Fastlane</b> and Bitrise.</p>
+        <p class="font-medium text-gray-800">Based in Chennai, India · Currently serving notice period (Last Working Day: July 16, 2026).</p>
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- SKILLS -->
-  <section id="skills" class="py-24">
+  <section id="skills" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="text-xs mono text-orange-400 uppercase tracking-widest">Core competencies</div>
-      <h2 class="mt-3 text-3xl font-bold text-white mb-12">What I do</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div class="card rounded-2xl p-6 transition-colors">
-          <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 inline-flex items-center justify-center mb-4"><i data-lucide="smartphone" class="w-5 h-5"></i></div>
-          <h3 class="font-semibold text-white">Native-First Development</h3>
-          <p class="text-sm text-slate-400 mt-2">Swift, SwiftUI, Kotlin, Jetpack Compose, Objective-C, Android NDK & JNI (C/C++), native bridging modules.</p>
+      <div class="text-sm font-bold text-[#1a73e8] uppercase tracking-wider">Core competencies</div>
+      <h2 class="mt-3 text-3xl font-bold text-gray-900 mb-12">What I do</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="md-card p-6">
+          <div class="w-12 h-12 rounded-full bg-[#e8f0fe] text-[#1a73e8] flex items-center justify-center mb-5"><i data-lucide="smartphone" class="w-6 h-6"></i></div>
+          <h3 class="text-lg font-bold text-gray-900">Native-First Development</h3>
+          <p class="text-sm text-gray-600 mt-3 leading-relaxed">Swift, SwiftUI, Kotlin, Jetpack Compose, Objective-C, Android NDK & JNI (C/C++), native bridging modules.</p>
         </div>
-        <div class="card rounded-2xl p-6 transition-colors">
-          <div class="w-10 h-10 rounded-lg bg-emerald-500/15 text-emerald-400 inline-flex items-center justify-center mb-4"><i data-lucide="layers" class="w-5 h-5"></i></div>
-          <h3 class="font-semibold text-white">Cross-Platform & Hybrid</h3>
-          <p class="text-sm text-slate-400 mt-2">React Native, Flutter, Kotlin Multiplatform (KMP), Cordova, Capacitor, Ionic, custom plugin architecture.</p>
+        
+        <div class="md-card p-6">
+          <div class="w-12 h-12 rounded-full bg-[#e6f4ea] text-[#137333] flex items-center justify-center mb-5"><i data-lucide="layers" class="w-6 h-6"></i></div>
+          <h3 class="text-lg font-bold text-gray-900">Cross-Platform & Hybrid</h3>
+          <p class="text-sm text-gray-600 mt-3 leading-relaxed">React Native, Flutter, Kotlin Multiplatform (KMP), Cordova, Capacitor, Ionic, custom plugin architecture.</p>
         </div>
-        <div class="card rounded-2xl p-6 transition-colors">
-          <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-400 inline-flex items-center justify-center mb-4"><i data-lucide="cpu" class="w-5 h-5"></i></div>
-          <h3 class="font-semibold text-white">Generative AI & LLMs</h3>
-          <p class="text-sm text-slate-400 mt-2">Purple Fabric, Claude AI, Amazon Bedrock, Google Cloud Vertex AI, RAG, MCP Client Integration, Prompt Caching.</p>
+        
+        <div class="md-card p-6">
+          <div class="w-12 h-12 rounded-full bg-[#fce8e6] text-[#c5221f] flex items-center justify-center mb-5"><i data-lucide="cpu" class="w-6 h-6"></i></div>
+          <h3 class="text-lg font-bold text-gray-900">Generative AI & LLMs</h3>
+          <p class="text-sm text-gray-600 mt-3 leading-relaxed">Purple Fabric, Claude AI, Amazon Bedrock, Google Cloud Vertex AI, RAG, MCP Client Integration, Prompt Caching.</p>
         </div>
-        <div class="card rounded-2xl p-6 transition-colors">
-          <div class="w-10 h-10 rounded-lg bg-red-500/15 text-red-400 inline-flex items-center justify-center mb-4"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
-          <h3 class="font-semibold text-white">Security & App Hardening</h3>
-          <p class="text-sm text-slate-400 mt-2">DexGuard, AppProtectt, Talsec, RASP development, JS obfuscation, Google Play Integrity, signature checks, VAPT.</p>
+        
+        <div class="md-card p-6">
+          <div class="w-12 h-12 rounded-full bg-[#fef7e0] text-[#b06000] flex items-center justify-center mb-5"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+          <h3 class="text-lg font-bold text-gray-900">Security & App Hardening</h3>
+          <p class="text-sm text-gray-600 mt-3 leading-relaxed">DexGuard, AppProtectt, Talsec, RASP development, JS obfuscation, Google Play Integrity, signature checks, VAPT.</p>
         </div>
-        <div class="card rounded-2xl p-6 transition-colors">
-          <div class="w-10 h-10 rounded-lg bg-purple-500/15 text-purple-400 inline-flex items-center justify-center mb-4"><i data-lucide="terminal" class="w-5 h-5"></i></div>
-          <h3 class="font-semibold text-white">DevOps & Distribution</h3>
-          <p class="text-sm text-slate-400 mt-2">Fastlane, Bitrise, GitHub Actions, Jenkins, App Store Connect (TestFlight), Google Play Console, Managed Publishing.</p>
+        
+        <div class="md-card p-6">
+          <div class="w-12 h-12 rounded-full bg-[#f3e8fd] text-[#7b1fa2] flex items-center justify-center mb-5"><i data-lucide="terminal" class="w-6 h-6"></i></div>
+          <h3 class="text-lg font-bold text-gray-900">DevOps & Distribution</h3>
+          <p class="text-sm text-gray-600 mt-3 leading-relaxed">Fastlane, Bitrise, GitHub Actions, Jenkins, App Store Connect (TestFlight), Google Play Console, Managed Publishing.</p>
         </div>
-        <div class="card rounded-2xl p-6 transition-colors">
-          <div class="w-10 h-10 rounded-lg bg-amber-500/15 text-amber-400 inline-flex items-center justify-center mb-4"><i data-lucide="git-branch" class="w-5 h-5"></i></div>
-          <h3 class="font-semibold text-white">Architecture & State</h3>
-          <p class="text-sm text-slate-400 mt-2">MVVM, Clean Architecture, Micro-frontends, Redux (React), BLoC/Riverpod (Flutter), Firebase Ecosystem.</p>
+        
+        <div class="md-card p-6">
+          <div class="w-12 h-12 rounded-full bg-[#e8eaed] text-[#3c4043] flex items-center justify-center mb-5"><i data-lucide="git-branch" class="w-6 h-6"></i></div>
+          <h3 class="text-lg font-bold text-gray-900">Architecture & State</h3>
+          <p class="text-sm text-gray-600 mt-3 leading-relaxed">MVVM, Clean Architecture, Micro-frontends, Redux (React), BLoC/Riverpod (Flutter), Firebase Ecosystem.</p>
         </div>
+
       </div>
 
-      <div class="mt-10 flex flex-wrap gap-2">
-        <span class="chip text-xs px-3 py-1 rounded-full mono">SwiftUI</span>
-        <span class="chip text-xs px-3 py-1 rounded-full mono">Jetpack Compose</span>
-        <span class="chip text-xs px-3 py-1 rounded-full mono">React Native</span>
-        <span class="chip text-xs px-3 py-1 rounded-full mono">Kotlin Multiplatform (KMP)</span>
-        <span class="chip text-xs px-3 py-1 rounded-full mono">Flutter</span>
-        <span class="chip text-xs px-3 py-1 rounded-full mono">Cordova & Capacitor</span>
-        <span class="chip text-xs px-3 py-1 rounded-full mono">Redux & BLoC</span>
-        <span class="chip text-xs px-3 py-1 rounded-full mono">Amazon Bedrock</span>
-        <span class="chip text-xs px-3 py-1 rounded-full mono">Google Vertex AI</span>
-        <span class="chip text-xs px-3 py-1 rounded-full mono">DexGuard / Talsec</span>
-        <span class="chip text-xs px-3 py-1 rounded-full mono">Android NDK & JNI</span>
-        <span class="chip text-xs px-3 py-1 rounded-full mono">Fastlane</span>
-        <span class="chip text-xs px-3 py-1 rounded-full mono">Bitrise</span>
+      <div class="mt-12 flex flex-wrap gap-2">
+        <span class="md-chip text-sm px-4 py-1.5 mono">SwiftUI</span>
+        <span class="md-chip text-sm px-4 py-1.5 mono">Jetpack Compose</span>
+        <span class="md-chip text-sm px-4 py-1.5 mono">React Native</span>
+        <span class="md-chip text-sm px-4 py-1.5 mono">Kotlin Multiplatform</span>
+        <span class="md-chip text-sm px-4 py-1.5 mono">Flutter</span>
+        <span class="md-chip text-sm px-4 py-1.5 mono">Capacitor</span>
+        <span class="md-chip text-sm px-4 py-1.5 mono">Redux & BLoC</span>
+        <span class="md-chip text-sm px-4 py-1.5 mono">Amazon Bedrock</span>
+        <span class="md-chip text-sm px-4 py-1.5 mono">Google Vertex AI</span>
+        <span class="md-chip text-sm px-4 py-1.5 mono">DexGuard / Talsec</span>
+        <span class="md-chip text-sm px-4 py-1.5 mono">Android NDK / JNI</span>
+        <span class="md-chip text-sm px-4 py-1.5 mono">Fastlane</span>
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- EXPERIENCE -->
   <section id="experience" class="py-24">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="text-xs mono text-orange-400 uppercase tracking-widest">Experience</div>
-      <h2 class="mt-3 text-3xl font-bold text-white mb-12">Career timeline</h2>
-      <ol class="relative border-l border-white/10 ml-3 space-y-10">
-        <li class="pl-6">
-          <span class="absolute -left-2 mt-1.5 w-4 h-4 rounded-full bg-orange-500 ring-4 ring-[#0c0a09]"></span>
-          <div class="text-xs mono text-slate-400">Feb 2024 — Present · Chennai, India 🇮🇳</div>
-          <h3 class="text-xl font-semibold text-white mt-1">Consultant (Principal Mobile Tech Lead)</h3>
-          <div class="text-slate-400 text-sm">Intellect Design Arena Ltd</div>
-          <ul class="mt-3 text-slate-300 list-disc pl-5 space-y-2 text-sm">
+      <div class="text-sm font-bold text-[#1a73e8] uppercase tracking-wider">Experience</div>
+      <h2 class="mt-3 text-3xl font-bold text-gray-900 mb-14">Career timeline</h2>
+      
+      <ol class="relative border-l-2 border-gray-200 ml-4 space-y-12">
+        <li class="pl-8 relative">
+          <span class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-[#1a73e8] ring-4 ring-[#f8f9fa]"></span>
+          <div class="text-sm font-medium text-[#1a73e8] mb-1">Feb 2024 — Present · Chennai, India</div>
+          <h3 class="text-xl font-bold text-gray-900">Consultant (Principal Mobile Tech Lead)</h3>
+          <div class="text-gray-600 font-medium mb-3">Intellect Design Arena Ltd</div>
+          <ul class="text-gray-700 list-disc pl-5 space-y-2 text-[15px] leading-relaxed">
             <li><b>Omni-Channel Mobile Architecture:</b> Spearheaded system design and technical roadmaps for flagship financial applications. Architected modernization pathways, guiding engineering squads in migrating legacy hybrid applications into high-performance <b>React Native</b> and <b>Kotlin Multiplatform (KMP)</b> architectures.</li>
             <li><b>Native & UI Innovation:</b> Engineered complex native bridging modules utilizing <b>SwiftUI</b> (iOS) and <b>Jetpack Compose</b> (Android) to deliver buttery-smooth, native-first user experiences within cross-platform containers.</li>
             <li><b>AI Integration & Smart Features:</b> Led the integration of AI models via Purple Fabric, Amazon Bedrock, and Google Cloud Vertex AI directly into mobile apps, powering intelligent multi-turn financial assistants. Implemented MCP clients for secure, real-time tool use and context retrieval (RAG).</li>
@@ -219,34 +254,37 @@
             <li><b>DevOps & Automated Delivery:</b> Architected and automated zero-touch mobile deployment pipelines utilizing <b>Fastlane</b> and Bitrise for 6+ concurrent enterprise clients. Managed strict semantic app versioning, app signing, and automated TestFlight/Play Console publishing.</li>
           </ul>
         </li>
-        <li class="pl-6">
-          <span class="absolute -left-2 mt-1.5 w-4 h-4 rounded-full bg-orange-500/70 ring-4 ring-[#0c0a09]"></span>
-          <div class="text-xs mono text-slate-400">Jun 2022 — Jul 2023 · Chennai, India 🇮🇳</div>
-          <h3 class="text-xl font-semibold text-white mt-1">Associate Consultant (Product Engineer - Mobility)</h3>
-          <div class="text-slate-400 text-sm">Intellect Design Arena Ltd · Hybrid Banking Apps</div>
-          <ul class="mt-3 text-slate-300 list-disc pl-5 space-y-2 text-sm">
+        
+        <li class="pl-8 relative">
+          <span class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-gray-300 ring-4 ring-[#f8f9fa]"></span>
+          <div class="text-sm font-medium text-gray-500 mb-1">Jun 2022 — Jul 2023 · Chennai, India</div>
+          <h3 class="text-xl font-bold text-gray-900">Associate Consultant (Product Engineer - Mobility)</h3>
+          <div class="text-gray-600 font-medium mb-3">Intellect Design Arena Ltd</div>
+          <ul class="text-gray-700 list-disc pl-5 space-y-2 text-[15px] leading-relaxed">
             <li><b>Hybrid & JS Optimization:</b> Leveraged a deep understanding of Vanilla JavaScript (ES6+), React, and Angular to optimize rendering times and resolve complex state management issues on low-memory mobile devices.</li>
             <li><b>Cross-Browser & UI:</b> Engineered highly responsive and adaptive web designs for desktop, tablet, and mobile platforms utilizing HTML5 and CSS3.</li>
             <li><b>Task Automation:</b> Streamlined mobile build processes by integrating task automators (Gulp/Grunt) into the CI/CD pipeline, reducing manual build times for both testing and production.</li>
           </ul>
         </li>
-        <li class="pl-6">
-          <span class="absolute -left-2 mt-1.5 w-4 h-4 rounded-full bg-orange-500/50 ring-4 ring-[#0c0a09]"></span>
-          <div class="text-xs mono text-slate-400">Aug 2021 — Mar 2022 · Chennai, India 🇮🇳</div>
-          <h3 class="text-xl font-semibold text-white mt-1">Full Stack Developer</h3>
-          <div class="text-slate-400 text-sm">Otomate Technologies · Automation Platforms</div>
-          <ul class="mt-3 text-slate-300 list-disc pl-5 space-y-2 text-sm">
+        
+        <li class="pl-8 relative">
+          <span class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-gray-300 ring-4 ring-[#f8f9fa]"></span>
+          <div class="text-sm font-medium text-gray-500 mb-1">Aug 2021 — Mar 2022 · Chennai, India</div>
+          <h3 class="text-xl font-bold text-gray-900">Full Stack Developer</h3>
+          <div class="text-gray-600 font-medium mb-3">Otomate Technologies</div>
+          <ul class="text-gray-700 list-disc pl-5 space-y-2 text-[15px] leading-relaxed">
             <li>Built dynamic, client-facing front-end interfaces using Angular, seamlessly connecting them to backend Spring Boot REST APIs.</li>
             <li>Established system monitoring tools and managed cloud infrastructure (AWS) to ensure high-availability services for hybrid mobile clients.</li>
             <li>Dockerized backend web services and maintained source control workflows utilizing Git and Jenkins.</li>
           </ul>
         </li>
-        <li class="pl-6">
-          <span class="absolute -left-2 mt-1.5 w-4 h-4 rounded-full bg-orange-500/30 ring-4 ring-[#0c0a09]"></span>
-          <div class="text-xs mono text-slate-400">Dec 2018 — May 2019 · Nagercoil, India 🇮🇳</div>
-          <h3 class="text-xl font-semibold text-white mt-1">Web Development Intern</h3>
-          <div class="text-slate-400 text-sm">CKS Solutions</div>
-          <ul class="mt-3 text-slate-300 list-disc pl-5 space-y-1 text-sm">
+        
+        <li class="pl-8 relative">
+          <span class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-gray-300 ring-4 ring-[#f8f9fa]"></span>
+          <div class="text-sm font-medium text-gray-500 mb-1">Dec 2018 — May 2019 · Nagercoil, India</div>
+          <h3 class="text-xl font-bold text-gray-900">Web Development Intern</h3>
+          <div class="text-gray-600 font-medium mb-3">CKS Solutions</div>
+          <ul class="text-gray-700 list-disc pl-5 space-y-1 text-[15px] leading-relaxed">
             <li>Developed modular web components and optimized database queries for web analytics workloads during a 6-month residency.</li>
           </ul>
         </li>
@@ -256,148 +294,159 @@
 
   <div class="divider"></div>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="py-24">
+  <section id="projects" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="text-xs mono text-orange-400 uppercase tracking-widest">Selected work</div>
-      <h2 class="mt-3 text-3xl font-bold text-white mb-12">Projects & impact</h2>
+      <div class="text-sm font-bold text-[#1a73e8] uppercase tracking-wider">Selected work</div>
+      <h2 class="mt-3 text-3xl font-bold text-gray-900 mb-12">Projects & impact</h2>
 
-      <div class="grid md:grid-cols-2 gap-5">
-        <div class="card rounded-2xl p-6">
-          <div class="flex items-center justify-between">
-            <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 inline-flex items-center justify-center"><i data-lucide="package" class="w-5 h-5"></i></div>
-            <span class="text-xs mono text-slate-500">Corporate Banking cms</span>
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <div class="md-card p-8 flex flex-col h-full">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-12 h-12 rounded-full bg-[#e8f0fe] text-[#1a73e8] flex items-center justify-center"><i data-lucide="building-2" class="w-6 h-6"></i></div>
+            <span class="text-sm font-medium text-gray-500">Corporate Banking CMS</span>
           </div>
-          <h3 class="mt-4 text-lg font-semibold text-white">Corporate Banking Mobile Platform (CMS)</h3>
-          <p class="text-sm text-slate-400 mt-2">An enterprise-grade banking suite. Evolved the architecture from legacy Cordova to a modern cross-platform stack utilizing Capacitor and React Native. Built custom native plugins using Swift and Kotlin to handle low-level device communication. Integrated a highly responsive conversational AI interface via Purple Fabric, and managed the end-to-end automated release pipeline (via Fastlane) for 6+ distinct client deployments.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">React Native & KMP</span>
-            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">Capacitor</span>
-            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">Generative AI</span>
-            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">Fastlane</span>
+          <h3 class="text-xl font-bold text-gray-900">Corporate Banking Mobile Platform</h3>
+          <p class="text-gray-600 mt-4 leading-relaxed flex-grow">An enterprise-grade banking suite. Evolved the architecture from legacy Cordova to a modern cross-platform stack utilizing Capacitor and React Native. Built custom native plugins using Swift and Kotlin to handle low-level device communication. Integrated a highly responsive conversational AI interface via Purple Fabric, and managed the end-to-end automated release pipeline (via Fastlane) for 6+ distinct client deployments.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="md-chip text-xs px-3 py-1 mono">React Native</span>
+            <span class="md-chip text-xs px-3 py-1 mono">Capacitor</span>
+            <span class="md-chip text-xs px-3 py-1 mono">GenAI</span>
+            <span class="md-chip text-xs px-3 py-1 mono">Fastlane</span>
           </div>
         </div>
 
-        <a href="https://github.com/techdhamo/aran" target="_blank" rel="noopener" class="card rounded-2xl p-6 block">
-          <div class="flex items-center justify-between">
-            <div class="w-10 h-10 rounded-lg bg-emerald-500/15 text-emerald-400 inline-flex items-center justify-center"><i data-lucide="shield" class="w-5 h-5"></i></div>
-            <span class="text-xs mono text-slate-500">github.com/techdhamo/aran</span>
+        <a href="https://github.com/techdhamo/aran" target="_blank" rel="noopener" class="md-card p-8 flex flex-col h-full block group">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-12 h-12 rounded-full bg-[#fce8e6] text-[#c5221f] flex items-center justify-center group-hover:scale-110 transition-transform"><i data-lucide="shield" class="w-6 h-6"></i></div>
+            <span class="text-sm font-medium text-gray-500 group-hover:text-[#1a73e8] transition-colors flex items-center gap-1">View Repo <i data-lucide="arrow-up-right" class="w-4 h-4"></i></span>
           </div>
-          <h3 class="mt-4 text-lg font-semibold text-white">Aran RASP — Mobile Security SDK</h3>
-          <p class="text-sm text-slate-400 mt-2">A cybersecurity SDK implementing Mobile RASP. Handled deep vulnerability detection and app hardening. Developed low-level security checks using Android NDK and JNI (C/C++) to fortify hybrid and native environments against reverse engineering, malware, and network spoofing.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">Mobile RASP</span>
-            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">Android NDK / JNI</span>
-            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">DexGuard</span>
-            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">App Hardening</span>
-          </div>
-        </a>
-
-        <a href="https://github.com/techdhamo/DS3" target="_blank" rel="noopener" class="card rounded-2xl p-6 block">
-          <div class="flex items-center justify-between">
-            <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-400 inline-flex items-center justify-center"><i data-lucide="shopping-cart" class="w-5 h-5"></i></div>
-            <span class="text-xs mono text-slate-500">github.com/techdhamo/DS3</span>
-          </div>
-          <h3 class="mt-4 text-lg font-semibold text-white">DS3 — Commerce & Experience Platform</h3>
-          <p class="text-sm text-slate-400 mt-2">Next.js App Router e-commerce with Prisma/Postgres, NextAuth, Razorpay, inventory sync cron, and gamified "Dungeon Raid" engagement APIs. Fully containerized.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">Next.js</span>
-            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">Prisma</span>
-            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">NextAuth</span>
-            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">Razorpay</span>
+          <h3 class="text-xl font-bold text-gray-900 group-hover:text-[#1a73e8] transition-colors">Aran RASP — Mobile Security SDK</h3>
+          <p class="text-gray-600 mt-4 leading-relaxed flex-grow">A cybersecurity SDK implementing Mobile RASP. Handled deep vulnerability detection and app hardening. Developed low-level security checks using Android NDK and JNI (C/C++) to fortify hybrid and native environments against reverse engineering, malware, and network spoofing.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="md-chip text-xs px-3 py-1 mono">Mobile RASP</span>
+            <span class="md-chip text-xs px-3 py-1 mono">Android NDK</span>
+            <span class="md-chip text-xs px-3 py-1 mono">JNI (C/C++)</span>
+            <span class="md-chip text-xs px-3 py-1 mono">App Hardening</span>
           </div>
         </a>
 
-        <a href="https://dhamo.in" target="_blank" rel="noopener" class="card rounded-2xl p-6 block">
-          <div class="flex items-center justify-between">
-            <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 inline-flex items-center justify-center"><i data-lucide="globe" class="w-5 h-5"></i></div>
-            <span class="text-xs mono text-slate-500">dhamo.in</span>
+        <a href="https://github.com/techdhamo/DS3" target="_blank" rel="noopener" class="md-card p-8 flex flex-col h-full block group">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-12 h-12 rounded-full bg-[#e6f4ea] text-[#137333] flex items-center justify-center group-hover:scale-110 transition-transform"><i data-lucide="shopping-cart" class="w-6 h-6"></i></div>
+            <span class="text-sm font-medium text-gray-500 group-hover:text-[#1a73e8] transition-colors flex items-center gap-1">View Repo <i data-lucide="arrow-up-right" class="w-4 h-4"></i></span>
           </div>
-          <h3 class="mt-4 text-lg font-semibold text-white">dhamo.in — GenAI-powered Portfolio</h3>
-          <p class="text-sm text-slate-400 mt-2">Portfolio showcasing expertise in Mobile Architecture, AppSec, and SaaS, powered by GenAI. Cloudflare-hosted, performance-first.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">GenAI</span>
-            <span class="chip text-xs px-2.5 py-0.5 rounded-full mono">Cloudflare</span>
+          <h3 class="text-xl font-bold text-gray-900 group-hover:text-[#1a73e8] transition-colors">DS3 — Commerce & Experience Platform</h3>
+          <p class="text-gray-600 mt-4 leading-relaxed flex-grow">Next.js App Router e-commerce with Prisma/Postgres, NextAuth, Razorpay, inventory sync cron, and gamified "Dungeon Raid" engagement APIs. Fully containerized.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="md-chip text-xs px-3 py-1 mono">Next.js</span>
+            <span class="md-chip text-xs px-3 py-1 mono">Prisma</span>
+            <span class="md-chip text-xs px-3 py-1 mono">NextAuth</span>
+            <span class="md-chip text-xs px-3 py-1 mono">Razorpay</span>
           </div>
         </a>
+
+        <a href="https://dhamo.in" target="_blank" rel="noopener" class="md-card p-8 flex flex-col h-full block group">
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-12 h-12 rounded-full bg-[#fef7e0] text-[#b06000] flex items-center justify-center group-hover:scale-110 transition-transform"><i data-lucide="globe" class="w-6 h-6"></i></div>
+            <span class="text-sm font-medium text-gray-500 group-hover:text-[#1a73e8] transition-colors flex items-center gap-1">Visit Site <i data-lucide="arrow-up-right" class="w-4 h-4"></i></span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 group-hover:text-[#1a73e8] transition-colors">dhamo.in — GenAI-powered Portfolio</h3>
+          <p class="text-gray-600 mt-4 leading-relaxed flex-grow">Portfolio showcasing expertise in Mobile Architecture, AppSec, and SaaS, powered by GenAI. Cloudflare-hosted, performance-first.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="md-chip text-xs px-3 py-1 mono">GenAI</span>
+            <span class="md-chip text-xs px-3 py-1 mono">Cloudflare</span>
+          </div>
+        </a>
+
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- AWARDS -->
   <section id="awards" class="py-24">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="text-xs mono text-orange-400 uppercase tracking-widest">Recognition</div>
-      <h2 class="mt-3 text-3xl font-bold text-white mb-8">Awards, Certifications & Education</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div class="card rounded-2xl p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-amber-500/15 text-amber-400 inline-flex items-center justify-center"><i data-lucide="award" class="w-5 h-5"></i></div>
-            <h3 class="font-semibold text-white">Awards</h3>
+      <div class="text-sm font-bold text-[#1a73e8] uppercase tracking-wider">Recognition</div>
+      <h2 class="mt-3 text-3xl font-bold text-gray-900 mb-10">Awards, Certifications & Education</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="md-card p-6">
+          <div class="flex items-center gap-4 mb-5 border-b border-gray-100 pb-4">
+            <div class="w-10 h-10 rounded-full bg-[#fef7e0] text-[#b06000] flex items-center justify-center"><i data-lucide="award" class="w-5 h-5"></i></div>
+            <h3 class="text-lg font-bold text-gray-900">Awards</h3>
           </div>
-          <ul class="text-sm text-slate-300 space-y-2">
-            <li>• <b>SPOTLIGHT (GEM) Award</b> (Apr 2025) — Cleared critical iOS/Android build failures for production launch.</li>
-            <li>• <b>SPOT Award</b> (Nov 2024) — Client appreciation for exceptional debugging, AppSec mitigation, and UI resolution.</li>
-            <li>• Kalam Award (2019)</li>
+          <ul class="text-[15px] text-gray-700 space-y-3">
+            <li><b class="text-gray-900">SPOTLIGHT (GEM) Award</b> (Apr 2025) — Cleared critical iOS/Android build failures for production launch.</li>
+            <li><b class="text-gray-900">SPOT Award</b> (Nov 2024) — Client appreciation for exceptional debugging, AppSec mitigation, and UI resolution.</li>
+            <li><b class="text-gray-900">Kalam Award</b></li>
           </ul>
         </div>
-        <div class="card rounded-2xl p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-emerald-500/15 text-emerald-400 inline-flex items-center justify-center"><i data-lucide="graduation-cap" class="w-5 h-5"></i></div>
-            <h3 class="font-semibold text-white">Certifications & Training</h3>
+        
+        <div class="md-card p-6">
+          <div class="flex items-center gap-4 mb-5 border-b border-gray-100 pb-4">
+            <div class="w-10 h-10 rounded-full bg-[#e6f4ea] text-[#137333] flex items-center justify-center"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
+            <h3 class="text-lg font-bold text-gray-900">Certifications</h3>
           </div>
-          <ul class="text-sm text-slate-300 space-y-2">
-            <li>• Claude with Amazon Bedrock (Anthropic)</li>
-            <li>• Claude with Google Cloud Vertex AI (Anthropic)</li>
+          <ul class="text-[15px] text-gray-700 space-y-3">
+            <li>• Claude with Amazon Bedrock <span class="text-gray-500 block text-xs mt-0.5">Anthropic Academy</span></li>
+            <li>• Claude with Google Cloud Vertex AI <span class="text-gray-500 block text-xs mt-0.5">Anthropic Academy</span></li>
             <li>• Mobile AppSec, Hybrid Mobile & AI Integrations</li>
           </ul>
         </div>
-        <div class="card rounded-2xl p-6 md:col-span-2 lg:col-span-1">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-400 inline-flex items-center justify-center"><i data-lucide="book-open" class="w-5 h-5"></i></div>
-            <h3 class="font-semibold text-white">Education</h3>
+        
+        <div class="md-card p-6 md:col-span-2 lg:col-span-1">
+          <div class="flex items-center gap-4 mb-5 border-b border-gray-100 pb-4">
+            <div class="w-10 h-10 rounded-full bg-[#e8f0fe] text-[#1a73e8] flex items-center justify-center"><i data-lucide="graduation-cap" class="w-5 h-5"></i></div>
+            <h3 class="text-lg font-bold text-gray-900">Education</h3>
           </div>
-          <ul class="text-sm text-slate-300 space-y-2">
-            <li>• <b>B.E. (Computer Science)</b><br/><span class="text-slate-400 text-xs">Stella Mary's College of Engg. (2018-2021) — First Class</span></li>
-            <li>• <b>Diploma (Computer Science)</b><br/><span class="text-slate-400 text-xs">Surya Polytechnic College, Nagercoil (2011-2014) — First Class</span></li>
+          <ul class="text-[15px] text-gray-700 space-y-4">
+            <li>
+              <b class="text-gray-900">B.E. (Computer Science)</b>
+              <span class="text-gray-600 block text-sm mt-1">Stella Mary's College of Engineering (2018-2021)<br/>First Class</span>
+            </li>
+            <li>
+              <b class="text-gray-900">Diploma (Computer Science)</b>
+              <span class="text-gray-600 block text-sm mt-1">Surya Polytechnic College (2011-2014)<br/>First Class</span>
+            </li>
           </ul>
         </div>
+
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
-  <!-- CONTACT -->
-  <section id="contact" class="py-24">
+  <section id="contact" class="py-24 bg-white border-t border-gray-200">
     <div class="max-w-6xl mx-auto px-6 text-center">
-      <div class="text-xs mono text-orange-400 uppercase tracking-widest">Contact</div>
-      <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-white">Let's build something resilient.</h2>
-      <p class="mt-4 text-slate-400 max-w-xl mx-auto">Available for Principal / Staff Engineering, Tech Lead, and Consulting engagements — specializing in Omni-Channel Mobile Architecture, AppSec Hardening, and Generative AI Integrations.</p>
-      <div class="mt-8 flex flex-wrap justify-center gap-3">
-        <a href="mailto:dhamodaran@outlook.in" class="px-5 py-2.5 rounded-md bg-orange-600 hover:bg-orange-500 text-white font-medium inline-flex items-center gap-2 glow transition-colors">
-          <i data-lucide="mail" class="w-4 h-4"></i> dhamodaran@outlook.in
+      <div class="w-16 h-16 rounded-full bg-[#e8f0fe] text-[#1a73e8] flex items-center justify-center mx-auto mb-6"><i data-lucide="messages-square" class="w-8 h-8"></i></div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Let's build something resilient.</h2>
+      <p class="mt-5 text-gray-600 text-lg max-w-2xl mx-auto">Available for Senior / Staff Engineering, Tech Lead, and Consulting engagements — specializing in Omni-Channel Mobile Architecture, AppSec Hardening, and Generative AI Integrations.</p>
+      
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+        <a href="mailto:dhamodaran@outlook.in" class="px-8 py-3.5 md-btn-filled inline-flex items-center gap-2">
+          <i data-lucide="mail" class="w-5 h-5"></i> dhamodaran@outlook.in
         </a>
-        <a href="https://www.linkedin.com/in/techdhamo" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-md border border-white/15 hover:border-orange-400/50 hover:text-orange-100 inline-flex items-center gap-2 transition-colors">
-          <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+        <a href="https://www.linkedin.com/in/techdhamo" target="_blank" rel="noopener" class="px-6 py-3.5 md-btn-outlined inline-flex items-center gap-2 border-gray-300 text-gray-700 hover:text-[#1a73e8] hover:border-[#1a73e8]">
+          <i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn
         </a>
-        <a href="https://github.com/techdhamo" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-md border border-white/15 hover:border-orange-400/50 hover:text-orange-100 inline-flex items-center gap-2 transition-colors">
-          <i data-lucide="github" class="w-4 h-4"></i> GitHub
+        <a href="https://github.com/techdhamo" target="_blank" rel="noopener" class="px-6 py-3.5 md-btn-outlined inline-flex items-center gap-2 border-gray-300 text-gray-700 hover:text-[#1a73e8] hover:border-[#1a73e8]">
+          <i data-lucide="github" class="w-5 h-5"></i> GitHub
         </a>
-        <a href="tel:+919655606681" class="px-5 py-2.5 rounded-md border border-white/15 hover:border-orange-400/50 hover:text-orange-100 inline-flex items-center gap-2 transition-colors">
-          <i data-lucide="phone" class="w-4 h-4"></i> +91 96556 06681
+        <a href="tel:+919655606681" class="px-6 py-3.5 md-btn-outlined inline-flex items-center gap-2 border-gray-300 text-gray-700 hover:text-[#1a73e8] hover:border-[#1a73e8]">
+          <i data-lucide="phone" class="w-5 h-5"></i> +91 96556 06681
         </a>
       </div>
     </div>
   </section>
 
-  <footer class="border-t border-white/5 py-10 text-center text-sm text-slate-500">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-center items-center gap-2">
+  <footer class="bg-[#f8f9fa] border-t border-gray-200 py-10 text-center text-sm text-gray-500 font-medium">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-center items-center gap-3">
       <span>© <span id="yr"></span> Dhamodaran Narayana Perumal</span>
-      <span class="hidden sm:inline">·</span>
-      <span class="inline-flex items-center gap-1">Chennai, India <img src="https://flagcdn.com/w20/in.png" alt="India Flag" class="w-4 h-auto rounded-sm"></span>
+      <span class="hidden sm:inline text-gray-300">|</span>
+      <span class="inline-flex items-center gap-2">
+        Chennai, India 
+        <img src="https://flagcdn.com/w20/in.png" alt="India Flag" class="w-4 h-auto rounded-sm border border-gray-200 shadow-sm">
+      </span>
     </div>
   </footer>
 
