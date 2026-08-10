@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — TvRemote</title>
+    <style>
+        :root {
+            --bg: #0D0D1A;
+            --card: #1A1A2E;
+            --blue: #4F8EF7;
+            --text: #E0E0E8;
+            --muted: #8888AA;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 24px;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        h1 { font-size: 2rem; color: #fff; margin-bottom: 8px; }
+        h2 { font-size: 1.3rem; color: var(--blue); margin-top: 32px; margin-bottom: 12px; }
+        p, li { margin-bottom: 12px; color: var(--text); }
+        ul { padding-left: 24px; }
+        a { color: var(--blue); text-decoration: none; }
+        .date { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
+        .card { background: var(--card); border-radius: 12px; padding: 20px; margin: 16px 0; }
+    </style>
+</head>
+<body>
+    <h1>Privacy Policy</h1>
+    <p class="date">Last updated: August 9, 2026</p>
+    <p>TvRemote ("we", "our", "the app") is published by Dhamo. This policy explains how TvRemote handles your data.</p>
+
+    <h2>1. Data We Collect</h2>
+    <div class="card">
+        <p><strong>Local-only data (never leaves your phone):</strong></p>
+        <ul>
+            <li>TV names, IP addresses, and MAC addresses discovered on your local WiFi network</li>
+            <li>Pairing certificates stored in your device's app-private storage</li>
+            <li>User preferences (theme, last device, onboarding state)</li>
+        </ul>
+        <p><strong>Analytics data (sent to Google):</strong></p>
+        <ul>
+            <li>App usage events (app opened, device connected, feature tapped) via <strong>Firebase Analytics</strong></li>
+            <li>Crash reports and stack traces via <strong>Firebase Crashlytics</strong></li>
+            <li>Advertising identifiers via <strong>Google AdMob</strong> (free tier only)</li>
+        </ul>
+    </div>
+
+    <h2>2. Data We Do NOT Collect</h2>
+    <ul>
+        <li>We do <strong>not</strong> collect your name, email, phone number, or any personal information</li>
+        <li>We do <strong>not</strong> access your contacts, photos, files, or location</li>
+        <li>We do <strong>not</strong> record or transmit any voice data — voice commands are processed locally on your device</li>
+        <li>We do <strong>not</strong> store any TV content or viewing history</li>
+    </ul>
+
+    <h2>3. How We Use Data</h2>
+    <ul>
+        <li><strong>Firebase Analytics:</strong> To understand which features are used, improve the app experience, and diagnose issues</li>
+        <li><strong>Crashlytics:</strong> To detect and fix crashes automatically</li>
+        <li><strong>AdMob:</strong> To display non-intrusive banner ads to free-tier users. Pro subscribers see no ads.</li>
+        <li><strong>Gemini AI:</strong> When you use the AI assistant (Pro feature), your text commands are sent to Google's Gemini API for processing. No conversation history is stored on our servers.</li>
+    </ul>
+
+    <h2>4. Data Sharing</h2>
+    <p>We do <strong>not</strong> sell, trade, or share your data with any third party, except:</p>
+    <ul>
+        <li><strong>Google (Firebase, AdMob, Gemini):</strong> As described above, for analytics, crash reporting, advertising, and AI processing. Google's privacy policies apply to their services.</li>
+        <li><strong>Google Play Billing:</strong> Subscription purchases are processed by Google Play. We do not have access to your payment information.</li>
+    </ul>
+
+    <h2>5. Data Storage & Security</h2>
+    <ul>
+        <li>All local data is stored in Android's app-private internal storage, encrypted at rest by the OS</li>
+        <li>TV communication uses TLS encryption (same protocol as Google's own remote app)</li>
+        <li>Pairing certificates are stored securely using Android Keystore-backed encryption</li>
+        <li>All network communication with Google services is encrypted in transit (HTTPS/TLS)</li>
+    </ul>
+
+    <h2>6. Data Retention</h2>
+    <ul>
+        <li>Local data is retained until you uninstall the app or clear app data</li>
+        <li>Firebase Analytics data is retained for 14 months (Google default)</li>
+        <li>Crashlytics data is retained for 90 days</li>
+    </ul>
+
+    <h2>7. Your Rights</h2>
+    <ul>
+        <li><strong>Delete your data:</strong> Clear app data or uninstall the app to remove all local data. For Firebase data, contact us at the email below.</li>
+        <li><strong>Opt out of ads:</strong> Upgrade to Pro to remove all advertising</li>
+        <li><strong>Opt out of analytics:</strong> Disable "Usage & diagnostics" in your Android device settings</li>
+    </ul>
+
+    <h2>8. Children's Privacy</h2>
+    <p>TvRemote is rated for all ages and does not knowingly collect data from children under 13. The app does not require account creation or personal information to function.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this policy from time to time. Changes will be posted on this page with an updated "Last updated" date.</p>
+
+    <h2>10. Contact</h2>
+    <p>For privacy questions or data deletion requests:</p>
+    <p>📧 <a href="mailto:privacy@dhamo.in">privacy@dhamo.in</a></p>
+    <p>🌐 <a href="https://dhamo.in/tvremote">dhamo.in/tvremote</a></p>
+</body>
+</html>
