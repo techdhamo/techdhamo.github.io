@@ -1,18 +1,21 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dhamodaran Narayana Perumal — Principal Mobile Engineering Lead</title>
-  <meta name="description" content="Principal Mobile Engineering Lead with 4+ years of experience specializing in Native, Cross-Platform, and Hybrid app development, security hardening, and AI integration." />
+  <meta name="description"
+    content="Principal Mobile Engineering Lead with 4+ years of experience specializing in Native, Cross-Platform, and Hybrid app development, security hardening, and AI integration." />
   <meta name="author" content="Dhamodaran Narayana Perumal" />
   <meta name="theme-color" content="#0f172a" />
   <meta property="og:title" content="Dhamodaran N. — Principal Mobile Engineering Lead" />
-  <meta property="og:description" content="4+ years defining architecture across Native (SwiftUI/Compose), Cross-Platform (React Native/KMP), AppSec, and AI integrations." />
+  <meta property="og:description"
+    content="4+ years defining architecture across Native (SwiftUI/Compose), Cross-Platform (React Native/KMP), AppSec, and AI integrations." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://techdhamo.github.io" />
   <link rel="canonical" href="https://techdhamo.github.io" />
-  
+
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
@@ -21,94 +24,145 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
   <style>
-    html { scroll-behavior: smooth; }
-    body { 
-        font-family: 'Inter', system-ui, sans-serif; 
-        background-color: #0f172a; /* Slate 900 */
-        color: #cbd5e1; /* Slate 300 */
-    } 
-    .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
-    
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #0f172a;
+      /* Slate 900 */
+      color: #cbd5e1;
+      /* Slate 300 */
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
     /* Subtle Code Grid Background */
     .bg-grid {
-        background-size: 40px 40px;
-        background-image: 
-            linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-        position: relative;
+      background-size: 40px 40px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      position: relative;
     }
-    
+
     /* Tech Cards */
-    .tech-card { 
-        background: rgba(30, 41, 59, 0.7); /* Slate 800 with opacity */
-        backdrop-filter: blur(8px);
-        border: 1px solid rgba(51, 65, 85, 0.8); /* Slate 700 */
-        border-radius: 12px; 
-        transition: all 0.2s ease-in-out; 
+    .tech-card {
+      background: rgba(30, 41, 59, 0.7);
+      /* Slate 800 with opacity */
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(51, 65, 85, 0.8);
+      /* Slate 700 */
+      border-radius: 12px;
+      transition: all 0.2s ease-in-out;
     }
-    .tech-card:hover { 
-        border-color: rgba(34, 211, 238, 0.4); /* Cyan 400 */
-        box-shadow: 0 0 15px rgba(34, 211, 238, 0.1);
-        transform: translateY(-2px);
+
+    .tech-card:hover {
+      border-color: rgba(34, 211, 238, 0.4);
+      /* Cyan 400 */
+      box-shadow: 0 0 15px rgba(34, 211, 238, 0.1);
+      transform: translateY(-2px);
     }
-    
+
     /* Code Chips */
-    .tech-chip { 
-        background: rgba(15, 23, 42, 0.8); /* Slate 900 */
-        color: #22d3ee; /* Cyan 400 */
-        border: 1px solid rgba(34, 211, 238, 0.2);
-        border-radius: 6px;
-        font-weight: 500;
+    .tech-chip {
+      background: rgba(15, 23, 42, 0.8);
+      /* Slate 900 */
+      color: #22d3ee;
+      /* Cyan 400 */
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 6px;
+      font-weight: 500;
     }
 
     /* Buttons */
     .tech-btn-filled {
-        background: #0ea5e9; /* Sky 500 */
-        color: #ffffff;
-        border-radius: 6px;
-        transition: all 0.2s;
-        font-weight: 600;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+      background: #0ea5e9;
+      /* Sky 500 */
+      color: #ffffff;
+      border-radius: 6px;
+      transition: all 0.2s;
+      font-weight: 600;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     }
+
     .tech-btn-filled:hover {
-        background: #0284c7; /* Sky 600 */
-        box-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
+      background: #0284c7;
+      /* Sky 600 */
+      box-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
     }
+
     .tech-btn-outlined {
-        background: rgba(30, 41, 59, 0.5);
-        color: #e2e8f0;
-        border: 1px solid #475569;
-        border-radius: 6px;
-        font-weight: 500;
-        transition: all 0.2s;
+      background: rgba(30, 41, 59, 0.5);
+      color: #e2e8f0;
+      border: 1px solid #475569;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.2s;
     }
+
     .tech-btn-outlined:hover {
-        background: rgba(51, 65, 85, 0.8);
-        border-color: #94a3b8;
-        color: #ffffff;
+      background: rgba(51, 65, 85, 0.8);
+      border-color: #94a3b8;
+      color: #ffffff;
     }
-    
-    .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(51, 65, 85, 1), transparent); }
-    a.nav-link { color: #94a3b8; font-weight: 500; }
-    a.nav-link:hover { color: #22d3ee; } 
-    
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(51, 65, 85, 1), transparent);
+    }
+
+    a.nav-link {
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    a.nav-link:hover {
+      color: #22d3ee;
+    }
+
     /* Radar/Pulse effect for availability */
-    .pulse-dot { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); animation: tech-pulse 2s infinite; }
-    @keyframes tech-pulse { 0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);} 70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);} 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);} }
-    
+    .pulse-dot {
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+      animation: tech-pulse 2s infinite;
+    }
+
+    @keyframes tech-pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+      }
+
+      70% {
+        box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+      }
+    }
+
     /* Glowing text accent */
-    .text-glow { text-shadow: 0 0 10px rgba(34, 211, 238, 0.5); }
+    .text-glow {
+      text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+    }
   </style>
 </head>
+
 <body class="antialiased selection:bg-cyan-900/50 selection:text-cyan-100 bg-grid">
 
   <header class="fixed inset-x-0 top-0 z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800 shadow-sm">
     <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="#top" class="flex items-center gap-2 font-bold tracking-tight text-xl text-white">
-        <span class="text-cyan-400 text-glow">Dhamo</span><span class="text-slate-500 font-normal mono hidden sm:inline">.in</span>
+        <span class="text-cyan-400 text-glow">Dhamo</span><span
+          class="text-slate-500 font-normal mono hidden sm:inline">.in</span>
       </a>
       <div class="hidden md:flex gap-8 text-sm mono">
         <a class="nav-link transition-colors" href="#about">About</a>
@@ -117,28 +171,37 @@
         <a class="nav-link transition-colors" href="#projects">Projects</a>
         <a class="nav-link transition-colors" href="#contact">Contact</a>
       </div>
-      <a href="/Dhamo_Resume.pdf" target="_blank" rel="noopener" class="text-sm px-4 py-2 tech-btn-outlined flex items-center gap-2 mono"> 
-        <i data-lucide="download" class="w-4 h-4 text-cyan-400"></i> Download 
+      <a href="/Dhamo_Resume.pdf" target="_blank" rel="noopener"
+        class="text-sm px-4 py-2 tech-btn-outlined flex items-center gap-2 mono">
+        <i data-lucide="download" class="w-4 h-4 text-cyan-400"></i> Download
       </a>
     </nav>
   </header>
 
   <section id="top" class="pt-36 pb-24 border-b border-slate-800 relative overflow-hidden">
     <!-- Subtle gradient orb in background -->
-    <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-900/20 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+    <div
+      class="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-900/20 rounded-full blur-[100px] -z-10 pointer-events-none">
+    </div>
 
     <div class="max-w-6xl mx-auto px-6">
-      <div class="inline-flex items-center gap-2 text-xs font-semibold text-emerald-400 px-4 py-2 rounded border border-emerald-900 bg-emerald-950/30 mb-8 mono">
+      <div
+        class="inline-flex items-center gap-2 text-xs font-semibold text-emerald-400 px-4 py-2 rounded border border-emerald-900 bg-emerald-950/30 mb-8 mono">
         <span class="w-2 h-2 bg-emerald-400 rounded-full pulse-dot"></span>
         STATUS: SERVING NOTICE PERIOD (LWD: JULY 16, 2026)
       </div>
       <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-white leading-[1.15]">
-        Hi, I'm <span class="text-cyan-400">Dhamodaran</span>.<br/>
-        I architect <span class="text-slate-200">omni-channel mobile</span><br/>
+        Hi, I'm <span class="text-cyan-400">Dhamodaran</span>.<br />
+        I architect <span class="text-slate-200">omni-channel mobile</span><br />
         ecosystems & <span class="text-slate-200">GenAI integrations</span>.
       </h1>
       <p class="mt-6 max-w-2xl text-slate-400 text-lg leading-relaxed">
-        Principal Mobile Engineering Lead with <b class="text-slate-200">4+ years</b> defining architecture across <b class="text-slate-200 mono text-sm">Native (SwiftUI/Compose)</b>, <b class="text-slate-200 mono text-sm">Cross-Platform (React Native/KMP)</b>, and <b class="text-slate-200 mono text-sm">Hybrid</b> systems. Expert at AppSec mitigation (RASP/JNI), automated delivery via <b class="text-slate-200">Fastlane</b>, and deploying intelligent features via <b class="text-slate-200">Amazon Bedrock & Vertex AI</b>.
+        Principal Mobile Engineering Lead with <b class="text-slate-200">4+ years</b> defining architecture across <b
+          class="text-slate-200 mono text-sm">Native (SwiftUI/Compose)</b>, <b
+          class="text-slate-200 mono text-sm">Cross-Platform (React Native/KMP)</b>, and <b
+          class="text-slate-200 mono text-sm">Hybrid</b> systems. Expert at AppSec mitigation (RASP/JNI), automated
+        delivery via <b class="text-slate-200">Fastlane</b>, and deploying intelligent features via <b
+          class="text-slate-200">Amazon Bedrock & Vertex AI</b>.
       </p>
       <div class="mt-10 flex flex-wrap gap-4 mono text-sm">
         <a href="#projects" class="px-6 py-3 tech-btn-filled inline-flex items-center gap-2">
@@ -147,8 +210,13 @@
         <a href="#contact" class="px-6 py-3 tech-btn-outlined inline-flex items-center gap-2">
           <i data-lucide="mail" class="w-4 h-4"></i> Contact
         </a>
-        <a href="https://github.com/techdhamo" target="_blank" rel="noopener" class="px-6 py-3 tech-btn-outlined inline-flex items-center gap-2">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg> GitHub
+        <a href="https://github.com/techdhamo" target="_blank" rel="noopener"
+          class="px-6 py-3 tech-btn-outlined inline-flex items-center gap-2">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              clip-rule="evenodd"></path>
+          </svg> GitHub
         </a>
       </div>
 
@@ -177,12 +245,21 @@
     <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12">
       <div>
         <div class="text-sm font-bold text-cyan-500 mono tracking-wider">ABOUT</div>
-        <h2 class="mt-3 text-3xl font-bold text-white leading-tight">Omni-Channel Architecture & AI Platform Leadership.</h2>
+        <h2 class="mt-3 text-3xl font-bold text-white leading-tight">Omni-Channel Architecture & AI Platform Leadership.
+        </h2>
       </div>
       <div class="md:col-span-2 space-y-6 text-slate-400 leading-relaxed text-lg">
-        <p>I am a Principal Mobile Engineering Lead with <b class="text-slate-200">4+ years</b> of extensive experience defining architecture and scaling enterprise mobile applications across the entire development spectrum. I lead cross-functional engineering squads executing <b class="text-slate-200">Native-First (SwiftUI, Jetpack Compose)</b>, <b class="text-slate-200">Cross-Platform (React Native, Flutter, Kotlin Multiplatform)</b>, and <b class="text-slate-200">Hybrid (Capacitor, Cordova)</b> developments.</p>
-        <p>My work bridges complex mobile front-ends with advanced AI: deploying context-aware LLMs via <b class="text-slate-200">Amazon Bedrock & Google Cloud Vertex AI</b> (RAG, Model Context Protocol), securing apps using <b class="text-slate-200">DexGuard, Talsec, RASP development, JNI C/C++ native checks</b>, and orchestrating zero-touch CI/CD pipelines via <b class="text-slate-200">Fastlane</b> and Bitrise.</p>
-        <p class="font-medium text-slate-300 mono text-sm">Based in Chennai, India · Serving notice period (LWD: July 16, 2026).</p>
+        <p>I am a Principal Mobile Engineering Lead with <b class="text-slate-200">4+ years</b> of extensive experience
+          defining architecture and scaling enterprise mobile applications across the entire development spectrum. I
+          lead cross-functional engineering squads executing <b class="text-slate-200">Native-First (SwiftUI, Jetpack
+            Compose)</b>, <b class="text-slate-200">Cross-Platform (React Native, Flutter, Kotlin Multiplatform)</b>,
+          and <b class="text-slate-200">Hybrid (Capacitor, Cordova)</b> developments.</p>
+        <p>My work bridges complex mobile front-ends with advanced AI: deploying context-aware LLMs via <b
+            class="text-slate-200">Amazon Bedrock & Google Cloud Vertex AI</b> (RAG, Model Context Protocol), securing
+          apps using <b class="text-slate-200">DexGuard, Talsec, RASP development, JNI C/C++ native checks</b>, and
+          orchestrating zero-touch CI/CD pipelines via <b class="text-slate-200">Fastlane</b> and Bitrise.</p>
+        <p class="font-medium text-slate-300 mono text-sm">Based in Chennai, India · Serving notice period (LWD: July
+          16, 2026).</p>
       </div>
     </div>
   </section>
@@ -194,41 +271,65 @@
       <div class="text-sm font-bold text-cyan-500 mono tracking-wider"> CORE COMPETENCIES</div>
       <h2 class="mt-3 text-3xl font-bold text-white mb-12">System Capabilities</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
+
         <div class="tech-card p-6">
-          <div class="w-10 h-10 rounded bg-cyan-900/40 text-cyan-400 flex items-center justify-center mb-5 border border-cyan-800/50"><i data-lucide="smartphone" class="w-5 h-5"></i></div>
+          <div
+            class="w-10 h-10 rounded bg-cyan-900/40 text-cyan-400 flex items-center justify-center mb-5 border border-cyan-800/50">
+            <i data-lucide="smartphone" class="w-5 h-5"></i>
+          </div>
           <h3 class="text-lg font-bold text-slate-100">Native-First Development</h3>
-          <p class="text-sm text-slate-400 mt-3 leading-relaxed">Swift, SwiftUI, Kotlin, Jetpack Compose, Objective-C, Android NDK & JNI (C/C++), native bridging modules.</p>
+          <p class="text-sm text-slate-400 mt-3 leading-relaxed">Swift, SwiftUI, Kotlin, Jetpack Compose, Objective-C,
+            Android NDK & JNI (C/C++), native bridging modules.</p>
         </div>
-        
+
         <div class="tech-card p-6">
-          <div class="w-10 h-10 rounded bg-indigo-900/40 text-indigo-400 flex items-center justify-center mb-5 border border-indigo-800/50"><i data-lucide="layers" class="w-5 h-5"></i></div>
+          <div
+            class="w-10 h-10 rounded bg-indigo-900/40 text-indigo-400 flex items-center justify-center mb-5 border border-indigo-800/50">
+            <i data-lucide="layers" class="w-5 h-5"></i>
+          </div>
           <h3 class="text-lg font-bold text-slate-100">Cross-Platform & Hybrid</h3>
-          <p class="text-sm text-slate-400 mt-3 leading-relaxed">React Native, Flutter, Kotlin Multiplatform (KMP), Cordova, Capacitor, Ionic, custom plugin architecture.</p>
+          <p class="text-sm text-slate-400 mt-3 leading-relaxed">React Native, Flutter, Kotlin Multiplatform (KMP),
+            Cordova, Capacitor, Ionic, custom plugin architecture.</p>
         </div>
-        
+
         <div class="tech-card p-6">
-          <div class="w-10 h-10 rounded bg-purple-900/40 text-purple-400 flex items-center justify-center mb-5 border border-purple-800/50"><i data-lucide="cpu" class="w-5 h-5"></i></div>
+          <div
+            class="w-10 h-10 rounded bg-purple-900/40 text-purple-400 flex items-center justify-center mb-5 border border-purple-800/50">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
+          </div>
           <h3 class="text-lg font-bold text-slate-100">Generative AI & LLMs</h3>
-          <p class="text-sm text-slate-400 mt-3 leading-relaxed">Purple Fabric, Claude AI, Amazon Bedrock, Google Cloud Vertex AI, RAG, MCP Client Integration, Prompt Caching.</p>
+          <p class="text-sm text-slate-400 mt-3 leading-relaxed">Purple Fabric, Claude AI, Amazon Bedrock, Google Cloud
+            Vertex AI, RAG, MCP Client Integration, Prompt Caching.</p>
         </div>
-        
+
         <div class="tech-card p-6">
-          <div class="w-10 h-10 rounded bg-emerald-900/40 text-emerald-400 flex items-center justify-center mb-5 border border-emerald-800/50"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
+          <div
+            class="w-10 h-10 rounded bg-emerald-900/40 text-emerald-400 flex items-center justify-center mb-5 border border-emerald-800/50">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
           <h3 class="text-lg font-bold text-slate-100">Security & App Hardening</h3>
-          <p class="text-sm text-slate-400 mt-3 leading-relaxed">DexGuard, AppProtectt, Talsec, RASP development, JS obfuscation, Google Play Integrity, signature checks, VAPT.</p>
+          <p class="text-sm text-slate-400 mt-3 leading-relaxed">DexGuard, AppProtectt, Talsec, RASP development, JS
+            obfuscation, Google Play Integrity, signature checks, VAPT.</p>
         </div>
-        
+
         <div class="tech-card p-6">
-          <div class="w-10 h-10 rounded bg-sky-900/40 text-sky-400 flex items-center justify-center mb-5 border border-sky-800/50"><i data-lucide="terminal" class="w-5 h-5"></i></div>
+          <div
+            class="w-10 h-10 rounded bg-sky-900/40 text-sky-400 flex items-center justify-center mb-5 border border-sky-800/50">
+            <i data-lucide="terminal" class="w-5 h-5"></i>
+          </div>
           <h3 class="text-lg font-bold text-slate-100">DevOps & Distribution</h3>
-          <p class="text-sm text-slate-400 mt-3 leading-relaxed">Fastlane, Bitrise, GitHub Actions, Jenkins, App Store Connect (TestFlight), Google Play Console, Managed Publishing.</p>
+          <p class="text-sm text-slate-400 mt-3 leading-relaxed">Fastlane, Bitrise, GitHub Actions, Jenkins, App Store
+            Connect (TestFlight), Google Play Console, Managed Publishing.</p>
         </div>
-        
+
         <div class="tech-card p-6">
-          <div class="w-10 h-10 rounded bg-slate-800 text-slate-300 flex items-center justify-center mb-5 border border-slate-700"><i data-lucide="git-branch" class="w-5 h-5"></i></div>
+          <div
+            class="w-10 h-10 rounded bg-slate-800 text-slate-300 flex items-center justify-center mb-5 border border-slate-700">
+            <i data-lucide="git-branch" class="w-5 h-5"></i>
+          </div>
           <h3 class="text-lg font-bold text-slate-100">Architecture & State</h3>
-          <p class="text-sm text-slate-400 mt-3 leading-relaxed">MVVM, Clean Architecture, Micro-frontends, Redux (React), BLoC/Riverpod (Flutter), Firebase Ecosystem.</p>
+          <p class="text-sm text-slate-400 mt-3 leading-relaxed">MVVM, Clean Architecture, Micro-frontends, Redux
+            (React), BLoC/Riverpod (Flutter), Firebase Ecosystem.</p>
         </div>
 
       </div>
@@ -256,7 +357,7 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-sm font-bold text-cyan-500 mono tracking-wider"> EXPERIENCE </div>
       <h2 class="mt-3 text-3xl font-bold text-white mb-14">Execution History</h2>
-      
+
       <ol class="relative border-l border-slate-700 ml-4 space-y-12">
         <li class="pl-8 relative">
           <span class="absolute -left-[9px] top-1 w-4 h-4 rounded bg-cyan-500 ring-4 ring-[#0f172a]"></span>
@@ -264,26 +365,36 @@
           <h3 class="text-xl font-bold text-white">Consultant (Principal Mobile Tech Lead)</h3>
           <div class="text-slate-400 font-medium mb-3">Intellect Design Arena Ltd</div>
           <ul class="text-slate-400 list-disc pl-5 space-y-2 text-[15px] leading-relaxed">
-            <li><b>Omni-Channel Architecture:</b> Spearheaded system design for flagship financial apps. Architected pathways migrating legacy hybrid apps into high-performance <b>React Native</b> and <b>Kotlin Multiplatform (KMP)</b>.</li>
-            <li><b>Native & UI Innovation:</b> Engineered native bridging modules utilizing <b>SwiftUI</b> and <b>Jetpack Compose</b> to deliver buttery-smooth user experiences within cross-platform containers.</li>
-            <li><b>AI Integration:</b> Led integration of AI models via Purple Fabric, Amazon Bedrock, and Google Cloud Vertex AI into mobile apps. Implemented MCP clients for secure context retrieval (RAG).</li>
-            <li><b>Security & Hardening:</b> Drove AppSec mitigation using AppProtectt, Talsec, and DexGuard. Authored robust native security guardrails utilizing Android NDK and JNI.</li>
-            <li><b>DevOps Automation:</b> Architected zero-touch deployment pipelines utilizing <b>Fastlane</b> and Bitrise for 6+ clients, managing automated TestFlight/Play Console publishing.</li>
+            <li><b>Omni-Channel Architecture:</b> Spearheaded system design for flagship financial apps. Architected
+              pathways migrating legacy hybrid apps into high-performance <b>React Native</b> and <b>Kotlin
+                Multiplatform (KMP)</b>.</li>
+            <li><b>Native & UI Innovation:</b> Engineered native bridging modules utilizing <b>SwiftUI</b> and
+              <b>Jetpack Compose</b> to deliver buttery-smooth user experiences within cross-platform containers.
+            </li>
+            <li><b>AI Integration:</b> Led integration of AI models via Purple Fabric, Amazon Bedrock, and Google Cloud
+              Vertex AI into mobile apps. Implemented MCP clients for secure context retrieval (RAG).</li>
+            <li><b>Security & Hardening:</b> Drove AppSec mitigation using AppProtectt, Talsec, and DexGuard. Authored
+              robust native security guardrails utilizing Android NDK and JNI.</li>
+            <li><b>DevOps Automation:</b> Architected zero-touch deployment pipelines utilizing <b>Fastlane</b> and
+              Bitrise for 6+ clients, managing automated TestFlight/Play Console publishing.</li>
           </ul>
         </li>
-        
+
         <li class="pl-8 relative">
           <span class="absolute -left-[9px] top-1 w-4 h-4 rounded bg-slate-600 ring-4 ring-[#0f172a]"></span>
           <div class="text-sm mono text-slate-500 mb-1">Jun 2022 — Jul 2023 · Chennai, India</div>
           <h3 class="text-xl font-bold text-slate-200">Associate Consultant (Product Engineer - Mobility)</h3>
           <div class="text-slate-400 font-medium mb-3">Intellect Design Arena Ltd</div>
           <ul class="text-slate-400 list-disc pl-5 space-y-2 text-[15px] leading-relaxed">
-            <li><b>Hybrid Optimization:</b> Leveraged Vanilla JavaScript (ES6+), React, and Angular to optimize rendering times and resolve state management issues on low-memory devices.</li>
-            <li><b>Cross-Browser & UI:</b> Engineered responsive web designs for desktop, tablet, and mobile platforms utilizing HTML5 and CSS3.</li>
-            <li><b>Task Automation:</b> Streamlined mobile build processes by integrating task automators (Gulp/Grunt) into the CI/CD pipeline, reducing manual build times.</li>
+            <li><b>Hybrid Optimization:</b> Leveraged Vanilla JavaScript (ES6+), React, and Angular to optimize
+              rendering times and resolve state management issues on low-memory devices.</li>
+            <li><b>Cross-Browser & UI:</b> Engineered responsive web designs for desktop, tablet, and mobile platforms
+              utilizing HTML5 and CSS3.</li>
+            <li><b>Task Automation:</b> Streamlined mobile build processes by integrating task automators (Gulp/Grunt)
+              into the CI/CD pipeline, reducing manual build times.</li>
           </ul>
         </li>
-        
+
         <li class="pl-8 relative">
           <span class="absolute -left-[9px] top-1 w-4 h-4 rounded bg-slate-600 ring-4 ring-[#0f172a]"></span>
           <div class="text-sm mono text-slate-500 mb-1">Aug 2021 — Mar 2022 · Chennai, India</div>
@@ -291,11 +402,12 @@
           <div class="text-slate-400 font-medium mb-3">Otomate Technologies</div>
           <ul class="text-slate-400 list-disc pl-5 space-y-2 text-[15px] leading-relaxed">
             <li>Built dynamic front-end interfaces using Angular, connecting them to Spring Boot REST APIs.</li>
-            <li>Established system monitoring tools and managed cloud infrastructure (AWS) for high-availability hybrid mobile clients.</li>
+            <li>Established system monitoring tools and managed cloud infrastructure (AWS) for high-availability hybrid
+              mobile clients.</li>
             <li>Dockerized backend services and maintained workflows utilizing Git and Jenkins.</li>
           </ul>
         </li>
-        
+
         <li class="pl-8 relative">
           <span class="absolute -left-[9px] top-1 w-4 h-4 rounded bg-slate-600 ring-4 ring-[#0f172a]"></span>
           <div class="text-sm mono text-slate-500 mb-1">Dec 2018 — May 2019 · Nagercoil, India</div>
@@ -317,14 +429,20 @@
       <h2 class="mt-3 text-3xl font-bold text-white mb-12">Deployed Architecture</h2>
 
       <div class="grid md:grid-cols-2 gap-6">
-        
+
         <div class="tech-card p-8 flex flex-col h-full">
           <div class="flex items-center justify-between mb-6">
-            <div class="w-10 h-10 rounded bg-cyan-900/40 text-cyan-400 border border-cyan-800/50 flex items-center justify-center"><i data-lucide="building-2" class="w-5 h-5"></i></div>
+            <div
+              class="w-10 h-10 rounded bg-cyan-900/40 text-cyan-400 border border-cyan-800/50 flex items-center justify-center">
+              <i data-lucide="building-2" class="w-5 h-5"></i>
+            </div>
             <span class="text-xs mono text-slate-500">Corporate Banking CMS</span>
           </div>
           <h3 class="text-xl font-bold text-slate-100">Corporate Banking Mobile Platform</h3>
-          <p class="text-slate-400 mt-4 leading-relaxed flex-grow text-sm">An enterprise-grade banking suite. Evolved architecture from legacy Cordova to a cross-platform stack utilizing Capacitor and React Native. Built custom native plugins (Swift/Kotlin). Integrated a conversational AI interface via Purple Fabric, and managed the automated release pipeline (Fastlane) for 6+ distinct client deployments.</p>
+          <p class="text-slate-400 mt-4 leading-relaxed flex-grow text-sm">An enterprise-grade banking suite. Evolved
+            architecture from legacy Cordova to a cross-platform stack utilizing Capacitor and React Native. Built
+            custom native plugins (Swift/Kotlin). Integrated a conversational AI interface via Purple Fabric, and
+            managed the automated release pipeline (Fastlane) for 6+ distinct client deployments.</p>
           <div class="mt-6 flex flex-wrap gap-2">
             <span class="tech-chip text-[11px] px-2 py-1 mono">React Native</span>
             <span class="tech-chip text-[11px] px-2 py-1 mono">Capacitor</span>
@@ -333,13 +451,23 @@
           </div>
         </div>
 
-        <a href="https://github.com/techdhamo/aran" target="_blank" rel="noopener" class="tech-card p-8 flex flex-col h-full block group">
+        <a href="https://github.com/techdhamo/aran" target="_blank" rel="noopener"
+          class="tech-card p-8 flex flex-col h-full block group">
           <div class="flex items-center justify-between mb-6">
-            <div class="w-10 h-10 rounded bg-emerald-900/40 text-emerald-400 border border-emerald-800/50 flex items-center justify-center group-hover:scale-110 transition-transform"><i data-lucide="shield" class="w-5 h-5"></i></div>
-            <span class="text-xs mono text-slate-500 group-hover:text-cyan-400 transition-colors flex items-center gap-1">View Repo <i data-lucide="external-link" class="w-3 h-3"></i></span>
+            <div
+              class="w-10 h-10 rounded bg-emerald-900/40 text-emerald-400 border border-emerald-800/50 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="shield" class="w-5 h-5"></i>
+            </div>
+            <span
+              class="text-xs mono text-slate-500 group-hover:text-cyan-400 transition-colors flex items-center gap-1">View
+              Repo <i data-lucide="external-link" class="w-3 h-3"></i></span>
           </div>
-          <h3 class="text-xl font-bold text-slate-100 group-hover:text-cyan-400 transition-colors">Aran RASP — Mobile Security SDK</h3>
-          <p class="text-slate-400 mt-4 leading-relaxed flex-grow text-sm">A cybersecurity SDK implementing Mobile RASP. Handled deep vulnerability detection and app hardening. Developed low-level security checks using Android NDK and JNI (C/C++) to fortify hybrid and native environments against reverse engineering, malware, and network spoofing.</p>
+          <h3 class="text-xl font-bold text-slate-100 group-hover:text-cyan-400 transition-colors">Aran RASP — Mobile
+            Security SDK</h3>
+          <p class="text-slate-400 mt-4 leading-relaxed flex-grow text-sm">A cybersecurity SDK implementing Mobile RASP.
+            Handled deep vulnerability detection and app hardening. Developed low-level security checks using Android
+            NDK and JNI (C/C++) to fortify hybrid and native environments against reverse engineering, malware, and
+            network spoofing.</p>
           <div class="mt-6 flex flex-wrap gap-2">
             <span class="tech-chip text-[11px] px-2 py-1 mono">Mobile RASP</span>
             <span class="tech-chip text-[11px] px-2 py-1 mono">Android NDK</span>
@@ -348,13 +476,22 @@
           </div>
         </a>
 
-        <a href="https://github.com/techdhamo/DS3" target="_blank" rel="noopener" class="tech-card p-8 flex flex-col h-full block group">
+        <a href="https://github.com/techdhamo/DS3" target="_blank" rel="noopener"
+          class="tech-card p-8 flex flex-col h-full block group">
           <div class="flex items-center justify-between mb-6">
-            <div class="w-10 h-10 rounded bg-indigo-900/40 text-indigo-400 border border-indigo-800/50 flex items-center justify-center group-hover:scale-110 transition-transform"><i data-lucide="shopping-cart" class="w-5 h-5"></i></div>
-            <span class="text-xs mono text-slate-500 group-hover:text-cyan-400 transition-colors flex items-center gap-1">View Repo <i data-lucide="external-link" class="w-3 h-3"></i></span>
+            <div
+              class="w-10 h-10 rounded bg-indigo-900/40 text-indigo-400 border border-indigo-800/50 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+            </div>
+            <span
+              class="text-xs mono text-slate-500 group-hover:text-cyan-400 transition-colors flex items-center gap-1">View
+              Repo <i data-lucide="external-link" class="w-3 h-3"></i></span>
           </div>
-          <h3 class="text-xl font-bold text-slate-100 group-hover:text-cyan-400 transition-colors">DS3 — Commerce & Experience Platform</h3>
-          <p class="text-slate-400 mt-4 leading-relaxed flex-grow text-sm">Next.js App Router e-commerce with Prisma/Postgres, NextAuth, Razorpay, inventory sync cron, and gamified engagement APIs. Fully containerized.</p>
+          <h3 class="text-xl font-bold text-slate-100 group-hover:text-cyan-400 transition-colors">DS3 — Commerce &
+            Experience Platform</h3>
+          <p class="text-slate-400 mt-4 leading-relaxed flex-grow text-sm">Next.js App Router e-commerce with
+            Prisma/Postgres, NextAuth, Razorpay, inventory sync cron, and gamified engagement APIs. Fully containerized.
+          </p>
           <div class="mt-6 flex flex-wrap gap-2">
             <span class="tech-chip text-[11px] px-2 py-1 mono">Next.js</span>
             <span class="tech-chip text-[11px] px-2 py-1 mono">Prisma</span>
@@ -363,17 +500,32 @@
           </div>
         </a>
 
-        <a href="https://dhamo.in" target="_blank" rel="noopener" class="tech-card p-8 flex flex-col h-full block group">
+        <a href="https://ds3.store" target="_blank" rel="noopener"
+          class="tech-card p-8 flex flex-col h-full block group">
           <div class="flex items-center justify-between mb-6">
-            <div class="w-10 h-10 rounded bg-purple-900/40 text-purple-400 border border-purple-800/50 flex items-center justify-center group-hover:scale-110 transition-transform"><i data-lucide="globe" class="w-5 h-5"></i></div>
-            <span class="text-xs mono text-slate-500 group-hover:text-cyan-400 transition-colors flex items-center gap-1">Visit Site <i data-lucide="external-link" class="w-3 h-3"></i></span>
+            <div
+              class="rounded bg-slate-800/40 border border-slate-700/50 flex items-center justify-center px-3 py-1.5 group-hover:scale-105 transition-transform"
+              style="font-weight: 800; font-size: 0.9rem; letter-spacing: -0.05em;">
+              <span class="text-white">DS</span><span
+                class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent ml-[2px]">3
+                Studio</span>
+            </div>
+            <span
+              class="text-xs mono text-slate-500 group-hover:text-cyan-400 transition-colors flex items-center gap-1">Visit
+              Site <i data-lucide="external-link" class="w-3 h-3"></i></span>
           </div>
-          <h3 class="text-xl font-bold text-slate-100 group-hover:text-cyan-400 transition-colors">dhamo.in — Portfolio Environment</h3>
-          <p class="text-slate-400 mt-4 leading-relaxed flex-grow text-sm">Portfolio showcasing expertise in Mobile Architecture, AppSec, and SaaS, powered by GenAI context logic. Cloudflare-hosted, performance-first.</p>
+          <h3 class="text-xl font-bold text-slate-100 group-hover:text-cyan-400 transition-colors">DS3 Store — Premium
+            Digital Products</h3>
+          <p class="text-slate-400 mt-4 leading-relaxed flex-grow text-sm">A dedicated platform showcasing
+            high-performance digital products. Built with a sleek Neon Glass aesthetic, secure edge hosting, and modern
+            web standards.</p>
           <div class="mt-6 flex flex-wrap gap-2">
-            <span class="tech-chip text-[11px] px-2 py-1 mono">GenAI</span>
+            <span class="tech-chip text-[11px] px-2 py-1 mono">Jetpack Compose</span>
+            <span class="tech-chip text-[11px] px-2 py-1 mono">Kotlin</span>
+            <span class="tech-chip text-[11px] px-2 py-1 mono">Glance Widgets</span>
+            <span class="tech-chip text-[11px] px-2 py-1 mono">Glassmorphism</span>
             <span class="tech-chip text-[11px] px-2 py-1 mono">Cloudflare</span>
-            <span class="tech-chip text-[11px] px-2 py-1 mono">Tailwind</span>
+            <span class="tech-chip text-[11px] px-2 py-1 mono">HTML/CSS</span>
           </div>
         </a>
 
@@ -388,31 +540,35 @@
       <div class="text-sm font-bold text-cyan-500 mono tracking-wider">RECOGNITION</div>
       <h2 class="mt-3 text-3xl font-bold text-white mb-10">Awards & Education</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
+
         <div class="tech-card p-6 border-t-2 border-t-cyan-500">
           <div class="flex items-center gap-3 mb-5 border-b border-slate-700/50 pb-4">
             <i data-lucide="award" class="w-5 h-5 text-cyan-400"></i>
             <h3 class="text-lg font-bold text-slate-100">Awards</h3>
           </div>
           <ul class="text-[14px] text-slate-400 space-y-3">
-            <li><b class="text-slate-200">SPOTLIGHT (GEM) Award</b> (Apr 2025) — Cleared critical iOS/Android build failures for production launch.</li>
-            <li><b class="text-slate-200">SPOT Award</b> (Nov 2024) — Client appreciation for exceptional debugging, AppSec mitigation, and UI resolution.</li>
+            <li><b class="text-slate-200">SPOTLIGHT (GEM) Award</b> (Apr 2025) — Cleared critical iOS/Android build
+              failures for production launch.</li>
+            <li><b class="text-slate-200">SPOT Award</b> (Nov 2024) — Client appreciation for exceptional debugging,
+              AppSec mitigation, and UI resolution.</li>
             <li><b class="text-slate-200">Kalam Award</b></li>
           </ul>
         </div>
-        
+
         <div class="tech-card p-6 border-t-2 border-t-emerald-500">
           <div class="flex items-center gap-3 mb-5 border-b border-slate-700/50 pb-4">
             <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400"></i>
             <h3 class="text-lg font-bold text-slate-100">Certifications</h3>
           </div>
           <ul class="text-[14px] text-slate-400 space-y-3">
-            <li>> Claude with Amazon Bedrock <br/><span class="text-slate-500 text-xs mt-0.5 mono">Anthropic Academy</span></li>
-            <li>> Claude with Google Cloud Vertex AI <br/><span class="text-slate-500 text-xs mt-0.5 mono">Anthropic Academy</span></li>
+            <li>> Claude with Amazon Bedrock <br /><span class="text-slate-500 text-xs mt-0.5 mono">Anthropic
+                Academy</span></li>
+            <li>> Claude with Google Cloud Vertex AI <br /><span class="text-slate-500 text-xs mt-0.5 mono">Anthropic
+                Academy</span></li>
             <li>> Mobile AppSec & Hybrid Mobile Integrations</li>
           </ul>
         </div>
-        
+
         <div class="tech-card p-6 md:col-span-2 lg:col-span-1 border-t-2 border-t-indigo-500">
           <div class="flex items-center gap-3 mb-5 border-b border-slate-700/50 pb-4">
             <i data-lucide="graduation-cap" class="w-5 h-5 text-indigo-400"></i>
@@ -421,11 +577,12 @@
           <ul class="text-[14px] text-slate-400 space-y-4">
             <li>
               <b class="text-slate-200">B.E. (Computer Science)</b>
-              <span class="block text-xs mt-1 mono">Stella Mary's College of Engineering<br/>(2018-2021) · First Class</span>
+              <span class="block text-xs mt-1 mono">Stella Mary's College of Engineering<br />(2018-2021) · First
+                Class</span>
             </li>
             <li>
               <b class="text-slate-200">Diploma (Computer Science)</b>
-              <span class="block text-xs mt-1 mono">Surya Polytechnic College<br/>(2011-2014) · First Class</span>
+              <span class="block text-xs mt-1 mono">Surya Polytechnic College<br />(2011-2014) · First Class</span>
             </li>
           </ul>
         </div>
@@ -436,19 +593,34 @@
 
   <section id="contact" class="py-24 border-t border-slate-800 bg-[#0f172a]">
     <div class="max-w-6xl mx-auto px-6 text-center">
-      <div class="w-16 h-16 rounded bg-cyan-900/30 text-cyan-400 flex items-center justify-center mx-auto mb-6 border border-cyan-800/50"><i data-lucide="terminal" class="w-8 h-8"></i></div>
+      <div
+        class="w-16 h-16 rounded bg-cyan-900/30 text-cyan-400 flex items-center justify-center mx-auto mb-6 border border-cyan-800/50">
+        <i data-lucide="terminal" class="w-8 h-8"></i>
+      </div>
       <h2 class="text-3xl sm:text-4xl font-bold text-white">Let's build something secure.</h2>
-      <p class="mt-5 text-slate-400 text-lg max-w-2xl mx-auto">Available for Senior / Staff Engineering, Tech Lead, and Consulting engagements — specializing in Omni-Channel Mobile Architecture, AppSec Hardening, and Generative AI Integrations.</p>
-      
+      <p class="mt-5 text-slate-400 text-lg max-w-2xl mx-auto">Available for Senior / Staff Engineering, Tech Lead, and
+        Consulting engagements — specializing in Omni-Channel Mobile Architecture, AppSec Hardening, and Generative AI
+        Integrations.</p>
+
       <div class="mt-10 flex flex-wrap justify-center gap-4 mono text-sm">
         <a href="mailto:dhamodaran@outlook.in" class="px-6 py-3 tech-btn-filled inline-flex items-center gap-2">
           <i data-lucide="mail" class="w-4 h-4"></i> dhamodaran@outlook.in
         </a>
-        <a href="https://www.linkedin.com/in/techdhamo" target="_blank" rel="noopener" class="px-6 py-3 tech-btn-outlined inline-flex items-center gap-2">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"></path></svg> LinkedIn
+        <a href="https://www.linkedin.com/in/techdhamo" target="_blank" rel="noopener"
+          class="px-6 py-3 tech-btn-outlined inline-flex items-center gap-2">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              clip-rule="evenodd"></path>
+          </svg> LinkedIn
         </a>
-        <a href="https://github.com/techdhamo" target="_blank" rel="noopener" class="px-6 py-3 tech-btn-outlined inline-flex items-center gap-2">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg> GitHub
+        <a href="https://github.com/techdhamo" target="_blank" rel="noopener"
+          class="px-6 py-3 tech-btn-outlined inline-flex items-center gap-2">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              clip-rule="evenodd"></path>
+          </svg> GitHub
         </a>
       </div>
     </div>
@@ -469,4 +641,5 @@
     lucide.createIcons();
   </script>
 </body>
+
 </html>
