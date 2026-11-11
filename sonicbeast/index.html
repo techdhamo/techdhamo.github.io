@@ -1,119 +1,240 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SonicBeast - Extreme Volume Amplifier & Acoustic Suite</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #E2E8F0;
-            background-color: #0A0E1A;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        h1 {
-            color: #FFFFFF;
-            font-size: 2.4rem;
-            margin-bottom: 10px;
-        }
-        .highlight {
-            color: #00E5FF;
-        }
-        .subtitle {
-            color: #94A3B8;
-            font-size: 1.2rem;
-        }
-        .card {
-            background: #151C2C;
-            border: 1px solid #2A364F;
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 24px;
-        }
-        .card h2 {
-            color: #00E5FF;
-            margin-top: 0;
-        }
-        .links {
-            display: flex;
-            gap: 16px;
-            margin-top: 30px;
-            justify-content: center;
-        }
-        .btn {
-            display: inline-block;
-            background: #7C4DFF;
-            color: white;
-            text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: background 0.2s;
-        }
-        .btn:hover {
-            background: #651FFF;
-        }
-        .btn-outline {
-            background: transparent;
-            border: 1px solid #00E5FF;
-            color: #00E5FF;
-        }
-        .btn-outline:hover {
-            background: rgba(0, 229, 255, 0.1);
-        }
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #64748B;
-            border-top: 1px solid #1E293B;
-            padding-top: 20px;
-        }
-        footer a {
-            color: #94A3B8;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        footer a:hover {
-            color: #00E5FF;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SonicBeast — Extreme Volume Amplifier & Acoustic Studio Suite | dhamo.in</title>
+  <meta name="description"
+    content="SonicBeast is an advanced mobile audio engine featuring multi-band dynamics processing, acoustic tuning profiles, and zero-distortion volume amplification for Android." />
+  <meta name="author" content="Dhamodaran Narayana Perumal" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="canonical" href="https://dhamo.in/sonicbeast/" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #0f172a;
+      color: #cbd5e1;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      position: relative;
+    }
+
+    .tech-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(51, 65, 85, 0.8);
+      border-radius: 12px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .tech-card:hover {
+      border-color: rgba(34, 211, 238, 0.4);
+      box-shadow: 0 0 15px rgba(34, 211, 238, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .tech-chip {
+      background: rgba(15, 23, 42, 0.8);
+      color: #22d3ee;
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .tech-btn-filled {
+      background: #0ea5e9;
+      color: #ffffff;
+      border-radius: 6px;
+      transition: all 0.2s;
+      font-weight: 600;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .tech-btn-filled:hover {
+      background: #0284c7;
+      box-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
+    }
+
+    .tech-btn-outlined {
+      background: rgba(30, 41, 59, 0.5);
+      color: #e2e8f0;
+      border: 1px solid #475569;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .tech-btn-outlined:hover {
+      background: rgba(51, 65, 85, 0.8);
+      border-color: #94a3b8;
+      color: #ffffff;
+    }
+
+    .text-glow {
+      text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+    }
+
+    a.nav-link {
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    a.nav-link:hover {
+      color: #22d3ee;
+    }
+  </style>
 </head>
-<body>
-    <div class="header">
-        <img src="sonicbeast-icon.svg" alt="SonicBeast App Icon" width="80" height="80" style="vertical-align: middle; margin-bottom: 12px; border-radius: 18px; box-shadow: 0 4px 20px rgba(108, 60, 225, 0.4);">
-        <h1>Sonic<span class="highlight">Beast</span></h1>
-        <p class="subtitle">Extreme Volume Amplifier &amp; Acoustic Studio Suite for Android</p>
+
+<body class="antialiased selection:bg-cyan-900/50 selection:text-cyan-100 bg-grid min-h-screen flex flex-col justify-between">
+
+  <!-- Header / Navigation -->
+  <header class="fixed inset-x-0 top-0 z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800 shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="https://dhamo.in" class="flex items-center gap-2 font-bold tracking-tight text-xl text-white">
+        <span class="text-cyan-400 text-glow">Dhamo</span><span class="text-slate-500 font-normal mono">.in</span>
+      </a>
+      <div class="flex items-center gap-6 text-sm mono">
+        <a class="nav-link text-cyan-400" href="/sonicbeast/">SonicBeast</a>
+        <a class="nav-link transition-colors hidden sm:inline" href="/sonicbeast/privacy.html">Privacy</a>
+        <a class="nav-link transition-colors hidden sm:inline" href="/sonicbeast/terms.html">Terms</a>
+        <a href="https://dhamo.in" class="text-xs px-3 py-1.5 tech-btn-outlined flex items-center gap-1.5 mono">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5 text-cyan-400"></i> Portfolio
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-32 pb-20 max-w-4xl mx-auto px-6 w-full">
+    
+    <!-- Hero Box -->
+    <div class="text-center mb-12">
+      <div class="inline-block p-1 bg-gradient-to-tr from-cyan-500 to-indigo-600 rounded-2xl shadow-xl shadow-cyan-950/50 mb-6">
+        <img src="sonicbeast-icon.svg" alt="SonicBeast Icon" class="w-20 h-20 rounded-xl" />
+      </div>
+      <div class="inline-flex items-center gap-2 text-xs font-semibold text-cyan-400 px-3.5 py-1.5 rounded border border-cyan-900/60 bg-cyan-950/30 mb-4 mono block mx-auto w-fit">
+        <span class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
+        v1.0.2 PRODUCTION RELEASE • ANDROID 8.0 TO 15
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white">
+        Sonic<span class="text-cyan-400 text-glow">Beast</span>
+      </h1>
+      <p class="mt-4 text-slate-400 text-lg max-w-2xl mx-auto">
+        Extreme Volume Amplifier &amp; Psychoacoustic Studio Suite for Android. High-gain headroom processing with zero digital clipping.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4 mono text-sm">
+        <a href="privacy.html" class="px-6 py-3 tech-btn-filled inline-flex items-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4"></i> Privacy Policy
+        </a>
+        <a href="terms.html" class="px-6 py-3 tech-btn-outlined inline-flex items-center gap-2">
+          <i data-lucide="file-text" class="w-4 h-4"></i> Terms of Service
+        </a>
+      </div>
     </div>
 
-    <div class="card">
-        <h2>About SonicBeast</h2>
-        <p>SonicBeast is an advanced mobile audio engine featuring multi-band compression, dynamic headroom limiters, and acoustic studio tuning for Android devices.</p>
-        <ul>
-            <li><strong>Up to +15 dB Gain:</strong> Clean amplification powered by Android DynamicsProcessing engine.</li>
-            <li><strong>Acoustic Tuning Suite:</strong> Cinema 3D, Audiophile Studio, Voice Clarity, and Beast Bass modes.</li>
-            <li><strong>Device Routing:</strong> Independent sound profiles for Bluetooth A2DP, USB DACs, wired headsets, and built-in speakers.</li>
-            <li><strong>Zero Data Tracking:</strong> 100% on-device processing. No accounts, no data collection.</li>
-        </ul>
+    <!-- Feature Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      <div class="tech-card p-6">
+        <div class="w-10 h-10 rounded bg-cyan-950/60 border border-cyan-800/40 text-cyan-400 flex items-center justify-center mb-4">
+          <i data-lucide="volume-2" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-white mb-2">Up to +15 dB Headroom Boost</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Powered by Android 9+ <code class="tech-chip px-1.5 py-0.5 text-xs">DynamicsProcessing</code> engine with multi-band compression and post-limiter makeup to safeguard DACs from digital distortion.
+        </p>
+      </div>
+
+      <div class="tech-card p-6">
+        <div class="w-10 h-10 rounded bg-indigo-950/60 border border-indigo-800/40 text-indigo-400 flex items-center justify-center mb-4">
+          <i data-lucide="sliders" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-white mb-2">Acoustic Tuning Suite</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Five distinct frequency curves: <b>Cinema 3D</b> (immersive surround), <b>Audiophile Studio</b> (Harman reference), <b>Voice Clarity</b> (speech lift), <b>Beast Bass</b> (sub-harmonics), and <b>Direct Boost</b>.
+        </p>
+      </div>
+
+      <div class="tech-card p-6">
+        <div class="w-10 h-10 rounded bg-sky-950/60 border border-sky-800/40 text-sky-400 flex items-center justify-center mb-4">
+          <i data-lucide="headphones" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-white mb-2">Smart Audio Sink Routing</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Real-time hardware priority detection for Bluetooth A2DP / BLE, USB DACs, 3.5mm wired headsets, and built-in speakers with independent volume memory.
+        </p>
+      </div>
+
+      <div class="tech-card p-6">
+        <div class="w-10 h-10 rounded bg-emerald-950/60 border border-emerald-800/40 text-emerald-400 flex items-center justify-center mb-4">
+          <i data-lucide="lock" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-white mb-2">100% On-Device Privacy</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Zero data collection, zero telemetry, and zero tracking. All audio enhancement executes strictly within the local Android HAL and native C++ layer.
+        </p>
+      </div>
     </div>
 
-    <div class="links">
-        <a href="privacy.html" class="btn">Privacy Policy</a>
-        <a href="terms.html" class="btn btn-outline">Terms of Service</a>
+    <!-- Quick Legal Card -->
+    <div class="tech-card p-8 border-cyan-800/50 bg-slate-900/90 text-center">
+      <h3 class="text-xl font-bold text-white mb-3">Compliance &amp; Legal Documentation</h3>
+      <p class="text-slate-400 text-sm max-w-xl mx-auto mb-6">
+        SonicBeast operates in full compliance with Google Play Developer Program Policies, the EU Digital Services Act (DSA), and international consumer privacy frameworks.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3 mono text-xs">
+        <a href="privacy.html" class="px-4 py-2 rounded tech-chip hover:bg-cyan-900/40 transition-colors inline-flex items-center gap-1.5">
+          <i data-lucide="shield" class="w-3.5 h-3.5"></i> Read Privacy Policy
+        </a>
+        <a href="terms.html" class="px-4 py-2 rounded tech-chip hover:bg-cyan-900/40 transition-colors inline-flex items-center gap-1.5">
+          <i data-lucide="file-check" class="w-3.5 h-3.5"></i> Read Terms of Service
+        </a>
+      </div>
     </div>
 
-    <footer>
-        &copy; 2026 Dhamo. All rights reserved.<br>
-        <a href="privacy.html">Privacy Policy</a> | 
-        <a href="terms.html">Terms of Service</a> | 
-        <a href="https://dhamo.in">Developer Portfolio</a>
-    </footer>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0b1120] border-t border-slate-800 py-8 text-center text-xs mono text-slate-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-center items-center gap-4">
+      <span>© <span id="yr"></span> Dhamodaran Narayana Perumal</span>
+      <span class="hidden sm:inline text-slate-700">|</span>
+      <a href="privacy.html" class="hover:text-cyan-400 transition-colors">Privacy Policy</a>
+      <span class="hidden sm:inline text-slate-700">|</span>
+      <a href="terms.html" class="hover:text-cyan-400 transition-colors">Terms of Service</a>
+      <span class="hidden sm:inline text-slate-700">|</span>
+      <a href="https://dhamo.in" class="hover:text-cyan-400 transition-colors">Dhamo.in</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    lucide.createIcons();
+  </script>
 </body>
+
 </html>

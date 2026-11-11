@@ -1,100 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - SonicBeast</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        .container {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1, h2, h3 {
-            color: #111;
-        }
-        h1 {
-            border-bottom: 2px solid #00E5FF;
-            padding-bottom: 10px;
-        }
-        .date {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-        footer {
-            margin-top: 30px;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
-            font-size: 0.9em;
-            color: #777;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy — SonicBeast | dhamo.in</title>
+  <meta name="description" content="Official Privacy Policy for SonicBeast - Zero personal data collection, 100% on-device audio processing." />
+  <meta name="author" content="Dhamodaran Narayana Perumal" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="canonical" href="https://dhamo.in/sonicbeast/privacy.html" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #0f172a;
+      color: #cbd5e1;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      position: relative;
+    }
+
+    .tech-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(51, 65, 85, 0.8);
+      border-radius: 12px;
+    }
+
+    .tech-chip {
+      background: rgba(15, 23, 42, 0.8);
+      color: #22d3ee;
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .tech-btn-outlined {
+      background: rgba(30, 41, 59, 0.5);
+      color: #e2e8f0;
+      border: 1px solid #475569;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .tech-btn-outlined:hover {
+      background: rgba(51, 65, 85, 0.8);
+      border-color: #94a3b8;
+      color: #ffffff;
+    }
+
+    .text-glow {
+      text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+    }
+
+    a.nav-link {
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    a.nav-link:hover {
+      color: #22d3ee;
+    }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 15px;">
-            <img src="sonicbeast-icon.svg" alt="SonicBeast" width="56" height="56" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(108, 60, 225, 0.25);">
-            <h1 style="margin: 0; border-bottom: none; padding-bottom: 0;">Privacy Policy for SonicBeast</h1>
+
+<body class="antialiased selection:bg-cyan-900/50 selection:text-cyan-100 bg-grid min-h-screen flex flex-col justify-between">
+
+  <!-- Header / Navigation -->
+  <header class="fixed inset-x-0 top-0 z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800 shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="https://dhamo.in" class="flex items-center gap-2 font-bold tracking-tight text-xl text-white">
+        <span class="text-cyan-400 text-glow">Dhamo</span><span class="text-slate-500 font-normal mono">.in</span>
+      </a>
+      <div class="flex items-center gap-6 text-sm mono">
+        <a class="nav-link transition-colors" href="/sonicbeast/">SonicBeast</a>
+        <a class="nav-link text-cyan-400" href="/sonicbeast/privacy.html">Privacy</a>
+        <a class="nav-link transition-colors" href="/sonicbeast/terms.html">Terms</a>
+        <a href="/sonicbeast/" class="text-xs px-3 py-1.5 tech-btn-outlined flex items-center gap-1.5 mono">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5 text-cyan-400"></i> App Home
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Legal Document -->
+  <main class="pt-28 pb-20 max-w-4xl mx-auto px-6 w-full">
+    
+    <div class="tech-card p-8 sm:p-12">
+      
+      <!-- Document Header -->
+      <div class="flex items-center gap-4 border-b border-slate-700/80 pb-6 mb-8">
+        <img src="sonicbeast-icon.svg" alt="SonicBeast" class="w-14 h-14 rounded-xl shadow-md shadow-cyan-950/40" />
+        <div>
+          <h1 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">SonicBeast Privacy Policy</h1>
+          <p class="text-xs mono text-cyan-400 mt-1">LAST UPDATED: NOVEMBER 11, 2026 • OFFICIAL COMPLIANCE DOCUMENT</p>
         </div>
-        <hr style="border: 0; border-top: 2px solid #00E5FF; margin-bottom: 20px;">
-        <p class="date">Last Updated: November 11, 2026</p>
+      </div>
 
-        <p>This Privacy Policy explains how <strong>SonicBeast</strong> ("we", "us", or "our"), developed by Dhamo, handles your information when you use our mobile application.</p>
+      <!-- Overview Box -->
+      <div class="bg-cyan-950/20 border border-cyan-800/40 rounded-lg p-5 mb-8">
+        <div class="flex items-start gap-3">
+          <i data-lucide="shield-check" class="w-5 h-5 text-cyan-400 mt-0.5 shrink-0"></i>
+          <div>
+            <h3 class="text-sm font-semibold text-white">Zero Personal Data Collection Policy</h3>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              SonicBeast is built with privacy-by-design. We do not collect, transmit, store, sell, or share any personal identifiable information (PII). All audio processing operates 100% locally on your device.
+            </p>
+          </div>
+        </div>
+      </div>
 
-        <h2>1. Zero Personal Data Collection</h2>
-        <p>SonicBeast is built with privacy-by-design. We <strong>do not collect, transmit, store, sell, or share</strong> any personal identifiable information (PII). The app operates locally on your device.</p>
+      <!-- Policy Sections -->
+      <div class="space-y-8 text-slate-300 text-sm leading-relaxed">
 
-        <h2>2. Data Stored Locally On Your Device</h2>
-        <p>The following non-identifiable preference data is stored solely in local Android DataStore on your device:</p>
-        <ul>
-            <li>Volume boost preferences, master percentage, and limiter settings</li>
-            <li>Acoustic tuning mode selections and custom equalizer band adjustments</li>
-            <li>Audio routing preferences (e.g., Bluetooth, wired headset, speaker profiles)</li>
-            <li>Safety and extreme volume liability acknowledgement flags</li>
-        </ul>
-        <p>None of this preference data ever leaves your device.</p>
+        <section>
+          <h2 class="text-base font-semibold text-white mb-2 flex items-center gap-2">
+            <span class="mono text-cyan-400 text-xs">01.</span> Data Stored Locally On Your Device
+          </h2>
+          <p class="text-slate-400 mb-3">
+            The following non-identifiable preference data is stored solely in local Android DataStore on your device:
+          </p>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-400 ml-2">
+            <li>Volume boost levels, limiter thresholds, and safety acknowledgements</li>
+            <li>Acoustic tuning mode selections and custom 5-band equalizer adjustments</li>
+            <li>Audio routing preferences (e.g. Bluetooth A2DP, wired headset, built-in speaker)</li>
+            <li>SonicBeast Pro pass activation timestamps and tokens</li>
+          </ul>
+          <p class="text-slate-400 mt-3">
+            None of this preference data ever leaves your device or touches any remote server.
+          </p>
+        </section>
 
-        <h2>3. Permissions Used by SonicBeast</h2>
-        <ul>
-            <li><strong>POST_NOTIFICATIONS (Android 13+):</strong> Required to show an active foreground service notification enabling you to control volume levels and acoustic modes directly from your lock screen and notification shade.</li>
-            <li><strong>BLUETOOTH_CONNECT (Android 12+):</strong> Required solely to detect when external Bluetooth headphones or speakers connect or disconnect, allowing SonicBeast to display the correct active device sink. No Bluetooth identifiers or location data are stored or transmitted.</li>
-            <li><strong>MODIFY_AUDIO_SETTINGS:</strong> Required to apply system audio effects (DynamicsProcessing, Equalizer, BassBoost, Virtualizer).</li>
-            <li><strong>FOREGROUND_SERVICE &amp; FOREGROUND_SERVICE_MEDIA_PLAYBACK:</strong> Required to keep audio enhancement active while other media players (YouTube, Spotify, etc.) are playing in the background.</li>
-        </ul>
+        <section>
+          <h2 class="text-base font-semibold text-white mb-2 flex items-center gap-2">
+            <span class="mono text-cyan-400 text-xs">02.</span> Permissions Requested &amp; Their Purpose
+          </h2>
+          <div class="space-y-3 mt-3">
+            <div class="bg-slate-900/60 border border-slate-800 rounded-lg p-3.5">
+              <span class="mono text-xs text-cyan-300 font-semibold">POST_NOTIFICATIONS (Android 13+)</span>
+              <p class="text-xs text-slate-400 mt-1">
+                Required solely to display the active foreground service notification, allowing you to monitor amplification and adjust modes directly from your lock screen and notification shade.
+              </p>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800 rounded-lg p-3.5">
+              <span class="mono text-xs text-cyan-300 font-semibold">BLUETOOTH_CONNECT (Android 12+)</span>
+              <p class="text-xs text-slate-400 mt-1">
+                Required solely to detect when external Bluetooth headphones or speakers connect or disconnect, enabling SonicBeast to switch to your saved Bluetooth sound profile automatically. No Bluetooth identifiers or location data are stored or transmitted.
+              </p>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800 rounded-lg p-3.5">
+              <span class="mono text-xs text-cyan-300 font-semibold">MODIFY_AUDIO_SETTINGS &amp; FOREGROUND_SERVICE_MEDIA_PLAYBACK</span>
+              <p class="text-xs text-slate-400 mt-1">
+                Required to apply Android audio effect chains (DynamicsProcessing, Equalizer, Virtualizer) and ensure continuous volume amplification while other media apps (YouTube, Spotify) play in the background.
+              </p>
+            </div>
+          </div>
+        </section>
 
-        <h2>4. Third-Party Services &amp; Payments</h2>
-        <p>SonicBeast uses official Google Play services for maintenance and transactions:</p>
-        <ul>
-            <li><strong>Google Play In-App Billing:</strong> All subscriptions and Pro passes are processed directly and securely by Google Play. We never see, collect, or store your credit card or financial information.</li>
-            <li><strong>Google Play In-App Updates &amp; Reviews:</strong> Standard Google Play Core APIs to notify you of available app updates and offer store ratings.</li>
-        </ul>
+        <section>
+          <h2 class="text-base font-semibold text-white mb-2 flex items-center gap-2">
+            <span class="mono text-cyan-400 text-xs">03.</span> Third-Party Services &amp; Payment Processing
+          </h2>
+          <p class="text-slate-400">
+            All subscriptions and Pro passes are processed directly and securely through <b>Google Play In-App Billing</b>. We never see, handle, or store your credit card, bank details, or payment credentials. Standard Google Play transaction receipts are verified locally.
+          </p>
+        </section>
 
-        <h2>5. Children's Privacy</h2>
-        <p>SonicBeast is not directed at children under the age of 13. We do not knowingly collect any data from children.</p>
+        <section>
+          <h2 class="text-base font-semibold text-white mb-2 flex items-center gap-2">
+            <span class="mono text-cyan-400 text-xs">04.</span> Children's Privacy
+          </h2>
+          <p class="text-slate-400">
+            SonicBeast is not directed at children under the age of 13. We do not knowingly collect, request, or solicit any personal information from children.
+          </p>
+        </section>
 
-        <h2>6. Health &amp; Hearing Protection Disclaimer</h2>
-        <p>Excessive volume levels can cause permanent hearing damage or hardware stress to mobile speakers. SonicBeast provides built-in safety limiters and warnings. By using this application, users assume responsibility for safe listening volume levels.</p>
+        <section>
+          <h2 class="text-base font-semibold text-white mb-2 flex items-center gap-2">
+            <span class="mono text-cyan-400 text-xs">05.</span> Acoustic Health &amp; Hearing Protection
+          </h2>
+          <p class="text-slate-400">
+            Excessive audio exposure can cause irreversible acoustic damage. SonicBeast incorporates built-in hardware limiters and safety confirmation dialogs to encourage responsible volume levels.
+          </p>
+        </section>
 
-        <h2>7. Contact Us</h2>
-        <p>If you have any questions or concerns regarding this Privacy Policy, please contact:</p>
-        <p><strong>Developer:</strong> Dhamodaran Narayana Perumal (Dhamo)<br>
-        <strong>Email:</strong> <a href="mailto:dhamo.developer@gmail.com">dhamo.developer@gmail.com</a><br>
-        <strong>Address:</strong> Ganapathipuram - 629502, Tamil Nadu, India</p>
+        <section class="border-t border-slate-700/80 pt-6">
+          <h2 class="text-base font-semibold text-white mb-3 flex items-center gap-2">
+            <span class="mono text-cyan-400 text-xs">06.</span> Developer Contact Information
+          </h2>
+          <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-4 mono text-xs text-slate-300 space-y-1">
+            <div><span class="text-slate-500">DEVELOPER:</span> Dhamodaran Narayana Perumal (Dhamo)</div>
+            <div><span class="text-slate-500">EMAIL:</span> <a href="mailto:dhamo.developer@gmail.com" class="text-cyan-400 hover:underline">dhamo.developer@gmail.com</a></div>
+            <div><span class="text-slate-500">LOCATION:</span> Ganapathipuram - 629502, Tamil Nadu, India</div>
+            <div><span class="text-slate-500">PORTFOLIO:</span> <a href="https://dhamo.in" class="text-cyan-400 hover:underline">https://dhamo.in</a></div>
+          </div>
+        </section>
 
-        <footer>
-            &copy; 2026 Dhamo. All rights reserved. • <a href="terms.html">Terms of Service</a>
-        </footer>
+      </div>
+
     </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0b1120] border-t border-slate-800 py-8 text-center text-xs mono text-slate-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-center items-center gap-4">
+      <span>© <span id="yr"></span> Dhamodaran Narayana Perumal</span>
+      <span class="hidden sm:inline text-slate-700">|</span>
+      <a href="/sonicbeast/" class="hover:text-cyan-400 transition-colors">SonicBeast</a>
+      <span class="hidden sm:inline text-slate-700">|</span>
+      <a href="terms.html" class="hover:text-cyan-400 transition-colors">Terms of Service</a>
+      <span class="hidden sm:inline text-slate-700">|</span>
+      <a href="https://dhamo.in" class="hover:text-cyan-400 transition-colors">Dhamo.in</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    lucide.createIcons();
+  </script>
 </body>
+
 </html>

@@ -1,119 +1,234 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - SonicBeast</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        .container {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1, h2, h3 {
-            color: #111;
-        }
-        h1 {
-            border-bottom: 2px solid #7C4DFF;
-            padding-bottom: 10px;
-        }
-        .date {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-        .alert {
-            background-color: #fff3cd;
-            color: #856404;
-            border-left: 4px solid #ffeeba;
-            padding: 12px 16px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-        .caps {
-            text-transform: uppercase;
-            font-size: 0.9em;
-            color: #444;
-        }
-        footer {
-            margin-top: 30px;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
-            font-size: 0.9em;
-            color: #777;
-        }
-        a {
-            color: #7C4DFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Terms of Service — SonicBeast | dhamo.in</title>
+  <meta name="description" content="Official Terms of Service & Conditions of Use for SonicBeast." />
+  <meta name="author" content="Dhamodaran Narayana Perumal" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="canonical" href="https://dhamo.in/sonicbeast/terms.html" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #0f172a;
+      color: #cbd5e1;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      position: relative;
+    }
+
+    .tech-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(51, 65, 85, 0.8);
+      border-radius: 12px;
+    }
+
+    .tech-chip {
+      background: rgba(15, 23, 42, 0.8);
+      color: #22d3ee;
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .tech-btn-outlined {
+      background: rgba(30, 41, 59, 0.5);
+      color: #e2e8f0;
+      border: 1px solid #475569;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .tech-btn-outlined:hover {
+      background: rgba(51, 65, 85, 0.8);
+      border-color: #94a3b8;
+      color: #ffffff;
+    }
+
+    .text-glow {
+      text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+    }
+
+    a.nav-link {
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    a.nav-link:hover {
+      color: #22d3ee;
+    }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 15px;">
-            <img src="sonicbeast-icon.svg" alt="SonicBeast" width="56" height="56" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(108, 60, 225, 0.25);">
-            <h1 style="margin: 0; border-bottom: none; padding-bottom: 0;">SonicBeast Terms of Service &amp; Conditions of Use</h1>
+
+<body class="antialiased selection:bg-cyan-900/50 selection:text-cyan-100 bg-grid min-h-screen flex flex-col justify-between">
+
+  <!-- Header / Navigation -->
+  <header class="fixed inset-x-0 top-0 z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800 shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="https://dhamo.in" class="flex items-center gap-2 font-bold tracking-tight text-xl text-white">
+        <span class="text-cyan-400 text-glow">Dhamo</span><span class="text-slate-500 font-normal mono">.in</span>
+      </a>
+      <div class="flex items-center gap-6 text-sm mono">
+        <a class="nav-link transition-colors" href="/sonicbeast/">SonicBeast</a>
+        <a class="nav-link transition-colors hidden sm:inline" href="/sonicbeast/privacy.html">Privacy</a>
+        <a class="nav-link text-cyan-400" href="/sonicbeast/terms.html">Terms</a>
+        <a href="/sonicbeast/" class="text-xs px-3 py-1.5 tech-btn-outlined flex items-center gap-1.5 mono">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5 text-cyan-400"></i> App Home
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Legal Document -->
+  <main class="pt-28 pb-20 max-w-4xl mx-auto px-6 w-full">
+    
+    <div class="tech-card p-8 sm:p-12">
+      
+      <!-- Document Header -->
+      <div class="flex items-center gap-4 border-b border-slate-700/80 pb-6 mb-8">
+        <img src="sonicbeast-icon.svg" alt="SonicBeast" class="w-14 h-14 rounded-xl shadow-md shadow-indigo-950/40" />
+        <div>
+          <h1 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">SonicBeast Terms of Service</h1>
+          <p class="text-xs mono text-indigo-400 mt-1">LAST UPDATED: NOVEMBER 11, 2026 • CONDITIONS OF USE &amp; LIABILITY WAIVER</p>
         </div>
-        <hr style="border: 0; border-top: 2px solid #7C4DFF; margin-bottom: 20px;">
-        <p class="date">Last Updated: November 11, 2026</p>
+      </div>
 
-        <p>Welcome to <strong>SonicBeast</strong>. By downloading, installing, accessing, or using the SonicBeast mobile application ("the Application"), you agree to be bound by these Terms of Service. If you do not agree to all terms, do not install or use the Application.</p>
-
-        <h2>1. Health, Hearing, &amp; Acoustic Safety Disclaimer</h2>
-        <div class="alert">
-            <strong>WARNING:</strong> Listening to high-volume audio for extended periods can cause permanent hearing damage, irreversible acoustic trauma, tinnitus, or hearing impairment.
+      <!-- Warning Box -->
+      <div class="bg-amber-950/30 border border-amber-800/60 rounded-lg p-5 mb-8">
+        <div class="flex items-start gap-3">
+          <i data-lucide="alert-triangle" class="w-5 h-5 text-amber-400 mt-0.5 shrink-0"></i>
+          <div>
+            <h3 class="text-sm font-semibold text-amber-200">Acoustic Safety &amp; Hearing Protection Warning</h3>
+            <p class="text-xs text-amber-300/80 mt-1 leading-relaxed">
+              SonicBeast is capable of driving device sound output beyond standard manufacturer specifications. Listening to high-volume audio for extended periods can cause irreversible hearing damage, permanent acoustic trauma, or tinnitus. You assume complete personal responsibility for safe listening volume levels.
+            </p>
+          </div>
         </div>
-        <p>SonicBeast is capable of driving sound output beyond standard Android device manufacturer specifications.</p>
-        <ul>
-            <li>You agree that you are solely responsible for monitoring your listening volume and protecting your hearing.</li>
-            <li>Never use volume amplification with headphones, in-ear monitors, or external speakers at full volume without first testing at low audio levels.</li>
-        </ul>
+      </div>
 
-        <h2>2. Hardware Integrity &amp; Speaker Protection</h2>
-        <p>Mobile device speakers, transducer membranes, and amplifier chipsets have physical structural limits. Excessive volume boost may cause distortion, diaphragm tearing, coil overheating, or total speaker failure. SonicBeast is provided without any warranty that your specific device hardware will endure high amplification. You assume complete responsibility for any hardware repair, replacement, or service costs.</p>
+      <!-- Terms Sections -->
+      <div class="space-y-8 text-slate-300 text-sm leading-relaxed">
 
-        <h2>3. In-App Purchases &amp; Subscriptions</h2>
-        <p>SonicBeast offers optional premium features ("SonicBeast Pro"):</p>
-        <ul>
-            <li><strong>Billing:</strong> All subscriptions and one-time purchases are processed securely through Google Play In-App Billing.</li>
-            <li><strong>Auto-Renewal:</strong> Subscriptions automatically renew unless cancelled at least 24 hours prior to the end of the current billing cycle.</li>
-            <li><strong>Cancellation:</strong> You can manage or cancel your subscription at any time via your Google Play account (<strong>Google Play Store &gt; Profile &gt; Payments &amp; subscriptions</strong>).</li>
-            <li><strong>Refunds:</strong> Refund requests are governed by Google Play standard refund policies.</li>
-        </ul>
+        <section>
+          <h2 class="text-base font-semibold text-white mb-2 flex items-center gap-2">
+            <span class="mono text-cyan-400 text-xs">01.</span> Agreement to Terms
+          </h2>
+          <p class="text-slate-400">
+            By downloading, installing, accessing, or using SonicBeast ("the Application"), you agree to be bound by these Terms of Service. If you do not agree to all terms, do not install or use the Application.
+          </p>
+        </section>
 
-        <h2>4. Absolute Limitation of Liability</h2>
-        <p class="caps">To the maximum extent permitted by applicable law, in no event shall Dhamo, its developers, affiliates, or contributors be liable for any direct, indirect, incidental, special, exemplary, punitive, or consequential damages (including, but not limited to, medical expenses, hearing loss, property damage, device failure, repair costs, loss of use, or loss of data) arising out of or in connection with the Application.</p>
+        <section>
+          <h2 class="text-base font-semibold text-white mb-2 flex items-center gap-2">
+            <span class="mono text-cyan-400 text-xs">02.</span> Hardware Integrity &amp; Speaker Protection
+          </h2>
+          <p class="text-slate-400">
+            Mobile device speakers, transducer membranes, and amplifier chipsets have physical structural limits. Excessive volume amplification may cause distortion, diaphragm tearing, voice coil overheating, or hardware failure. SonicBeast is provided without any warranty that your specific device hardware will endure high amplification. You assume complete responsibility for any hardware repair, replacement, or service costs.
+          </p>
+        </section>
 
-        <h2>5. Warranty Disclaimer</h2>
-        <p class="caps">The Application is provided on an "AS-IS" and "AS-AVAILABLE" basis without warranties of any kind, either express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+        <section>
+          <h2 class="text-base font-semibold text-white mb-2 flex items-center gap-2">
+            <span class="mono text-cyan-400 text-xs">03.</span> In-App Purchases &amp; Subscriptions
+          </h2>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-400 ml-2">
+            <li><b>Billing:</b> Subscriptions (SonicBeast Pro) are processed securely through Google Play Billing.</li>
+            <li><b>Auto-Renewal:</b> Subscriptions automatically renew unless cancelled at least 24 hours prior to the end of the current billing cycle.</li>
+            <li><b>Cancellation:</b> Manage or cancel subscriptions anytime in <b>Google Play Store &gt; Profile &gt; Payments &amp; subscriptions</b>.</li>
+            <li><b>Refunds:</b> Refund requests are handled in accordance with standard Google Play policies.</li>
+          </ul>
+        </section>
 
-        <h2>6. Privacy</h2>
-        <p>Your privacy is paramount. Please review our <a href="privacy.html">Privacy Policy</a> to understand how SonicBeast operates without collecting or transmitting any personal data.</p>
+        <section>
+          <h2 class="text-base font-semibold text-white mb-2 flex items-center gap-2">
+            <span class="mono text-cyan-400 text-xs">04.</span> Absolute Limitation of Liability
+          </h2>
+          <p class="text-slate-400 uppercase text-xs tracking-wide bg-slate-900/60 border border-slate-800 rounded-lg p-4 font-mono">
+            To the maximum extent permitted by applicable law, in no event shall Dhamo, its developers, or affiliates be liable for any direct, indirect, incidental, special, exemplary, punitive, or consequential damages (including, but not limited to, medical expenses, hearing loss, property damage, device failure, or repair costs) arising out of or in connection with the Application. In any jurisdiction where liability exclusions are limited, aggregate liability shall not exceed the amount paid by you in the last thirty (30) days or USD $0.00, whichever is less.
+          </p>
+        </section>
 
-        <h2>7. Contact Information</h2>
-        <p>If you have any questions or inquiries regarding these Terms of Service, please reach out to:</p>
-        <p>
-            <strong>Developer:</strong> Dhamodaran Narayana Perumal (Dhamo)<br>
-            <strong>Email:</strong> <a href="mailto:dhamo.developer@gmail.com">dhamo.developer@gmail.com</a><br>
-            <strong>Address:</strong> 6/1A, Puthoor, Ganapathipuram - 629502, Tamil Nadu, India
-        </p>
+        <section>
+          <h2 class="text-base font-semibold text-white mb-2 flex items-center gap-2">
+            <span class="mono text-cyan-400 text-xs">05.</span> "AS-IS" Warranty Disclaimer
+          </h2>
+          <p class="text-slate-400">
+            The Application is provided on an "AS-IS" and "AS-AVAILABLE" basis without warranties of any kind, express or implied, including but not limited to merchantability, fitness for a particular purpose, and non-infringement.
+          </p>
+        </section>
 
-        <footer>
-            &copy; 2026 Dhamo. All rights reserved. • <a href="privacy.html">Privacy Policy</a>
-        </footer>
+        <section>
+          <h2 class="text-base font-semibold text-white mb-2 flex items-center gap-2">
+            <span class="mono text-cyan-400 text-xs">06.</span> Privacy
+          </h2>
+          <p class="text-slate-400">
+            Your privacy is our priority. Please review our <a href="privacy.html" class="text-cyan-400 hover:underline">Privacy Policy</a> to understand how SonicBeast operates with zero data tracking.
+          </p>
+        </section>
+
+        <section class="border-t border-slate-700/80 pt-6">
+          <h2 class="text-base font-semibold text-white mb-3 flex items-center gap-2">
+            <span class="mono text-cyan-400 text-xs">07.</span> Contact Information
+          </h2>
+          <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-4 mono text-xs text-slate-300 space-y-1">
+            <div><span class="text-slate-500">DEVELOPER:</span> Dhamodaran Narayana Perumal (Dhamo)</div>
+            <div><span class="text-slate-500">EMAIL:</span> <a href="mailto:dhamo.developer@gmail.com" class="text-cyan-400 hover:underline">dhamo.developer@gmail.com</a></div>
+            <div><span class="text-slate-500">LOCATION:</span> Ganapathipuram - 629502, Tamil Nadu, India</div>
+            <div><span class="text-slate-500">PORTFOLIO:</span> <a href="https://dhamo.in" class="text-cyan-400 hover:underline">https://dhamo.in</a></div>
+          </div>
+        </section>
+
+      </div>
+
     </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0b1120] border-t border-slate-800 py-8 text-center text-xs mono text-slate-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-center items-center gap-4">
+      <span>© <span id="yr"></span> Dhamodaran Narayana Perumal</span>
+      <span class="hidden sm:inline text-slate-700">|</span>
+      <a href="/sonicbeast/" class="hover:text-cyan-400 transition-colors">SonicBeast</a>
+      <span class="hidden sm:inline text-slate-700">|</span>
+      <a href="privacy.html" class="hover:text-cyan-400 transition-colors">Privacy Policy</a>
+      <span class="hidden sm:inline text-slate-700">|</span>
+      <a href="https://dhamo.in" class="hover:text-cyan-400 transition-colors">Dhamo.in</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    lucide.createIcons();
+  </script>
 </body>
+
 </html>
