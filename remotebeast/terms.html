@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RemoteBeast Terms of Service</title>
+  <meta name="description" content="By installing or using RemoteBeast (&quot;the app&quot;), published by Dhamo Labs, you agree to these terms." />
+  <meta name="author" content="Dhamo Labs" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="color-scheme" content="dark" />
+  <meta property="og:title" content="RemoteBeast Terms of Service" />
+  <meta property="og:description" content="By installing or using RemoteBeast (&quot;the app&quot;), published by Dhamo Labs, you agree to these terms." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="RemoteBeast" />
+  <meta property="og:url" content="https://dhamo.in/remotebeast/terms.html" />
+  <meta property="og:image" content="https://dhamo.in/remotebeast/assets/icon-256.png" />
+  <meta property="og:image:alt" content="RemoteBeast app icon: a remote with signal waves on a purple circle" />
+  <link rel="canonical" href="https://dhamo.in/remotebeast/terms.html" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      background-color: #0f172a;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #0f172a;
+      /* Slate 900 */
+      color: #cbd5e1;
+      /* Slate 300 */
+      line-height: 1.6;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    /* Fallbacks so the page stays readable if the CDN is blocked */
+    a {
+      color: #22d3ee;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #f1f5f9;
+      line-height: 1.2;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    /* Subtle Code Grid Background */
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      position: relative;
+    }
+
+    /* Tech Cards */
+    .tech-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(51, 65, 85, 0.8);
+      border-radius: 12px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .tech-card.hoverable:hover {
+      border-color: rgba(34, 211, 238, 0.4);
+      box-shadow: 0 0 15px rgba(34, 211, 238, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Code Chips */
+    .tech-chip {
+      background: rgba(15, 23, 42, 0.8);
+      color: #22d3ee;
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    /* Buttons */
+    .tech-btn-filled {
+      background: #0ea5e9;
+      color: #ffffff;
+      border-radius: 6px;
+      transition: all 0.2s;
+      font-weight: 600;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .tech-btn-filled:hover {
+      background: #0284c7;
+      box-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
+    }
+
+    .tech-btn-filled[aria-disabled="true"] {
+      background: #1e293b;
+      color: #cbd5e1;
+      border: 1px solid #475569;
+      text-shadow: none;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .tech-btn-outlined {
+      background: rgba(30, 41, 59, 0.5);
+      color: #e2e8f0;
+      border: 1px solid #475569;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .tech-btn-outlined:hover {
+      background: rgba(51, 65, 85, 0.8);
+      border-color: #94a3b8;
+      color: #ffffff;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(51, 65, 85, 1), transparent);
+    }
+
+    a.nav-link {
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    a.nav-link:hover,
+    a.nav-link[aria-current="page"] {
+      color: #22d3ee;
+    }
+
+    /* Glowing text accent */
+    .text-glow {
+      text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+    }
+
+    /* Accessibility */
+    .skip {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 100;
+      background: #0ea5e9;
+      color: #ffffff;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+    }
+
+    .skip:focus {
+      left: 8px;
+      top: 8px;
+    }
+
+    :focus-visible {
+      outline: 3px solid #22d3ee;
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+
+      .tech-card.hoverable:hover {
+        transform: none;
+      }
+    }
+
+    /* Product page */
+    .phone {
+      background: #050507;
+      border: 2px solid #334155;
+      border-radius: 30px;
+      padding: 9px;
+    }
+
+    .phone img {
+      width: 100%;
+      height: auto;
+      background: #0f172a;
+      border-radius: 22px;
+      display: block;
+    }
+
+    .shots {
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+      overflow-x: auto;
+      padding: 8px 4px 24px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .shots figure {
+      margin: 0;
+      flex: 0 0 220px;
+      scroll-snap-align: center;
+    }
+
+    .shots figcaption {
+      margin-top: 12px;
+      color: #94a3b8;
+      font-size: 0.875rem;
+      text-align: center;
+    }
+
+    @media (min-width: 1000px) {
+      .shots {
+        justify-content: center;
+        overflow: visible;
+      }
+
+      .shots figure {
+        flex: 1 1 0;
+        max-width: 230px;
+      }
+    }
+
+    .plans {
+      width: 100%;
+      font-size: 0.9375rem;
+    }
+
+    .plans caption {
+      text-align: left;
+      padding: 16px 20px;
+      color: #94a3b8;
+      font-size: 0.875rem;
+    }
+
+    .plans th,
+    .plans td {
+      text-align: left;
+      padding: 14px 20px;
+      border-top: 1px solid rgba(51, 65, 85, 0.8);
+      vertical-align: top;
+    }
+
+    .plans thead th {
+      background: rgba(15, 23, 42, 0.6);
+      color: #f1f5f9;
+    }
+
+    .plans thead th.pro {
+      color: #fbbf24;
+    }
+
+    .plans tbody th {
+      font-weight: 600;
+      color: #e2e8f0;
+      width: 34%;
+    }
+
+    .plans td {
+      color: #cbd5e1;
+    }
+
+    .plans td.no {
+      color: #94a3b8;
+    }
+
+    .faq details {
+      margin-bottom: 12px;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      padding: 16px 20px;
+      font-weight: 600;
+      color: #f1f5f9;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq summary::after {
+      content: "+";
+      color: #22d3ee;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    .faq details[open] summary::after {
+      content: "\2212";
+    }
+
+    .faq details p {
+      padding: 0 20px 18px;
+      margin: 0;
+      color: #94a3b8;
+    }
+
+    /* Legal document typography */
+    .legal {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: #cbd5e1;
+    }
+
+    .legal h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+
+    .legal h2 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 2.25rem 0 0.75rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(51, 65, 85, 0.8);
+    }
+
+    .legal h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .legal p {
+      color: #94a3b8;
+      margin: 0 0 1rem;
+    }
+
+    .legal ul,
+    .legal ol {
+      margin: 0 0 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+
+    .legal ul {
+      list-style: disc;
+    }
+
+    .legal ol {
+      list-style: decimal;
+    }
+
+    .legal li {
+      margin: 0.5rem 0;
+      padding-left: 0.25rem;
+    }
+
+    .legal li::marker {
+      color: #22d3ee;
+    }
+
+    .legal strong,
+    .legal b {
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+
+    .legal a {
+      color: #22d3ee;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    .legal a:hover {
+      color: #67e8f9;
+    }
+
+    .legal code {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 0.85em;
+      color: #22d3ee;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 6px;
+      padding: 0.1em 0.4em;
+      overflow-wrap: anywhere;
+    }
+
+    .legal-meta,
+    .legal-meta p {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 0.75rem;
+      color: #22d3ee;
+      margin: 0.25rem 0 0;
+    }
+  </style>
+</head>
+
+<body class="antialiased selection:bg-cyan-900/50 selection:text-cyan-100 bg-grid min-h-screen flex flex-col">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="fixed inset-x-0 top-0 z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800 shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between" aria-label="Main">
+      <a href="https://dhamo.in" class="flex items-center gap-2 font-bold tracking-tight text-xl text-white">
+        <span class="text-cyan-400 text-glow">Dhamo</span><span class="text-slate-500 font-normal mono">.in</span>
+      </a>
+      <div class="flex gap-3 sm:gap-8 text-xs sm:text-sm mono">
+        <a class="nav-link transition-colors" href="index.html">RemoteBeast</a>
+        <a class="nav-link transition-colors" href="privacy.html">Privacy</a>
+        <a class="nav-link transition-colors" href="terms.html" aria-current="page">Terms</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="flex-grow">
+<div class="max-w-4xl mx-auto px-6 pt-28 pb-20 w-full">
+  <article class="tech-card p-8 sm:p-12">
+    <div class="flex items-center gap-4 border-b border-slate-700/80 pb-6 mb-8">
+      <img src="assets/icon-256.png" alt="RemoteBeast app icon" width="56" height="56" class="w-14 h-14 rounded-xl shadow-md shadow-cyan-950/40" />
+      <div class="legal">
+        <h1>RemoteBeast Terms of Service</h1>
+        <div class="legal-meta"><p>Last updated: 22 November 2026</p></div>
+      </div>
+    </div>
+    <div class="legal">
+<p>By installing or using RemoteBeast ("the app"), published by Dhamo Labs, you agree to these terms. If you do not agree, do not use the app.</p>
+<h2>1. What the app needs</h2>
+<ul>
+<li>RemoteBeast controls TVs and streaming devices running Google TV or Android TV that accept the standard Android TV remote connection. Your phone and the TV must be on the same Wi-Fi network.</li>
+<li>TV makers and Google can change how TVs accept remote connections. We try to keep the app working, but we cannot promise that every TV, model or software version is supported, now or in the future.</li>
+<li>RemoteBeast is made by Dhamo Labs. It is not made, endorsed or sponsored by Google. Google TV and Android TV are trademarks of Google LLC.</li>
+</ul>
+<h2>2. Your TVs and your network</h2>
+<ul>
+<li>Use RemoteBeast only with TVs you own or are allowed to control. Pairing needs the code shown on the TV screen, so someone at the TV has to agree to it.</li>
+<li>You are responsible for your home network and for who can use the paired phone.</li>
+</ul>
+<h2>3. Wake TV</h2>
+<p>Wake TV (Pro) switches a TV on when the TV stays connected to the network in standby. Whether that works depends on the TV and its power settings; some TVs turn their network off in deeper standby and can then only be switched on with their own remote. This is a limit of the TV, not a fault in the app.</p>
+<h2>4. Voice and AI assistant</h2>
+<ul>
+<li>Voice search (Pro) sends what you say to your paired TV, where the TV's own voice search handles it. Results come from the TV and its services.</li>
+<li>The AI assistant (Pro), where available, turns what you type into remote commands using Google's generative AI services. It can misunderstand a request or press the wrong buttons. Check what it did, and do not enter personal information.</li>
+</ul>
+<h2>5. Purchases and subscriptions</h2>
+<ul>
+<li>RemoteBeast Pro is an optional paid upgrade processed by Google Play. The price is shown in Google Play before you buy.</li>
+<li>Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period.</li>
+<li>Manage or cancel a subscription in Google Play under Payments and subscriptions.</li>
+<li>Refunds follow Google Play's refund policy.</li>
+</ul>
+<h2>6. Ads</h2>
+<p>The free version shows ads served by Google AdMob. Pro removes them. We are not responsible for the content of ads or for third-party sites you open from an ad.</p>
+<h2>7. Limitation of liability</h2>
+<p>To the extent the law allows, we are not liable for indirect or consequential loss arising from the app, including missed programmes, settings changed on your TV, or loss of use.</p>
+<h2>8. No warranty</h2>
+<p>The app is provided "as is" and "as available", without warranty of any kind, including merchantability, fitness for a purpose and non-infringement.</p>
+<h2>9. Privacy</h2>
+<p>How the app handles information is described in the <a href="privacy.html">Privacy Policy</a>.</p>
+<h2>10. Contact</h2>
+<p>Questions about these terms: <a href="mailto:support@dhamo.in">support@dhamo.in</a></p>
+<p>Dhamo Labs</p>
+    </div>
+  </article>
+</div>
+
+  </main>
+
+  <footer class="bg-[#0b1120] border-t border-slate-800 py-10 text-sm text-slate-400">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row md:justify-between md:items-center gap-6">
+      <div>
+        <a class="inline-flex items-center gap-3 text-slate-200 font-bold" href="mailto:support@dhamo.in"
+          aria-label="Dhamo Labs, email support"><img src="assets/dhamo-labs-logo.svg" width="48" height="48" alt=""
+            class="w-12 h-12 rounded-lg bg-white p-0.5" />Dhamo Labs</a>
+        <p class="mt-3 mono text-xs">Support: <a href="mailto:support@dhamo.in">support@dhamo.in</a></p>
+        <p class="mt-2 mono text-xs">© <span id="yr">2026</span> Dhamo Labs</p>
+      </div>
+      <nav aria-label="Footer" class="flex flex-wrap gap-x-6 gap-y-2 mono text-xs">
+        <a class="nav-link transition-colors" href="index.html">RemoteBeast</a>
+        <a class="nav-link transition-colors" href="privacy.html">Privacy</a>
+        <a class="nav-link transition-colors" href="terms.html">Terms</a>
+        <a class="nav-link transition-colors inline-flex items-center gap-1.5" href="https://dhamo.in"><i data-lucide="arrow-left" class="w-3.5 h-3.5 text-cyan-400" aria-hidden="true"></i>Back to dhamo.in</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year dynamically
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    // Initialize Lucide icons (skipped when the CDN is blocked)
+    if (window.lucide) { lucide.createIcons(); }
+  </script>
+</body>
+
+</html>
