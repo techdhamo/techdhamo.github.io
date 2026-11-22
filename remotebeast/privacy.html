@@ -453,7 +453,7 @@
       <img src="assets/icon-256.png" alt="RemoteBeast app icon" width="56" height="56" class="w-14 h-14 rounded-xl shadow-md shadow-cyan-950/40" />
       <div class="legal">
         <h1>RemoteBeast Privacy Policy</h1>
-        <div class="legal-meta"><p>Last updated: 22 November 2026</p></div>
+        <div class="legal-meta"><p>Last updated: 23 November 2026</p></div>
       </div>
     </div>
     <div class="legal">
@@ -469,7 +469,7 @@
 </ul>
 
 <h2>2. Voice</h2>
-<p>When you hold the voice button, RemoteBeast uses the microphone and streams that audio <strong>directly to your paired TV</strong> over your local network, so the TV's own voice search can handle it. The app does not record, store or upload your voice anywhere else. What the TV does with the audio is governed by the TV maker's and Google's terms for the TV. The microphone is used only while you hold the voice button, and only after you grant the permission. <strong>Voice typing (Pro)</strong> is different: when you tap the microphone in the keyboard, your phone's own speech recognition service (usually Google's) turns your words into text, and RemoteBeast types that text into the TV's text box. RemoteBeast receives only the text, never the audio; the speech service handles the audio under its own privacy terms.</p>
+<p>When you tap the voice button, your phone's own speech recognition service (usually Google's) turns what you say into text. RemoteBeast receives <strong>only the text</strong> and types it into the text box on your TV over your local network. RemoteBeast itself does not use the microphone and does not record, store or upload your voice; the speech service on your phone handles the audio under its own privacy terms. The words you speak are typed into the TV, so the TV and the app it is showing (for example YouTube) receive that text.</p>
 
 <h2>3. AI assistant (Pro)</h2>
 <p>If you use the AI assistant, the text you enter (for example "open YouTube and turn the volume up") is sent to Google through Firebase AI Logic (Gemini) so it can be turned into remote commands. Do not enter personal information there. Requests are processed by Google under Google's terms for Firebase and its generative AI services. To protect this service from abuse, Firebase App Check asks Google Play Integrity to confirm the request comes from a genuine copy of the app on a genuine device.</p>
@@ -497,7 +497,6 @@
 <li><strong>INTERNET</strong>: connects to your TV on your local network; also lets Firebase (after consent), AdMob, the AI assistant and Google Play Billing reach Google.</li>
 <li><strong>ACCESS_NETWORK_STATE</strong> and <strong>ACCESS_WIFI_STATE</strong>: check whether you are on Wi-Fi before looking for TVs or reconnecting.</li>
 <li><strong>CHANGE_WIFI_MULTICAST_STATE</strong>: lets the app hear TVs announcing themselves on your Wi-Fi (multicast DNS discovery).</li>
-<li><strong>RECORD_AUDIO</strong>: the voice feature in section 2, only while you hold the voice button.</li>
 <li><strong>FOREGROUND_SERVICE</strong> and <strong>FOREGROUND_SERVICE_CONNECTED_DEVICE</strong>: keep the connection to your TV alive with a visible notification while you use other apps, if you turn on Background Service in Settings.</li>
 <li><strong>POST_NOTIFICATIONS</strong>: shows that notification with media controls (Android 13 and later).</li>
 <li><strong>VIBRATE</strong>: haptic feedback when you press remote buttons (can be turned off in Settings).</li>
