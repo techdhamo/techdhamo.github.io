@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RemoteBeast: remote for Google TV &amp; Android TV</title>
+  <meta name="description" content="RemoteBeast turns your Android phone into a remote for Google TV and Android TV, talking to your TV directly over your home Wi-Fi." />
+  <meta name="author" content="Dhamo Labs" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="color-scheme" content="dark" />
+  <meta property="og:title" content="RemoteBeast: remote for Google TV &amp; Android TV" />
+  <meta property="og:description" content="RemoteBeast turns your Android phone into a remote for Google TV and Android TV, talking to your TV directly over your home Wi-Fi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="RemoteBeast" />
+  <meta property="og:url" content="https://dhamo.in/remotebeast/" />
+  <meta property="og:image" content="https://dhamo.in/remotebeast/assets/icon-256.png" />
+  <meta property="og:image:alt" content="RemoteBeast app icon: a remote with signal waves on a purple circle" />
+  <link rel="canonical" href="https://dhamo.in/remotebeast/" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      background-color: #0f172a;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #0f172a;
+      /* Slate 900 */
+      color: #cbd5e1;
+      /* Slate 300 */
+      line-height: 1.6;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    /* Fallbacks so the page stays readable if the CDN is blocked */
+    a {
+      color: #22d3ee;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #f1f5f9;
+      line-height: 1.2;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    /* Subtle Code Grid Background */
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      position: relative;
+    }
+
+    /* Tech Cards */
+    .tech-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(51, 65, 85, 0.8);
+      border-radius: 12px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .tech-card.hoverable:hover {
+      border-color: rgba(34, 211, 238, 0.4);
+      box-shadow: 0 0 15px rgba(34, 211, 238, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Code Chips */
+    .tech-chip {
+      background: rgba(15, 23, 42, 0.8);
+      color: #22d3ee;
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    /* Buttons */
+    .tech-btn-filled {
+      background: #0ea5e9;
+      color: #ffffff;
+      border-radius: 6px;
+      transition: all 0.2s;
+      font-weight: 600;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .tech-btn-filled:hover {
+      background: #0284c7;
+      box-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
+    }
+
+    .tech-btn-filled[aria-disabled="true"] {
+      background: #1e293b;
+      color: #cbd5e1;
+      border: 1px solid #475569;
+      text-shadow: none;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .tech-btn-outlined {
+      background: rgba(30, 41, 59, 0.5);
+      color: #e2e8f0;
+      border: 1px solid #475569;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .tech-btn-outlined:hover {
+      background: rgba(51, 65, 85, 0.8);
+      border-color: #94a3b8;
+      color: #ffffff;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(51, 65, 85, 1), transparent);
+    }
+
+    a.nav-link {
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    a.nav-link:hover,
+    a.nav-link[aria-current="page"] {
+      color: #22d3ee;
+    }
+
+    /* Glowing text accent */
+    .text-glow {
+      text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+    }
+
+    /* Accessibility */
+    .skip {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 100;
+      background: #0ea5e9;
+      color: #ffffff;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+    }
+
+    .skip:focus {
+      left: 8px;
+      top: 8px;
+    }
+
+    :focus-visible {
+      outline: 3px solid #22d3ee;
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+
+      .tech-card.hoverable:hover {
+        transform: none;
+      }
+    }
+
+    /* Product page */
+    .phone {
+      background: #050507;
+      border: 2px solid #334155;
+      border-radius: 30px;
+      padding: 9px;
+    }
+
+    .phone img {
+      width: 100%;
+      height: auto;
+      background: #0f172a;
+      border-radius: 22px;
+      display: block;
+    }
+
+    .shots {
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+      overflow-x: auto;
+      padding: 8px 4px 24px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .shots figure {
+      margin: 0;
+      flex: 0 0 220px;
+      scroll-snap-align: center;
+    }
+
+    .shots figcaption {
+      margin-top: 12px;
+      color: #94a3b8;
+      font-size: 0.875rem;
+      text-align: center;
+    }
+
+    @media (min-width: 1000px) {
+      .shots {
+        justify-content: center;
+        overflow: visible;
+      }
+
+      .shots figure {
+        flex: 1 1 0;
+        max-width: 230px;
+      }
+    }
+
+    .plans {
+      width: 100%;
+      font-size: 0.9375rem;
+    }
+
+    .plans caption {
+      text-align: left;
+      padding: 16px 20px;
+      color: #94a3b8;
+      font-size: 0.875rem;
+    }
+
+    .plans th,
+    .plans td {
+      text-align: left;
+      padding: 14px 20px;
+      border-top: 1px solid rgba(51, 65, 85, 0.8);
+      vertical-align: top;
+    }
+
+    .plans thead th {
+      background: rgba(15, 23, 42, 0.6);
+      color: #f1f5f9;
+    }
+
+    .plans thead th.pro {
+      color: #fbbf24;
+    }
+
+    .plans tbody th {
+      font-weight: 600;
+      color: #e2e8f0;
+      width: 34%;
+    }
+
+    .plans td {
+      color: #cbd5e1;
+    }
+
+    .plans td.no {
+      color: #94a3b8;
+    }
+
+    .faq details {
+      margin-bottom: 12px;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      padding: 16px 20px;
+      font-weight: 600;
+      color: #f1f5f9;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq summary::after {
+      content: "+";
+      color: #22d3ee;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    .faq details[open] summary::after {
+      content: "\2212";
+    }
+
+    .faq details p {
+      padding: 0 20px 18px;
+      margin: 0;
+      color: #94a3b8;
+    }
+
+    /* Legal document typography */
+    .legal {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: #cbd5e1;
+    }
+
+    .legal h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+
+    .legal h2 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 2.25rem 0 0.75rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(51, 65, 85, 0.8);
+    }
+
+    .legal h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .legal p {
+      color: #94a3b8;
+      margin: 0 0 1rem;
+    }
+
+    .legal ul,
+    .legal ol {
+      margin: 0 0 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+
+    .legal ul {
+      list-style: disc;
+    }
+
+    .legal ol {
+      list-style: decimal;
+    }
+
+    .legal li {
+      margin: 0.5rem 0;
+      padding-left: 0.25rem;
+    }
+
+    .legal li::marker {
+      color: #22d3ee;
+    }
+
+    .legal strong,
+    .legal b {
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+
+    .legal a {
+      color: #22d3ee;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    .legal a:hover {
+      color: #67e8f9;
+    }
+
+    .legal code {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 0.85em;
+      color: #22d3ee;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 6px;
+      padding: 0.1em 0.4em;
+      overflow-wrap: anywhere;
+    }
+
+    .legal-meta,
+    .legal-meta p {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 0.75rem;
+      color: #22d3ee;
+      margin: 0.25rem 0 0;
+    }
+  </style>
+</head>
+
+<body class="antialiased selection:bg-cyan-900/50 selection:text-cyan-100 bg-grid min-h-screen flex flex-col">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="fixed inset-x-0 top-0 z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800 shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between" aria-label="Main">
+      <a href="https://dhamo.in" class="flex items-center gap-2 font-bold tracking-tight text-xl text-white">
+        <span class="text-cyan-400 text-glow">Dhamo</span><span class="text-slate-500 font-normal mono">.in</span>
+      </a>
+      <div class="flex gap-3 sm:gap-8 text-xs sm:text-sm mono">
+        <a class="nav-link transition-colors" href="index.html" aria-current="page">RemoteBeast</a>
+        <a class="nav-link transition-colors" href="privacy.html">Privacy</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="flex-grow">
+<script>
+/* Set LIVE to true once the Google Play listing is public. */
+const LIVE = false;
+</script>
+
+<section id="top" class="pt-36 pb-24 border-b border-slate-800 relative overflow-hidden" aria-labelledby="h-hero">
+  <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-900/20 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <img class="mx-auto mb-6 w-32 h-32 rounded-[28px] shadow-lg shadow-cyan-950/60" src="assets/icon-256.png" width="128" height="128" alt="RemoteBeast app icon: a remote with signal waves on a purple circle">
+    <h1 id="h-hero" class="text-4xl sm:text-6xl font-bold tracking-tight text-white leading-[1.15]">RemoteBeast</h1>
+    <p class="mt-6 max-w-2xl mx-auto text-slate-400 text-lg leading-relaxed">A remote for Google TV and Android TV on your phone. It talks to your TV directly over your home Wi-Fi, with a D-pad, touchpad, keyboard and volume that moves exactly as far as you press.</p>
+    <div class="mt-10 flex flex-wrap justify-center gap-4 mono text-sm">
+      <a class="px-6 py-3 tech-btn-filled inline-flex items-center gap-2" id="play-btn" href="#" aria-disabled="true" role="link" tabindex="-1">Coming soon to Google Play</a>
+      <a class="px-6 py-3 tech-btn-outlined inline-flex items-center gap-2" href="#features"><i data-lucide="arrow-down" class="w-4 h-4 text-cyan-400" aria-hidden="true"></i>See what it does</a>
+    </div>
+    <p class="mt-8 text-sm text-slate-400 mono">Requires Android 7.0 or later, and a Google TV or Android TV on the same Wi-Fi network as your phone.</p>
+  </div>
+</section>
+
+<section id="features" class="py-24" aria-labelledby="h-features">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-sm font-bold text-cyan-500 mono tracking-wider uppercase">What it does</div>
+    <h2 id="h-features" class="mt-3 text-3xl font-bold text-white">Your TV remote, on your phone</h2>
+    <p class="mt-4 max-w-2xl text-slate-400 text-lg leading-relaxed">Pair once with the code on your TV screen, then control it from the couch.</p>
+    <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <article class="tech-card hoverable p-6">
+        <div class="w-10 h-10 rounded bg-cyan-900/40 text-cyan-400 flex items-center justify-center mb-5 border border-cyan-800/50"><i data-lucide="gamepad-2" class="w-5 h-5" aria-hidden="true"></i></div>
+        <h3 class="text-lg font-bold text-slate-100">D-pad and touchpad</h3>
+        <p class="text-sm text-slate-400 mt-3 leading-relaxed">Move through menus with the D-pad or swipe on the touchpad. Home, Back, media keys and power are one tap away.</p>
+      </article>
+      <article class="tech-card hoverable p-6">
+        <div class="w-10 h-10 rounded bg-indigo-900/40 text-indigo-400 flex items-center justify-center mb-5 border border-indigo-800/50"><i data-lucide="volume-2" class="w-5 h-5" aria-hidden="true"></i></div>
+        <h3 class="text-lg font-bold text-slate-100">Precise volume</h3>
+        <p class="text-sm text-slate-400 mt-3 leading-relaxed">One tap is one step. Or drag the volume bar to the level you want, and RemoteBeast takes the TV there and stops.</p>
+      </article>
+      <article class="tech-card hoverable p-6">
+        <div class="w-10 h-10 rounded bg-purple-900/40 text-purple-400 flex items-center justify-center mb-5 border border-purple-800/50"><i data-lucide="keyboard" class="w-5 h-5" aria-hidden="true"></i></div>
+        <h3 class="text-lg font-bold text-slate-100">Keyboard</h3>
+        <p class="text-sm text-slate-400 mt-3 leading-relaxed">Type searches and passwords on your phone's keyboard instead of picking letters one by one on the TV.</p>
+      </article>
+      <article class="tech-card hoverable p-6">
+        <div class="w-10 h-10 rounded bg-emerald-900/40 text-emerald-400 flex items-center justify-center mb-5 border border-emerald-800/50"><i data-lucide="mic" class="w-5 h-5" aria-hidden="true"></i></div>
+        <h3 class="text-lg font-bold text-slate-100">Voice search <span class="tech-chip text-[11px] px-2 py-1 mono align-middle">Pro</span></h3>
+        <p class="text-sm text-slate-400 mt-3 leading-relaxed">Hold the voice button and speak. Your voice goes straight to your TV's own voice search.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="plans" class="py-24 bg-[#0b1120]/50" aria-labelledby="h-plans">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-sm font-bold text-cyan-500 mono tracking-wider uppercase">Free and Pro</div>
+    <h2 id="h-plans" class="mt-3 text-3xl font-bold text-white mb-12">Start free, upgrade if you want more</h2>
+    <div class="tech-card overflow-x-auto">
+      <table class="plans">
+        <caption>What each plan includes</caption>
+        <thead>
+          <tr><th scope="col">Feature</th><th scope="col">Free</th><th scope="col" class="pro">Pro</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">D-pad, touchpad, Home, Back, media keys, power</th><td>Included</td><td>Included</td></tr>
+          <tr><th scope="row">Volume buttons and drag-to-level volume bar</th><td>Included</td><td>Included</td></tr>
+          <tr><th scope="row">Keyboard</th><td>Included</td><td>Included</td></tr>
+          <tr><th scope="row">Voice search</th><td class="no">Not included</td><td>Included</td></tr>
+          <tr><th scope="row">Wake TV</th><td class="no">Not included</td><td>Included, for TVs that stay on the network in standby</td></tr>
+          <tr><th scope="row">Ads</th><td>A banner on the Controls tab</td><td>No ads</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-slate-400">Pro is an optional upgrade, bought through Google Play. The price is shown in Google Play before you buy.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="privacy" class="py-24" aria-labelledby="h-privacy">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-sm font-bold text-cyan-500 mono tracking-wider uppercase">Privacy</div>
+    <h2 id="h-privacy" class="mt-3 text-3xl font-bold text-white mb-12">Your TV, your network, your choice</h2>
+    <ul class="grid md:grid-cols-2 gap-6">
+      <li class="tech-card hoverable p-6">
+        <h3 class="text-lg font-bold text-slate-100">Straight to your TV</h3>
+        <p class="text-sm text-slate-400 mt-3 leading-relaxed">Button presses, typing and volume go directly from your phone to your TV over your home Wi-Fi, encrypted. There is no RemoteBeast server in between.</p>
+      </li>
+      <li class="tech-card hoverable p-6">
+        <h3 class="text-lg font-bold text-slate-100">Nothing is sent until you accept</h3>
+        <p class="text-sm text-slate-400 mt-3 leading-relaxed">On first launch the app asks whether you accept analytics and crash reports. If you decline, the app works the same way. You can change your mind in Settings.</p>
+      </li>
+      <li class="tech-card hoverable p-6">
+        <h3 class="text-lg font-bold text-slate-100">Your voice goes only to your TV</h3>
+        <p class="text-sm text-slate-400 mt-3 leading-relaxed">Voice search streams the microphone to your paired TV while you hold the button. RemoteBeast does not record or keep it.</p>
+      </li>
+      <li class="tech-card hoverable p-6">
+        <h3 class="text-lg font-bold text-slate-100">No account needed</h3>
+        <p class="text-sm text-slate-400 mt-3 leading-relaxed">There is nothing to sign up for. Your paired TVs are saved on your phone only. The free version shows ads from Google AdMob; Pro removes them.</p>
+      </li>
+    </ul>
+    <p class="mt-8 flex flex-wrap gap-4 mono text-sm">
+      <a href="privacy.html" class="px-6 py-3 tech-btn-outlined inline-flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-cyan-400" aria-hidden="true"></i>Privacy policy</a>
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="faq" class="py-24 bg-[#0b1120]/50" aria-labelledby="h-faq">
+  <div class="max-w-6xl mx-auto px-6 faq">
+    <div class="text-sm font-bold text-cyan-500 mono tracking-wider uppercase">Questions</div>
+    <h2 id="h-faq" class="mt-3 text-3xl font-bold text-white mb-12">Frequently asked questions</h2>
+    <details class="tech-card">
+      <summary>Which TVs does it work with?</summary>
+      <p>TVs and streaming boxes running Google TV or Android TV that accept the standard Android TV remote connection. Your phone and the TV must be on the same Wi-Fi network.</p>
+    </details>
+    <details class="tech-card">
+      <summary>How do I pair my TV?</summary>
+      <p>Open RemoteBeast on the same Wi-Fi as your TV and pick the TV from the list. The TV shows a short code; type it into the app. You only do this once per TV.</p>
+    </details>
+    <details class="tech-card">
+      <summary>Can it turn my TV on?</summary>
+      <p>With Pro, Wake TV switches the TV on when the TV stays connected to the network in standby. Some TVs turn their Wi-Fi off in deeper standby after a while; those can only be turned on with their own remote. On many TVs, a setting such as "Network standby" or an energy mode that keeps network features on helps.</p>
+    </details>
+    <details class="tech-card">
+      <summary>Does it work away from home?</summary>
+      <p>No. RemoteBeast talks to your TV over your home Wi-Fi, so your phone needs to be on the same network as the TV.</p>
+    </details>
+    <details class="tech-card">
+      <summary>How do I cancel Pro?</summary>
+      <p>Open Google Play and go to Payments and subscriptions to manage or cancel. A subscription renews automatically unless you cancel at least 24 hours before the end of the current period. Refunds follow Google Play's refund policy.</p>
+    </details>
+    <p class="mt-8 text-sm text-slate-500">RemoteBeast is made by Dhamo Labs. It is not made, endorsed or sponsored by Google. Google TV and Android TV are trademarks of Google LLC.</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var btn = document.getElementById("play-btn");
+  if (!btn) return;
+  if (LIVE) {
+    btn.textContent = "Get it on Google Play";
+    btn.href = "https://play.google.com/store/apps/details?id=in.dhamo.remotebeast";
+    btn.removeAttribute("aria-disabled");
+    btn.removeAttribute("role");
+    btn.removeAttribute("tabindex");
+  } else {
+    btn.addEventListener("click", function (e) { e.preventDefault(); });
+  }
+})();
+</script>
+
+  </main>
+
+  <footer class="bg-[#0b1120] border-t border-slate-800 py-10 text-sm text-slate-400">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row md:justify-between md:items-center gap-6">
+      <div>
+        <a class="inline-flex items-center gap-3 text-slate-200 font-bold" href="mailto:support@dhamo.in"
+          aria-label="Dhamo Labs, email support"><img src="assets/dhamo-labs-logo.svg" width="48" height="48" alt=""
+            class="w-12 h-12 rounded-lg bg-white p-0.5" />Dhamo Labs</a>
+        <p class="mt-3 mono text-xs">Support: <a href="mailto:support@dhamo.in">support@dhamo.in</a></p>
+        <p class="mt-2 mono text-xs">© <span id="yr">2026</span> Dhamo Labs</p>
+      </div>
+      <nav aria-label="Footer" class="flex flex-wrap gap-x-6 gap-y-2 mono text-xs">
+        <a class="nav-link transition-colors" href="privacy.html">Privacy</a>
+        <a class="nav-link transition-colors" href="#top">Back to top</a>
+        <a class="nav-link transition-colors inline-flex items-center gap-1.5" href="https://dhamo.in"><i data-lucide="arrow-left" class="w-3.5 h-3.5 text-cyan-400" aria-hidden="true"></i>Back to dhamo.in</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year dynamically
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    // Initialize Lucide icons (skipped when the CDN is blocked)
+    if (window.lucide) { lucide.createIcons(); }
+  </script>
+</body>
+
+</html>

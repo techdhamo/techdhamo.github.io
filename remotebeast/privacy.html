@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RemoteBeast Privacy Policy</title>
+  <meta name="description" content="This policy explains what the RemoteBeast app (&quot;we&quot;, &quot;us&quot;), published by Dhamo Labs, handles on your device and what leaves it." />
+  <meta name="author" content="Dhamo Labs" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="color-scheme" content="dark" />
+  <meta property="og:title" content="RemoteBeast Privacy Policy" />
+  <meta property="og:description" content="This policy explains what the RemoteBeast app (&quot;we&quot;, &quot;us&quot;), published by Dhamo Labs, handles on your device and what leaves it." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="RemoteBeast" />
+  <meta property="og:url" content="https://dhamo.in/remotebeast/privacy.html" />
+  <meta property="og:image" content="https://dhamo.in/remotebeast/assets/icon-256.png" />
+  <meta property="og:image:alt" content="RemoteBeast app icon: a remote with signal waves on a purple circle" />
+  <link rel="canonical" href="https://dhamo.in/remotebeast/privacy.html" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      background-color: #0f172a;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #0f172a;
+      /* Slate 900 */
+      color: #cbd5e1;
+      /* Slate 300 */
+      line-height: 1.6;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    /* Fallbacks so the page stays readable if the CDN is blocked */
+    a {
+      color: #22d3ee;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #f1f5f9;
+      line-height: 1.2;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    /* Subtle Code Grid Background */
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      position: relative;
+    }
+
+    /* Tech Cards */
+    .tech-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(51, 65, 85, 0.8);
+      border-radius: 12px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .tech-card.hoverable:hover {
+      border-color: rgba(34, 211, 238, 0.4);
+      box-shadow: 0 0 15px rgba(34, 211, 238, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Code Chips */
+    .tech-chip {
+      background: rgba(15, 23, 42, 0.8);
+      color: #22d3ee;
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    /* Buttons */
+    .tech-btn-filled {
+      background: #0ea5e9;
+      color: #ffffff;
+      border-radius: 6px;
+      transition: all 0.2s;
+      font-weight: 600;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .tech-btn-filled:hover {
+      background: #0284c7;
+      box-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
+    }
+
+    .tech-btn-filled[aria-disabled="true"] {
+      background: #1e293b;
+      color: #cbd5e1;
+      border: 1px solid #475569;
+      text-shadow: none;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .tech-btn-outlined {
+      background: rgba(30, 41, 59, 0.5);
+      color: #e2e8f0;
+      border: 1px solid #475569;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .tech-btn-outlined:hover {
+      background: rgba(51, 65, 85, 0.8);
+      border-color: #94a3b8;
+      color: #ffffff;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(51, 65, 85, 1), transparent);
+    }
+
+    a.nav-link {
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    a.nav-link:hover,
+    a.nav-link[aria-current="page"] {
+      color: #22d3ee;
+    }
+
+    /* Glowing text accent */
+    .text-glow {
+      text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+    }
+
+    /* Accessibility */
+    .skip {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 100;
+      background: #0ea5e9;
+      color: #ffffff;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+    }
+
+    .skip:focus {
+      left: 8px;
+      top: 8px;
+    }
+
+    :focus-visible {
+      outline: 3px solid #22d3ee;
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+
+      .tech-card.hoverable:hover {
+        transform: none;
+      }
+    }
+
+    /* Product page */
+    .phone {
+      background: #050507;
+      border: 2px solid #334155;
+      border-radius: 30px;
+      padding: 9px;
+    }
+
+    .phone img {
+      width: 100%;
+      height: auto;
+      background: #0f172a;
+      border-radius: 22px;
+      display: block;
+    }
+
+    .shots {
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+      overflow-x: auto;
+      padding: 8px 4px 24px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .shots figure {
+      margin: 0;
+      flex: 0 0 220px;
+      scroll-snap-align: center;
+    }
+
+    .shots figcaption {
+      margin-top: 12px;
+      color: #94a3b8;
+      font-size: 0.875rem;
+      text-align: center;
+    }
+
+    @media (min-width: 1000px) {
+      .shots {
+        justify-content: center;
+        overflow: visible;
+      }
+
+      .shots figure {
+        flex: 1 1 0;
+        max-width: 230px;
+      }
+    }
+
+    .plans {
+      width: 100%;
+      font-size: 0.9375rem;
+    }
+
+    .plans caption {
+      text-align: left;
+      padding: 16px 20px;
+      color: #94a3b8;
+      font-size: 0.875rem;
+    }
+
+    .plans th,
+    .plans td {
+      text-align: left;
+      padding: 14px 20px;
+      border-top: 1px solid rgba(51, 65, 85, 0.8);
+      vertical-align: top;
+    }
+
+    .plans thead th {
+      background: rgba(15, 23, 42, 0.6);
+      color: #f1f5f9;
+    }
+
+    .plans thead th.pro {
+      color: #fbbf24;
+    }
+
+    .plans tbody th {
+      font-weight: 600;
+      color: #e2e8f0;
+      width: 34%;
+    }
+
+    .plans td {
+      color: #cbd5e1;
+    }
+
+    .plans td.no {
+      color: #94a3b8;
+    }
+
+    .faq details {
+      margin-bottom: 12px;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      padding: 16px 20px;
+      font-weight: 600;
+      color: #f1f5f9;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq summary::after {
+      content: "+";
+      color: #22d3ee;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    .faq details[open] summary::after {
+      content: "\2212";
+    }
+
+    .faq details p {
+      padding: 0 20px 18px;
+      margin: 0;
+      color: #94a3b8;
+    }
+
+    /* Legal document typography */
+    .legal {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: #cbd5e1;
+    }
+
+    .legal h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+
+    .legal h2 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 2.25rem 0 0.75rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(51, 65, 85, 0.8);
+    }
+
+    .legal h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .legal p {
+      color: #94a3b8;
+      margin: 0 0 1rem;
+    }
+
+    .legal ul,
+    .legal ol {
+      margin: 0 0 1rem;
+      padding-left: 1.5rem;
+      color: #94a3b8;
+    }
+
+    .legal ul {
+      list-style: disc;
+    }
+
+    .legal ol {
+      list-style: decimal;
+    }
+
+    .legal li {
+      margin: 0.5rem 0;
+      padding-left: 0.25rem;
+    }
+
+    .legal li::marker {
+      color: #22d3ee;
+    }
+
+    .legal strong,
+    .legal b {
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+
+    .legal a {
+      color: #22d3ee;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    .legal a:hover {
+      color: #67e8f9;
+    }
+
+    .legal code {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 0.85em;
+      color: #22d3ee;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 6px;
+      padding: 0.1em 0.4em;
+      overflow-wrap: anywhere;
+    }
+
+    .legal-meta,
+    .legal-meta p {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 0.75rem;
+      color: #22d3ee;
+      margin: 0.25rem 0 0;
+    }
+  </style>
+</head>
+
+<body class="antialiased selection:bg-cyan-900/50 selection:text-cyan-100 bg-grid min-h-screen flex flex-col">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="fixed inset-x-0 top-0 z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800 shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between" aria-label="Main">
+      <a href="https://dhamo.in" class="flex items-center gap-2 font-bold tracking-tight text-xl text-white">
+        <span class="text-cyan-400 text-glow">Dhamo</span><span class="text-slate-500 font-normal mono">.in</span>
+      </a>
+      <div class="flex gap-3 sm:gap-8 text-xs sm:text-sm mono">
+        <a class="nav-link transition-colors" href="index.html">RemoteBeast</a>
+        <a class="nav-link transition-colors" href="privacy.html" aria-current="page">Privacy</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="flex-grow">
+<div class="max-w-4xl mx-auto px-6 pt-28 pb-20 w-full">
+  <article class="tech-card p-8 sm:p-12">
+    <div class="flex items-center gap-4 border-b border-slate-700/80 pb-6 mb-8">
+      <img src="assets/icon-256.png" alt="RemoteBeast app icon" width="56" height="56" class="w-14 h-14 rounded-xl shadow-md shadow-cyan-950/40" />
+      <div class="legal">
+        <h1>RemoteBeast Privacy Policy</h1>
+        <div class="legal-meta"><p>Last updated: 22 November 2026</p></div>
+      </div>
+    </div>
+    <div class="legal">
+<p>This policy explains what the RemoteBeast app ("we", "us"), published by Dhamo Labs, handles on your device and what leaves it. RemoteBeast is a remote control for Google TV and Android TV devices on your home Wi-Fi. You can reach us at <a href="mailto:support@dhamo.in">support@dhamo.in</a>.</p>
+
+<h2>1. What stays on your device or your home network</h2>
+<ul>
+<li><strong>Finding and pairing TVs:</strong> RemoteBeast looks for TVs on your Wi-Fi network (multicast DNS) and pairs with a TV using the code the TV shows. The app creates its own security certificate for pairing and keeps it, and the TV's certificate, on your phone.</li>
+<li><strong>Controlling the TV:</strong> button presses, text you type with the keyboard feature and volume changes go directly from your phone to your TV over your local network, encrypted (TLS). They do not go through our servers; we have none for this.</li>
+<li><strong>Saved TVs:</strong> for each paired TV the app stores its name, network address, port, network hardware (MAC) address and when you last used it, on your phone only. The MAC address is read from your phone's network table so the app can wake the TV.</li>
+<li><strong>Wake TV:</strong> to switch a TV on, the app sends the TV's power key over the local connection or a "Wake-on-LAN" packet on your local network. Nothing leaves your network.</li>
+<li><strong>Settings</strong> (haptics, auto-reconnect, theme, your consent choice and similar) are stored on your phone only.</li>
+</ul>
+
+<h2>2. Voice</h2>
+<p>When you hold the voice button, RemoteBeast uses the microphone and streams that audio <strong>directly to your paired TV</strong> over your local network, so the TV's own voice search can handle it. The app does not record, store or upload your voice anywhere else. What the TV does with the audio is governed by the TV maker's and Google's terms for the TV. The microphone is used only while you hold the voice button, and only after you grant the permission.</p>
+
+<h2>3. AI assistant (Pro)</h2>
+<p>If you use the AI assistant, the text you enter (for example "open YouTube and turn the volume up") is sent to Google through Firebase AI Logic (Gemini) so it can be turned into remote commands. Do not enter personal information there. Requests are processed by Google under Google's terms for Firebase and its generative AI services. To protect this service from abuse, Firebase App Check asks Google Play Integrity to confirm the request comes from a genuine copy of the app on a genuine device.</p>
+
+<h2>4. Analytics and crash reports, only after you accept</h2>
+<p>On first launch RemoteBeast asks for your <strong>consent</strong> to analytics and crash reporting. Until you accept, both stay switched off and nothing is sent. If you decline, the app works the same way.</p>
+<p>If you accept, we use Google's Firebase services:</p>
+<ul>
+<li><strong>Firebase Analytics:</strong> a pseudonymous app-instance identifier, app version, Android version, device model, approximate region (Google derives it from the IP address), and events that show which features are used and whether they worked (for example, a TV was connected, or a wake attempt succeeded). Events carry no free text: no TV names, network addresses, MAC addresses, voice or anything you type.</li>
+<li><strong>Crashlytics:</strong> crash reports and error diagnostics with a stack trace, device model, Android version, app version and the app state at the time, so that we can fix problems.</li>
+<li><strong>Install referrer:</strong> Firebase Analytics may read the Google Play install referrer (which campaign or store page led to the install) to measure installs. This also happens only after you accept.</li>
+</ul>
+<p>We use this data to find and fix problems and to decide which features to improve. We do not sell it. Data is processed by Google under Google's terms and privacy policy for Firebase (see <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>).</p>
+<p>You can change your choice at any time in <strong>Settings &gt; Privacy</strong>. When you withdraw consent, collection stops at once, the app asks Firebase to reset its analytics data for this installation, and unsent crash reports on the device are deleted. To ask about data already sent, write to <a href="mailto:support@dhamo.in">support@dhamo.in</a>.</p>
+
+<h2>5. Ads (free version)</h2>
+<p>The free version shows banner ads from <strong>Google AdMob</strong>. Pro removes them. AdMob is separate from the analytics consent in section 4: it collects information such as your device's advertising ID, IP address, device and app information and ad interactions to deliver, measure and limit ads, and to detect fraud. Depending on your region and settings, ads may be personalised. You can reset or delete your advertising ID, or opt out of personalised ads, in your phone's Android settings (Privacy &gt; Ads). Google's use of this data is described at <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a>. On newer Android versions the AdMob SDK may also use the Android Privacy Sandbox ad services (ad ID, attribution and topics) that you can control in Android settings.</p>
+
+<h2>6. Purchases and reviews</h2>
+<p>RemoteBeast Pro is bought through Google Play. Google handles the payment and shows the app a purchase token and entitlement status so the app can unlock Pro. We never see your card or payment details. After you have used the app for a while, it may ask Google Play to show its in-app review prompt; the review goes to Google Play. Both are governed by Google Play's terms and privacy policy.</p>
+
+<h2>7. Permissions</h2>
+<p>RemoteBeast declares the following permissions, including those added by the libraries it uses. Each is used only for the purpose given.</p>
+<ul>
+<li><strong>INTERNET</strong>: connects to your TV on your local network; also lets Firebase (after consent), AdMob, the AI assistant and Google Play Billing reach Google.</li>
+<li><strong>ACCESS_NETWORK_STATE</strong> and <strong>ACCESS_WIFI_STATE</strong>: check whether you are on Wi-Fi before looking for TVs or reconnecting.</li>
+<li><strong>CHANGE_WIFI_MULTICAST_STATE</strong>: lets the app hear TVs announcing themselves on your Wi-Fi (multicast DNS discovery).</li>
+<li><strong>RECORD_AUDIO</strong>: the voice feature in section 2, only while you hold the voice button.</li>
+<li><strong>FOREGROUND_SERVICE</strong> and <strong>FOREGROUND_SERVICE_CONNECTED_DEVICE</strong>: keep the connection to your TV alive with a visible notification while you use other apps, if you turn on Background Service in Settings.</li>
+<li><strong>POST_NOTIFICATIONS</strong>: shows that notification with media controls (Android 13 and later).</li>
+<li><strong>VIBRATE</strong>: haptic feedback when you press remote buttons (can be turned off in Settings).</li>
+<li><strong>WAKE_LOCK</strong>: lets Firebase and Google services finish sending while the screen is off.</li>
+<li><strong>com.android.vending.BILLING</strong>: Google Play Billing for the Pro purchase in section 6.</li>
+<li><strong>com.google.android.gms.permission.AD_ID</strong> and <strong>ACCESS_ADSERVICES_AD_ID</strong>, <strong>ACCESS_ADSERVICES_ATTRIBUTION</strong>, <strong>ACCESS_ADSERVICES_TOPICS</strong>: added by the AdMob SDK for the ads in section 5.</li>
+<li><strong>com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE</strong>: the Google Play install referrer, used as described in section 4 after you accept.</li>
+<li><strong>in.dhamo.remotebeast.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</strong>: an app-own permission added by AndroidX so that other apps cannot send broadcasts to the app's internal receivers. It grants nothing to other apps.</li>
+</ul>
+
+<h2>8. Children</h2>
+<p>RemoteBeast is not directed at children under 13, and we do not knowingly gather information from children.</p>
+
+<h2>9. Security and retention</h2>
+<p>Communication with your TV is encrypted with TLS using the certificates created at pairing. Data on your phone stays until you unpair a TV, clear the app's data or uninstall the app. Data held by Google services is kept according to Google's retention settings and policies.</p>
+
+<h2>10. Changes and contact</h2>
+<p>If this policy changes, the date above changes and, if the change affects what is collected, the app tells you. Contact: <a href="mailto:support@dhamo.in">support@dhamo.in</a></p>
+<p>Dhamo Labs</p>
+<p>RemoteBeast is not made, endorsed or sponsored by Google. Google TV and Android TV are trademarks of Google LLC.</p>
+    </div>
+  </article>
+</div>
+
+  </main>
+
+  <footer class="bg-[#0b1120] border-t border-slate-800 py-10 text-sm text-slate-400">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row md:justify-between md:items-center gap-6">
+      <div>
+        <a class="inline-flex items-center gap-3 text-slate-200 font-bold" href="mailto:support@dhamo.in"
+          aria-label="Dhamo Labs, email support"><img src="assets/dhamo-labs-logo.svg" width="48" height="48" alt=""
+            class="w-12 h-12 rounded-lg bg-white p-0.5" />Dhamo Labs</a>
+        <p class="mt-3 mono text-xs">Support: <a href="mailto:support@dhamo.in">support@dhamo.in</a></p>
+        <p class="mt-2 mono text-xs">© <span id="yr">2026</span> Dhamo Labs</p>
+      </div>
+      <nav aria-label="Footer" class="flex flex-wrap gap-x-6 gap-y-2 mono text-xs">
+        <a class="nav-link transition-colors" href="index.html">RemoteBeast</a>
+        <a class="nav-link transition-colors" href="privacy.html">Privacy</a>
+        <a class="nav-link transition-colors inline-flex items-center gap-1.5" href="https://dhamo.in"><i data-lucide="arrow-left" class="w-3.5 h-3.5 text-cyan-400" aria-hidden="true"></i>Back to dhamo.in</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year dynamically
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    // Initialize Lucide icons (skipped when the CDN is blocked)
+    if (window.lucide) { lucide.createIcons(); }
+  </script>
+</body>
+
+</html>
